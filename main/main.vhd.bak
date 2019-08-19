@@ -1,0 +1,12 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity main is
+	port (input_button	: in std_logic;
+			led0, led1, led2, led3, led4, led5	: out std_logic);
+end main;
+
+architecture main_loop of main is
+begin
+
+end main_loop;
