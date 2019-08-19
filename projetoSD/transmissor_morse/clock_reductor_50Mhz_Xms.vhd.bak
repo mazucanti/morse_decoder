@@ -1,0 +1,8 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity clock_reductor_50Mhz_Xms is
+	generic	();
+	port	();
+end clock_reductor_50Mhz_Xms;
+

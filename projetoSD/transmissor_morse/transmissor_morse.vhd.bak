@@ -1,0 +1,11 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity transmissor_morse is
+	port (clock, user_input	: in std_logic;
+			led	: out std_logic);
+end transmissor_morse;
+
+architecture logic of transmissor_morse is;
+begin
+end logic;
