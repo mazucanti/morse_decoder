@@ -1,0 +1,4 @@
+library verilog;
+use verilog.vl_types.all;
+entity short_or_long_signal_identifier_vlg_vec_tst is
+end short_or_long_signal_identifier_vlg_vec_tst;

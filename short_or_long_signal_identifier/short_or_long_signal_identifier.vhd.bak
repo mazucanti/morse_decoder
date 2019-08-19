@@ -1,0 +1,28 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity short_or_long_signal_identifier is
+	generic (short_long_border	: integer 500);
+	port (clock	: in std_logic;
+			button_input	: in std_logic;
+			output_value	: out integer);
+end short_or_long_signal_identifier;
+
+architecture verifier of short_or_long_signal_identifier is
+begin
+	process(clock, button_input)
+		variable	: count integer := 0;
+	begin
+		if (button_input = '1') then
+			output_value <= '0';
+			count = 0;
+		elsif (clock'event and clock = '0') then
+			count = count + 1;
+			if (count > short_long_border) then
+				output_value <= '2';
+			else
+				output_value <= '1';
+			end if;
+		end if;
+	end process;
+end verifier;
