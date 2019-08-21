@@ -22,10 +22,10 @@ begin
 			--end if;
 		end if;
 		
-		if ((c <= unsigned(duty)) and (en = '1')) then
-			pwm_out <= '0';
-		else
+		if ((c < unsigned(duty)) and (en = '1')) then
 			pwm_out <= '1';
+		else
+			pwm_out <= '0';
 		end if;
 	end process;
 	

@@ -10,6 +10,24 @@ led[3] <= modulo_pwm:brightness_loop:3:led_intensity_module.pwm_out
 led[2] <= modulo_pwm:brightness_loop:2:led_intensity_module.pwm_out
 led[1] <= modulo_pwm:brightness_loop:1:led_intensity_module.pwm_out
 led[0] <= modulo_pwm:brightness_loop:0:led_intensity_module.pwm_out
+code_test0[0] <= <GND>
+code_test0[1] <= <GND>
+code_test0[2] <= <GND>
+code_test1[0] <= <VCC>
+code_test1[1] <= <GND>
+code_test1[2] <= <GND>
+code_test2[0] <= <GND>
+code_test2[1] <= <VCC>
+code_test2[2] <= <GND>
+code_test3[0] <= <VCC>
+code_test3[1] <= <GND>
+code_test3[2] <= <GND>
+code_test4[0] <= <GND>
+code_test4[1] <= <VCC>
+code_test4[2] <= <GND>
+index_test[0] <= <GND>
+index_test[1] <= <GND>
+index_test[2] <= <VCC>
 
 
 |main|modulo_pwm:\brightness_loop:0:led_intensity_module
