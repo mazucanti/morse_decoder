@@ -1,5 +1,5 @@
 Analysis & Synthesis report for short_or_long_signal_identifier
-Mon Aug 19 16:34:33 2019
+Tue Aug 20 21:59:52 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,7 +13,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
+  8. User-Specified and Inferred Latches
   9. General Register Statistics
  10. Elapsed Time Per Partition
  11. Analysis & Synthesis Messages
@@ -42,16 +42,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Aug 19 16:34:33 2019           ;
+; Analysis & Synthesis Status        ; Successful - Tue Aug 20 21:59:52 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; short_or_long_signal_identifier                 ;
 ; Top-level Entity Name              ; short_or_long_signal_identifier                 ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 44                                              ;
-;     Total combinational functions  ; 44                                              ;
+; Total logic elements               ; 51                                              ;
+;     Total combinational functions  ; 51                                              ;
 ;     Dedicated logic registers      ; 34                                              ;
 ; Total registers                    ; 34                                              ;
-; Total pins                         ; 34                                              ;
+; Total pins                         ; 10                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -164,34 +164,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 44    ;
-;                                             ;       ;
-; Total combinational functions               ; 44    ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 10    ;
-;     -- 3 input functions                    ; 1     ;
-;     -- <=2 input functions                  ; 33    ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 13    ;
-;     -- arithmetic mode                      ; 31    ;
-;                                             ;       ;
-; Total registers                             ; 34    ;
-;     -- Dedicated logic registers            ; 34    ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 34    ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 34    ;
-; Total fan-out                               ; 211   ;
-; Average fan-out                             ; 1.88  ;
-+---------------------------------------------+-------+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 51           ;
+;                                             ;              ;
+; Total combinational functions               ; 51           ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 10           ;
+;     -- 3 input functions                    ; 6            ;
+;     -- <=2 input functions                  ; 35           ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 20           ;
+;     -- arithmetic mode                      ; 31           ;
+;                                             ;              ;
+; Total registers                             ; 34           ;
+;     -- Dedicated logic registers            ; 34           ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 10           ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+; Maximum fan-out node                        ; button_input ;
+; Maximum fan-out                             ; 35           ;
+; Total fan-out                               ; 233          ;
+; Average fan-out                             ; 2.45         ;
++---------------------------------------------+--------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -199,48 +199,22 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
 ; Compilation Hierarchy Node       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Library Name ;
 +----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
-; |short_or_long_signal_identifier ; 44 (44)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |short_or_long_signal_identifier ; work         ;
+; |short_or_long_signal_identifier ; 51 (51)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |short_or_long_signal_identifier ; work         ;
 +----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; output_value[30]~reg0                  ; Stuck at GND due to stuck port data_in ;
-; output_value[29]~reg0                  ; Stuck at GND due to stuck port data_in ;
-; output_value[28]~reg0                  ; Stuck at GND due to stuck port data_in ;
-; output_value[27]~reg0                  ; Stuck at GND due to stuck port data_in ;
-; output_value[26]~reg0                  ; Stuck at GND due to stuck port data_in ;
-; output_value[25]~reg0                  ; Stuck at GND due to stuck port data_in ;
-; output_value[24]~reg0                  ; Stuck at GND due to stuck port data_in ;
-; output_value[23]~reg0                  ; Stuck at GND due to stuck port data_in ;
-; output_value[22]~reg0                  ; Stuck at GND due to stuck port data_in ;
-; output_value[21]~reg0                  ; Stuck at GND due to stuck port data_in ;
-; output_value[20]~reg0                  ; Stuck at GND due to stuck port data_in ;
-; output_value[19]~reg0                  ; Stuck at GND due to stuck port data_in ;
-; output_value[18]~reg0                  ; Stuck at GND due to stuck port data_in ;
-; output_value[17]~reg0                  ; Stuck at GND due to stuck port data_in ;
-; output_value[16]~reg0                  ; Stuck at GND due to stuck port data_in ;
-; output_value[15]~reg0                  ; Stuck at GND due to stuck port data_in ;
-; output_value[14]~reg0                  ; Stuck at GND due to stuck port data_in ;
-; output_value[13]~reg0                  ; Stuck at GND due to stuck port data_in ;
-; output_value[12]~reg0                  ; Stuck at GND due to stuck port data_in ;
-; output_value[11]~reg0                  ; Stuck at GND due to stuck port data_in ;
-; output_value[10]~reg0                  ; Stuck at GND due to stuck port data_in ;
-; output_value[9]~reg0                   ; Stuck at GND due to stuck port data_in ;
-; output_value[8]~reg0                   ; Stuck at GND due to stuck port data_in ;
-; output_value[7]~reg0                   ; Stuck at GND due to stuck port data_in ;
-; output_value[6]~reg0                   ; Stuck at GND due to stuck port data_in ;
-; output_value[5]~reg0                   ; Stuck at GND due to stuck port data_in ;
-; output_value[4]~reg0                   ; Stuck at GND due to stuck port data_in ;
-; output_value[3]~reg0                   ; Stuck at GND due to stuck port data_in ;
-; output_value[2]~reg0                   ; Stuck at GND due to stuck port data_in ;
-; output_value[31]~reg0                  ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 30 ;                                        ;
-+----------------------------------------+----------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; index_out[0]$latch                                 ; index_out[2]        ; yes                    ;
+; index_out[1]$latch                                 ; index_out[2]        ; yes                    ;
+; index_out[2]$latch                                 ; index_out[2]        ; yes                    ;
+; Number of user-specified and inferred latches = 3  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -273,56 +247,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Aug 19 16:34:28 2019
+    Info: Processing started: Tue Aug 20 21:59:48 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off short_or_long_signal_identifier -c short_or_long_signal_identifier
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file short_or_long_signal_identifier.vhd
     Info (12022): Found design unit 1: short_or_long_signal_identifier-verifier
     Info (12023): Found entity 1: short_or_long_signal_identifier
 Info (12127): Elaborating entity "short_or_long_signal_identifier" for the top level hierarchy
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "output_value[2]" is stuck at GND
-    Warning (13410): Pin "output_value[3]" is stuck at GND
-    Warning (13410): Pin "output_value[4]" is stuck at GND
-    Warning (13410): Pin "output_value[5]" is stuck at GND
-    Warning (13410): Pin "output_value[6]" is stuck at GND
-    Warning (13410): Pin "output_value[7]" is stuck at GND
-    Warning (13410): Pin "output_value[8]" is stuck at GND
-    Warning (13410): Pin "output_value[9]" is stuck at GND
-    Warning (13410): Pin "output_value[10]" is stuck at GND
-    Warning (13410): Pin "output_value[11]" is stuck at GND
-    Warning (13410): Pin "output_value[12]" is stuck at GND
-    Warning (13410): Pin "output_value[13]" is stuck at GND
-    Warning (13410): Pin "output_value[14]" is stuck at GND
-    Warning (13410): Pin "output_value[15]" is stuck at GND
-    Warning (13410): Pin "output_value[16]" is stuck at GND
-    Warning (13410): Pin "output_value[17]" is stuck at GND
-    Warning (13410): Pin "output_value[18]" is stuck at GND
-    Warning (13410): Pin "output_value[19]" is stuck at GND
-    Warning (13410): Pin "output_value[20]" is stuck at GND
-    Warning (13410): Pin "output_value[21]" is stuck at GND
-    Warning (13410): Pin "output_value[22]" is stuck at GND
-    Warning (13410): Pin "output_value[23]" is stuck at GND
-    Warning (13410): Pin "output_value[24]" is stuck at GND
-    Warning (13410): Pin "output_value[25]" is stuck at GND
-    Warning (13410): Pin "output_value[26]" is stuck at GND
-    Warning (13410): Pin "output_value[27]" is stuck at GND
-    Warning (13410): Pin "output_value[28]" is stuck at GND
-    Warning (13410): Pin "output_value[29]" is stuck at GND
-    Warning (13410): Pin "output_value[30]" is stuck at GND
-Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register output_value[0]~reg0 will power up to Low
-    Critical Warning (18010): Register output_value[31]~reg0 will power up to Low
+Warning (10492): VHDL Process Statement warning at short_or_long_signal_identifier.vhd(30): signal "output_value" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at short_or_long_signal_identifier.vhd(31): signal "index_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at short_or_long_signal_identifier.vhd(33): signal "index_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at short_or_long_signal_identifier.vhd(22): inferring latch(es) for signal or variable "index_out", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "index_out[0]" at short_or_long_signal_identifier.vhd(22)
+Info (10041): Inferred latch for "index_out[1]" at short_or_long_signal_identifier.vhd(22)
+Info (10041): Inferred latch for "index_out[2]" at short_or_long_signal_identifier.vhd(22)
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 111 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 77 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 34 warnings
-    Info: Peak virtual memory: 4660 megabytes
-    Info: Processing ended: Mon Aug 19 16:34:33 2019
-    Info: Elapsed time: 00:00:05
+Info (21057): Implemented 94 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 84 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4668 megabytes
+    Info: Processing ended: Tue Aug 20 21:59:52 2019
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

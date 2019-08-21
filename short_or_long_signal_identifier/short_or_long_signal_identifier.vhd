@@ -10,7 +10,9 @@ use ieee.std_logic_1164.all;
 entity short_or_long_signal_identifier is
 	port (clock	: in std_logic;
 			button_input	: in std_logic;
-			output_value	: out integer);
+			index_in			: in integer range 0 to 4;
+			index_out		: out integer range 0 to 4;
+			output_value	: buffer integer range 0 to 2);
 end short_or_long_signal_identifier;
 
 architecture verifier of short_or_long_signal_identifier is
@@ -22,9 +24,15 @@ begin
 	begin
 		-- Botao ativo em baixo
 		-- "reset" assincrono
-		if (button_input = '1') then
+		if	(button_input = '1') then
 			output_value <= 0;
 			count := 0;
+			if	(output_value /= 0) then
+				case index_in is
+					when 4 => index_out <= 0;
+					when others => index_out <= index_in + 1;
+				end case;
+			end if;
 			
 		elsif (clock'event and clock = '0') then
 			count := count + 1;

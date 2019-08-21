@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Shoji\Desktop\morse_decoder\main\simulation\qsim
+vmain
+Z1 !s100 9S@Z3EncWjH9=e<QD?3]E1
+Z2 IQI[K_A[_`e9<EAPzI=>Hm3
+Z3 V?B>N;CLFXDBo1:W_z_PCS0
+Z4 dC:\Users\Shoji\Desktop\morse_decoder\main\simulation\qsim
+Z5 w1566351941
+Z6 8main.vo
+Z7 Fmain.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|main.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1566351943.025000
+Z12 !s107 main.vo|
+!s101 -O0
+vmain_vlg_check_tst
+!i10b 1
+Z13 !s100 g7c<djc=JoG695oG@>b2D1
+Z14 Iz6XjeTgULenN1KDd6anD11
+Z15 VC^iOZfD^9kk2N8AGBPX:=3
+R4
+Z16 w1566351939
+Z17 8main.vt
+Z18 Fmain.vt
+L0 59
+R8
+r1
+!s85 0
+31
+Z19 !s108 1566351943.478000
+Z20 !s107 main.vt|
+Z21 !s90 -work|work|main.vt|
+!s101 -O0
+R10
+vmain_vlg_sample_tst
+!i10b 1
+Z22 !s100 Tz]@fN3ZBe;Q`LzcC2kIH3
+Z23 IWZB@fcMe;dRP<lN_D9l8f2
+Z24 V3AbJXlcD^:ihbh1Y[4Hk[1
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vmain_vlg_vec_tst
+!i10b 1
+Z25 !s100 U0TP8`Z@mMBZ2n:]HH7Vl2
+Z26 Ijl0;P:^m]CA3Sc;:X4fjV3
+Z27 VHZma`Q?n[z_A]1=F?<UDB3
+R4
+R16
+R17
+R18
+Z28 L0 597
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
