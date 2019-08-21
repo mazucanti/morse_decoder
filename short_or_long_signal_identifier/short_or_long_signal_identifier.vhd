@@ -27,7 +27,7 @@ end short_or_long_signal_identifier;
 
 architecture verifier of short_or_long_signal_identifier is
 	-- Define o tempo em que o sinal mudara de curto para longo
-	constant short_long_border : integer := 25;		-- 0.5s
+	constant short_long_border : integer := 25000000;		-- 0.5s
 	signal	code	: integer_vector	:= (others => 0);		-- Guarda a "letra" salva atualmente (0: desligado, 1: ponto, 2: traco)
 	signal current_index	: integer range 0 to MAX_CODE_LENGTH := 1;
 	signal next_value	: integer range 0 to 2 := 0;
@@ -40,7 +40,6 @@ begin
 	begin
 		if (clock'event and clock = '0') then
 			-- Botao ativo em baixo
-			-- "reset" assincrono
 			if	(button_input = '1') then
 				if (new_value /= 0) then
 					index_variable := index_variable + 1;
