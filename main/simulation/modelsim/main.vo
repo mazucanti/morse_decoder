@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
-// DATE "08/21/2019 15:25:53"
+// DATE "08/21/2019 15:49:42"
 
 // 
 // Device: Altera EP2C20F484C7 Package FBGA484
@@ -55,24 +55,24 @@ output 	[2:0] index_test;
 // led[2]	=>  Location: PIN_U19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // led[1]	=>  Location: PIN_R19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // led[0]	=>  Location: PIN_R20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// code_test0[0]	=>  Location: PIN_Y16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// code_test0[1]	=>  Location: PIN_G16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// code_test0[2]	=>  Location: PIN_AB9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// code_test1[0]	=>  Location: PIN_D3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// code_test1[1]	=>  Location: PIN_R18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// code_test1[2]	=>  Location: PIN_K21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// code_test2[0]	=>  Location: PIN_V19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// code_test2[1]	=>  Location: PIN_D14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// code_test0[0]	=>  Location: PIN_AA4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// code_test0[1]	=>  Location: PIN_B18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// code_test0[2]	=>  Location: PIN_B13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// code_test1[0]	=>  Location: PIN_E20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// code_test1[1]	=>  Location: PIN_U3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// code_test1[2]	=>  Location: PIN_Y21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// code_test2[0]	=>  Location: PIN_AB7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// code_test2[1]	=>  Location: PIN_AA7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // code_test2[2]	=>  Location: PIN_A8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// code_test3[0]	=>  Location: PIN_G6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// code_test3[1]	=>  Location: PIN_R15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// code_test3[2]	=>  Location: PIN_C10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// code_test4[0]	=>  Location: PIN_F15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// code_test4[1]	=>  Location: PIN_U9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// code_test4[2]	=>  Location: PIN_W11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// index_test[0]	=>  Location: PIN_P15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// index_test[1]	=>  Location: PIN_A10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
-// index_test[2]	=>  Location: PIN_B15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// code_test3[0]	=>  Location: PIN_B5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// code_test3[1]	=>  Location: PIN_U1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// code_test3[2]	=>  Location: PIN_E2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// code_test4[0]	=>  Location: PIN_A10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// code_test4[1]	=>  Location: PIN_A9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// code_test4[2]	=>  Location: PIN_K22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// index_test[0]	=>  Location: PIN_R13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// index_test[1]	=>  Location: PIN_C16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// index_test[2]	=>  Location: PIN_H12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 // clock	=>  Location: PIN_L1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 
 
@@ -87,16 +87,12 @@ assign unknown = 1'bx;
 tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
-wire \brightness_loop:0:led_intensity_module|c[5]~15_combout ;
 wire \clock~combout ;
 wire \clock~clkctrl_outclk ;
 wire \brightness_loop:0:led_intensity_module|c[0]~21_combout ;
-wire \brightness_loop:0:led_intensity_module|c[1]~7_combout ;
 wire \brightness_loop:0:led_intensity_module|c[1]~8 ;
 wire \brightness_loop:0:led_intensity_module|c[2]~9_combout ;
 wire \brightness_loop:0:led_intensity_module|c[2]~10 ;
-wire \brightness_loop:0:led_intensity_module|c[3]~11_combout ;
-wire \brightness_loop:4:led_intensity_module|LessThan0~0_combout ;
 wire \brightness_loop:0:led_intensity_module|c[3]~12 ;
 wire \brightness_loop:0:led_intensity_module|c[4]~13_combout ;
 wire \brightness_loop:0:led_intensity_module|c[4]~14 ;
@@ -105,42 +101,14 @@ wire \brightness_loop:0:led_intensity_module|c[6]~17_combout ;
 wire \brightness_loop:0:led_intensity_module|c[6]~18 ;
 wire \brightness_loop:0:led_intensity_module|c[7]~19_combout ;
 wire \brightness_loop:4:led_intensity_module|LessThan0~1_combout ;
+wire \brightness_loop:0:led_intensity_module|c[3]~11_combout ;
+wire \brightness_loop:0:led_intensity_module|c[1]~7_combout ;
+wire \brightness_loop:4:led_intensity_module|LessThan0~0_combout ;
 wire \brightness_loop:4:led_intensity_module|LessThan0~2_combout ;
+wire \brightness_loop:0:led_intensity_module|c[5]~15_combout ;
 wire \brightness_loop:3:led_intensity_module|LessThan0~0_combout ;
 wire [7:0] \brightness_loop:0:led_intensity_module|c ;
 
-
-// Location: LCFF_X49_Y4_N21
-cycloneii_lcell_ff \brightness_loop:0:led_intensity_module|c[5] (
-	.clk(!\clock~clkctrl_outclk ),
-	.datain(\brightness_loop:0:led_intensity_module|c[5]~15_combout ),
-	.sdata(gnd),
-	.aclr(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.regout(\brightness_loop:0:led_intensity_module|c [5]));
-
-// Location: LCCOMB_X49_Y4_N20
-cycloneii_lcell_comb \brightness_loop:0:led_intensity_module|c[5]~15 (
-// Equation(s):
-// \brightness_loop:0:led_intensity_module|c[5]~15_combout  = (\brightness_loop:0:led_intensity_module|c [5] & (\brightness_loop:0:led_intensity_module|c[4]~14  $ (GND))) # (!\brightness_loop:0:led_intensity_module|c [5] & 
-// (!\brightness_loop:0:led_intensity_module|c[4]~14  & VCC))
-// \brightness_loop:0:led_intensity_module|c[5]~16  = CARRY((\brightness_loop:0:led_intensity_module|c [5] & !\brightness_loop:0:led_intensity_module|c[4]~14 ))
-
-	.dataa(\brightness_loop:0:led_intensity_module|c [5]),
-	.datab(vcc),
-	.datac(vcc),
-	.datad(vcc),
-	.cin(\brightness_loop:0:led_intensity_module|c[4]~14 ),
-	.combout(\brightness_loop:0:led_intensity_module|c[5]~15_combout ),
-	.cout(\brightness_loop:0:led_intensity_module|c[5]~16 ));
-// synopsys translate_off
-defparam \brightness_loop:0:led_intensity_module|c[5]~15 .lut_mask = 16'hA50A;
-defparam \brightness_loop:0:led_intensity_module|c[5]~15 .sum_lutc_input = "cin";
-// synopsys translate_on
 
 // Location: PIN_L1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 cycloneii_io \clock~I (
@@ -191,7 +159,7 @@ defparam \clock~clkctrl .clock_type = "global clock";
 defparam \clock~clkctrl .ena_register_mode = "none";
 // synopsys translate_on
 
-// Location: LCCOMB_X49_Y4_N4
+// Location: LCCOMB_X49_Y4_N0
 cycloneii_lcell_comb \brightness_loop:0:led_intensity_module|c[0]~21 (
 // Equation(s):
 // \brightness_loop:0:led_intensity_module|c[0]~21_combout  = !\brightness_loop:0:led_intensity_module|c [0]
@@ -208,7 +176,7 @@ defparam \brightness_loop:0:led_intensity_module|c[0]~21 .lut_mask = 16'h0F0F;
 defparam \brightness_loop:0:led_intensity_module|c[0]~21 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCFF_X49_Y4_N5
+// Location: LCFF_X49_Y4_N1
 cycloneii_lcell_ff \brightness_loop:0:led_intensity_module|c[0] (
 	.clk(!\clock~clkctrl_outclk ),
 	.datain(\brightness_loop:0:led_intensity_module|c[0]~21_combout ),
@@ -239,19 +207,6 @@ cycloneii_lcell_comb \brightness_loop:0:led_intensity_module|c[1]~7 (
 defparam \brightness_loop:0:led_intensity_module|c[1]~7 .lut_mask = 16'h6688;
 defparam \brightness_loop:0:led_intensity_module|c[1]~7 .sum_lutc_input = "datac";
 // synopsys translate_on
-
-// Location: LCFF_X49_Y4_N13
-cycloneii_lcell_ff \brightness_loop:0:led_intensity_module|c[1] (
-	.clk(!\clock~clkctrl_outclk ),
-	.datain(\brightness_loop:0:led_intensity_module|c[1]~7_combout ),
-	.sdata(gnd),
-	.aclr(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.regout(\brightness_loop:0:led_intensity_module|c [1]));
 
 // Location: LCCOMB_X49_Y4_N14
 cycloneii_lcell_comb \brightness_loop:0:led_intensity_module|c[2]~9 (
@@ -304,37 +259,6 @@ defparam \brightness_loop:0:led_intensity_module|c[3]~11 .lut_mask = 16'hA50A;
 defparam \brightness_loop:0:led_intensity_module|c[3]~11 .sum_lutc_input = "cin";
 // synopsys translate_on
 
-// Location: LCFF_X49_Y4_N17
-cycloneii_lcell_ff \brightness_loop:0:led_intensity_module|c[3] (
-	.clk(!\clock~clkctrl_outclk ),
-	.datain(\brightness_loop:0:led_intensity_module|c[3]~11_combout ),
-	.sdata(gnd),
-	.aclr(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.regout(\brightness_loop:0:led_intensity_module|c [3]));
-
-// Location: LCCOMB_X49_Y4_N6
-cycloneii_lcell_comb \brightness_loop:4:led_intensity_module|LessThan0~0 (
-// Equation(s):
-// \brightness_loop:4:led_intensity_module|LessThan0~0_combout  = (!\brightness_loop:0:led_intensity_module|c [2] & (!\brightness_loop:0:led_intensity_module|c [0] & (!\brightness_loop:0:led_intensity_module|c [1] & !\brightness_loop:0:led_intensity_module|c 
-// [3])))
-
-	.dataa(\brightness_loop:0:led_intensity_module|c [2]),
-	.datab(\brightness_loop:0:led_intensity_module|c [0]),
-	.datac(\brightness_loop:0:led_intensity_module|c [1]),
-	.datad(\brightness_loop:0:led_intensity_module|c [3]),
-	.cin(gnd),
-	.combout(\brightness_loop:4:led_intensity_module|LessThan0~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \brightness_loop:4:led_intensity_module|LessThan0~0 .lut_mask = 16'h0001;
-defparam \brightness_loop:4:led_intensity_module|LessThan0~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
 // Location: LCCOMB_X49_Y4_N18
 cycloneii_lcell_comb \brightness_loop:0:led_intensity_module|c[4]~13 (
 // Equation(s):
@@ -366,6 +290,25 @@ cycloneii_lcell_ff \brightness_loop:0:led_intensity_module|c[4] (
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.regout(\brightness_loop:0:led_intensity_module|c [4]));
+
+// Location: LCCOMB_X49_Y4_N20
+cycloneii_lcell_comb \brightness_loop:0:led_intensity_module|c[5]~15 (
+// Equation(s):
+// \brightness_loop:0:led_intensity_module|c[5]~15_combout  = (\brightness_loop:0:led_intensity_module|c [5] & (\brightness_loop:0:led_intensity_module|c[4]~14  $ (GND))) # (!\brightness_loop:0:led_intensity_module|c [5] & 
+// (!\brightness_loop:0:led_intensity_module|c[4]~14  & VCC))
+// \brightness_loop:0:led_intensity_module|c[5]~16  = CARRY((\brightness_loop:0:led_intensity_module|c [5] & !\brightness_loop:0:led_intensity_module|c[4]~14 ))
+
+	.dataa(\brightness_loop:0:led_intensity_module|c [5]),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(vcc),
+	.cin(\brightness_loop:0:led_intensity_module|c[4]~14 ),
+	.combout(\brightness_loop:0:led_intensity_module|c[5]~15_combout ),
+	.cout(\brightness_loop:0:led_intensity_module|c[5]~16 ));
+// synopsys translate_off
+defparam \brightness_loop:0:led_intensity_module|c[5]~15 .lut_mask = 16'hA50A;
+defparam \brightness_loop:0:led_intensity_module|c[5]~15 .sum_lutc_input = "cin";
+// synopsys translate_on
 
 // Location: LCCOMB_X49_Y4_N22
 cycloneii_lcell_comb \brightness_loop:0:led_intensity_module|c[6]~17 (
@@ -429,54 +372,113 @@ cycloneii_lcell_ff \brightness_loop:0:led_intensity_module|c[7] (
 	.devpor(devpor),
 	.regout(\brightness_loop:0:led_intensity_module|c [7]));
 
-// Location: LCCOMB_X49_Y4_N0
+// Location: LCCOMB_X49_Y4_N28
 cycloneii_lcell_comb \brightness_loop:4:led_intensity_module|LessThan0~1 (
 // Equation(s):
-// \brightness_loop:4:led_intensity_module|LessThan0~1_combout  = (!\brightness_loop:0:led_intensity_module|c [5] & (!\brightness_loop:0:led_intensity_module|c [7] & !\brightness_loop:0:led_intensity_module|c [6]))
+// \brightness_loop:4:led_intensity_module|LessThan0~1_combout  = (((!\brightness_loop:0:led_intensity_module|c [6]) # (!\brightness_loop:0:led_intensity_module|c [7])) # (!\brightness_loop:0:led_intensity_module|c [4])) # 
+// (!\brightness_loop:0:led_intensity_module|c [5])
 
 	.dataa(\brightness_loop:0:led_intensity_module|c [5]),
-	.datab(vcc),
+	.datab(\brightness_loop:0:led_intensity_module|c [4]),
 	.datac(\brightness_loop:0:led_intensity_module|c [7]),
 	.datad(\brightness_loop:0:led_intensity_module|c [6]),
 	.cin(gnd),
 	.combout(\brightness_loop:4:led_intensity_module|LessThan0~1_combout ),
 	.cout());
 // synopsys translate_off
-defparam \brightness_loop:4:led_intensity_module|LessThan0~1 .lut_mask = 16'h0005;
+defparam \brightness_loop:4:led_intensity_module|LessThan0~1 .lut_mask = 16'h7FFF;
 defparam \brightness_loop:4:led_intensity_module|LessThan0~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
+// Location: LCFF_X49_Y4_N17
+cycloneii_lcell_ff \brightness_loop:0:led_intensity_module|c[3] (
+	.clk(!\clock~clkctrl_outclk ),
+	.datain(\brightness_loop:0:led_intensity_module|c[3]~11_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\brightness_loop:0:led_intensity_module|c [3]));
+
+// Location: LCFF_X49_Y4_N13
+cycloneii_lcell_ff \brightness_loop:0:led_intensity_module|c[1] (
+	.clk(!\clock~clkctrl_outclk ),
+	.datain(\brightness_loop:0:led_intensity_module|c[1]~7_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\brightness_loop:0:led_intensity_module|c [1]));
+
 // Location: LCCOMB_X49_Y4_N2
+cycloneii_lcell_comb \brightness_loop:4:led_intensity_module|LessThan0~0 (
+// Equation(s):
+// \brightness_loop:4:led_intensity_module|LessThan0~0_combout  = (((!\brightness_loop:0:led_intensity_module|c [2]) # (!\brightness_loop:0:led_intensity_module|c [1])) # (!\brightness_loop:0:led_intensity_module|c [3])) # 
+// (!\brightness_loop:0:led_intensity_module|c [0])
+
+	.dataa(\brightness_loop:0:led_intensity_module|c [0]),
+	.datab(\brightness_loop:0:led_intensity_module|c [3]),
+	.datac(\brightness_loop:0:led_intensity_module|c [1]),
+	.datad(\brightness_loop:0:led_intensity_module|c [2]),
+	.cin(gnd),
+	.combout(\brightness_loop:4:led_intensity_module|LessThan0~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \brightness_loop:4:led_intensity_module|LessThan0~0 .lut_mask = 16'h7FFF;
+defparam \brightness_loop:4:led_intensity_module|LessThan0~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X49_Y4_N6
 cycloneii_lcell_comb \brightness_loop:4:led_intensity_module|LessThan0~2 (
 // Equation(s):
-// \brightness_loop:4:led_intensity_module|LessThan0~2_combout  = ((\brightness_loop:0:led_intensity_module|c [4]) # (!\brightness_loop:4:led_intensity_module|LessThan0~1_combout )) # (!\brightness_loop:4:led_intensity_module|LessThan0~0_combout )
+// \brightness_loop:4:led_intensity_module|LessThan0~2_combout  = (\brightness_loop:4:led_intensity_module|LessThan0~1_combout ) # (\brightness_loop:4:led_intensity_module|LessThan0~0_combout )
 
-	.dataa(\brightness_loop:4:led_intensity_module|LessThan0~0_combout ),
-	.datab(\brightness_loop:0:led_intensity_module|c [4]),
+	.dataa(vcc),
+	.datab(\brightness_loop:4:led_intensity_module|LessThan0~1_combout ),
 	.datac(vcc),
-	.datad(\brightness_loop:4:led_intensity_module|LessThan0~1_combout ),
+	.datad(\brightness_loop:4:led_intensity_module|LessThan0~0_combout ),
 	.cin(gnd),
 	.combout(\brightness_loop:4:led_intensity_module|LessThan0~2_combout ),
 	.cout());
 // synopsys translate_off
-defparam \brightness_loop:4:led_intensity_module|LessThan0~2 .lut_mask = 16'hDDFF;
+defparam \brightness_loop:4:led_intensity_module|LessThan0~2 .lut_mask = 16'hFFCC;
 defparam \brightness_loop:4:led_intensity_module|LessThan0~2 .sum_lutc_input = "datac";
 // synopsys translate_on
+
+// Location: LCFF_X49_Y4_N21
+cycloneii_lcell_ff \brightness_loop:0:led_intensity_module|c[5] (
+	.clk(!\clock~clkctrl_outclk ),
+	.datain(\brightness_loop:0:led_intensity_module|c[5]~15_combout ),
+	.sdata(gnd),
+	.aclr(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.regout(\brightness_loop:0:led_intensity_module|c [5]));
 
 // Location: LCCOMB_X49_Y4_N8
 cycloneii_lcell_comb \brightness_loop:3:led_intensity_module|LessThan0~0 (
 // Equation(s):
-// \brightness_loop:3:led_intensity_module|LessThan0~0_combout  = ((!\brightness_loop:4:led_intensity_module|LessThan0~0_combout  & \brightness_loop:0:led_intensity_module|c [4])) # (!\brightness_loop:4:led_intensity_module|LessThan0~1_combout )
+// \brightness_loop:3:led_intensity_module|LessThan0~0_combout  = (\brightness_loop:0:led_intensity_module|c [5]) # ((\brightness_loop:0:led_intensity_module|c [4]) # ((\brightness_loop:0:led_intensity_module|c [7]) # 
+// (\brightness_loop:0:led_intensity_module|c [6])))
 
-	.dataa(\brightness_loop:4:led_intensity_module|LessThan0~0_combout ),
+	.dataa(\brightness_loop:0:led_intensity_module|c [5]),
 	.datab(\brightness_loop:0:led_intensity_module|c [4]),
-	.datac(vcc),
-	.datad(\brightness_loop:4:led_intensity_module|LessThan0~1_combout ),
+	.datac(\brightness_loop:0:led_intensity_module|c [7]),
+	.datad(\brightness_loop:0:led_intensity_module|c [6]),
 	.cin(gnd),
 	.combout(\brightness_loop:3:led_intensity_module|LessThan0~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \brightness_loop:3:led_intensity_module|LessThan0~0 .lut_mask = 16'h44FF;
+defparam \brightness_loop:3:led_intensity_module|LessThan0~0 .lut_mask = 16'hFFFE;
 defparam \brightness_loop:3:led_intensity_module|LessThan0~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
@@ -554,7 +556,7 @@ defparam \led[4]~I .output_sync_reset = "none";
 
 // Location: PIN_Y19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \led[3]~I (
-	.datain(\brightness_loop:3:led_intensity_module|LessThan0~0_combout ),
+	.datain(!\brightness_loop:3:led_intensity_module|LessThan0~0_combout ),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),
@@ -590,7 +592,7 @@ defparam \led[3]~I .output_sync_reset = "none";
 
 // Location: PIN_U19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \led[2]~I (
-	.datain(gnd),
+	.datain(\brightness_loop:4:led_intensity_module|LessThan0~2_combout ),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),
@@ -626,7 +628,7 @@ defparam \led[2]~I .output_sync_reset = "none";
 
 // Location: PIN_R19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \led[1]~I (
-	.datain(\brightness_loop:3:led_intensity_module|LessThan0~0_combout ),
+	.datain(!\brightness_loop:3:led_intensity_module|LessThan0~0_combout ),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),
@@ -662,7 +664,7 @@ defparam \led[1]~I .output_sync_reset = "none";
 
 // Location: PIN_R20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \led[0]~I (
-	.datain(\brightness_loop:4:led_intensity_module|LessThan0~2_combout ),
+	.datain(gnd),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),
@@ -696,7 +698,7 @@ defparam \led[0]~I .output_register_mode = "none";
 defparam \led[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_Y16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_AA4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \code_test0[0]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -732,7 +734,7 @@ defparam \code_test0[0]~I .output_register_mode = "none";
 defparam \code_test0[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_G16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_B18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \code_test0[1]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -768,7 +770,7 @@ defparam \code_test0[1]~I .output_register_mode = "none";
 defparam \code_test0[1]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_AB9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_B13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \code_test0[2]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -804,7 +806,7 @@ defparam \code_test0[2]~I .output_register_mode = "none";
 defparam \code_test0[2]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_D3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_E20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \code_test1[0]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -840,7 +842,7 @@ defparam \code_test1[0]~I .output_register_mode = "none";
 defparam \code_test1[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_R18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_U3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \code_test1[1]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -876,7 +878,7 @@ defparam \code_test1[1]~I .output_register_mode = "none";
 defparam \code_test1[1]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_K21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_Y21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \code_test1[2]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -912,7 +914,7 @@ defparam \code_test1[2]~I .output_register_mode = "none";
 defparam \code_test1[2]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_V19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_AB7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \code_test2[0]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -948,7 +950,7 @@ defparam \code_test2[0]~I .output_register_mode = "none";
 defparam \code_test2[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_D14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_AA7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \code_test2[1]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -1020,7 +1022,7 @@ defparam \code_test2[2]~I .output_register_mode = "none";
 defparam \code_test2[2]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_G6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_B5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \code_test3[0]~I (
 	.datain(vcc),
 	.oe(vcc),
@@ -1056,7 +1058,7 @@ defparam \code_test3[0]~I .output_register_mode = "none";
 defparam \code_test3[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_R15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_U1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \code_test3[1]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -1092,7 +1094,7 @@ defparam \code_test3[1]~I .output_register_mode = "none";
 defparam \code_test3[1]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_C10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_E2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \code_test3[2]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -1128,7 +1130,7 @@ defparam \code_test3[2]~I .output_register_mode = "none";
 defparam \code_test3[2]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_F15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_A10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \code_test4[0]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -1164,9 +1166,9 @@ defparam \code_test4[0]~I .output_register_mode = "none";
 defparam \code_test4[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_U9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_A9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \code_test4[1]~I (
-	.datain(gnd),
+	.datain(vcc),
 	.oe(vcc),
 	.outclk(gnd),
 	.outclkena(vcc),
@@ -1200,7 +1202,7 @@ defparam \code_test4[1]~I .output_register_mode = "none";
 defparam \code_test4[1]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_W11,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_K22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \code_test4[2]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -1236,7 +1238,7 @@ defparam \code_test4[2]~I .output_register_mode = "none";
 defparam \code_test4[2]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_P15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_R13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \index_test[0]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -1272,7 +1274,7 @@ defparam \index_test[0]~I .output_register_mode = "none";
 defparam \index_test[0]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_A10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_C16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \index_test[1]~I (
 	.datain(gnd),
 	.oe(vcc),
@@ -1308,7 +1310,7 @@ defparam \index_test[1]~I .output_register_mode = "none";
 defparam \index_test[1]~I .output_sync_reset = "none";
 // synopsys translate_on
 
-// Location: PIN_B15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
+// Location: PIN_H12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 cycloneii_io \index_test[2]~I (
 	.datain(vcc),
 	.oe(vcc),

@@ -73,6 +73,7 @@ begin
 	abc:	for i in 0 to MAX_CODE_LENGTH-1 generate
 		code(i) <= next_value when i = current_index else unaffected;
 	end generate abc;
+	
 	--process(clock, next_value)
 	--begin
 	--	if (clock'event and clock = '0') then

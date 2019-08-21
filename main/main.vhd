@@ -37,7 +37,7 @@ begin
 	code(1) <= 1;
 	code(2) <= 2;
 	code(3) <= 1;
-	code(4) <= 0;
+	code(4) <= 2;
 	-- Controle de brilho para sinalizar o comando inserido atualmente
 	brightness_loop:	for i in 0 to MAX_CODE_LENGTH-1 generate
 		led_intensity(i)	<=	"00000000" when code(i) = 0 else
