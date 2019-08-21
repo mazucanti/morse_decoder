@@ -38,28 +38,29 @@ begin
 		--variable code_variable	: integer_vector := code;
 		variable new_value	: integer range 0 to 2 := next_value;
 	begin
-		-- Botao ativo em baixo
-		-- "reset" assincrono
-		if	(button_input = '1') then
-			if (new_value /= 0) then
-		--		index_variable := index_variable + 1;
-		--		if (index_variable = MAX_CODE_LENGTH) then
-		--			index_variable := 0;
-		--		end if;
+		if (clock'event and clock = '0') then
+			-- Botao ativo em baixo
+			-- "reset" assincrono
+			if	(button_input = '1') then
+				if (new_value /= 0) then
+					index_variable := index_variable + 1;
+					if (index_variable = MAX_CODE_LENGTH) then
+						index_variable := 0;
+					end if;
+				end if;
+				next_value <= new_value;
+				new_value := 0;
+				count := 0;
+				
+			else	
+				count := count + 1;
+				if (count > short_long_border) then		-- Sinal longo
+					new_value := 2;
+				else		-- Sinal curto
+					new_value := 1;
+				end if;
+				next_value <= new_value;
 			end if;
-			next_value <= new_value;
-			new_value := 0;
-			count := 0;
-
-			
-		elsif (clock'event and clock = '0') then
-			count := count + 1;
-			if (count > short_long_border) then		-- Sinal longo
-				new_value := 2;
-			else		-- Sinal curto
-				new_value := 1;
-			end if;
-			next_value <= new_value;
 		end if;
 		
 		current_index <= index_variable;
@@ -70,27 +71,37 @@ begin
 	code_current_index_test <= next_value;
 
 	
-	abc:	for i in 0 to MAX_CODE_LENGTH-1 generate
-		code(i) <= next_value when i = current_index else unaffected;
-	end generate abc;
+	--code(0) <= next_value when current_index = 0 else unaffected;
+	--code(1) <= next_value when current_index = 1 else unaffected;
+	--code(2) <= next_value when current_index = 2 else unaffected;
+	--code(3) <= next_value when current_index = 3 else unaffected;
+	--code(4) <= next_value when current_index = 4 else unaffected;
 	
-	--process(clock, next_value)
-	--begin
-	--	if (clock'event and clock = '0') then
-	--		for i in 0 to MAX_CODE_LENGTH-1 loop
-	--			case current_index is
-	--				when i => code(i) <= next_value;
-	--				when others => code(i) <= unaffected;
-	--			end case;
-	--		end loop;
-	--	end if;
-	--end process;
+	--code_assigner:	for i in 0 to MAX_CODE_LENGTH-1 generate
+	--	code(i) <= next_value when i = current_index else unaffected;
+	--end generate code_assigner;
+	
+	process(clock, next_value)
+	begin
+		if (clock'event and clock = '0') then
+			for i in 0 to MAX_CODE_LENGTH-1 loop
+				case current_index is
+					when i => code(i) <= next_value;
+					when others => code(i) <= unaffected;
+				end case;
+			end loop;
+		end if;
+	end process;
 	
 	-- [DEBUG]
-	--code_test0 <= code(0);
-	--code_test1 <= code(1);
-	--code_test2 <= code(2);
-	--code_test3 <= code(3);
-	--code_test4 <= code(4);
+	code_test0 <= code(0);
+	code_test1 <= code(1);
+	code_test2 <= code(2);
+	code_test3 <= code(3);
+	code_test4 <= code(4);
 
 end verifier;
+
+-- Insight para a solucao do problema do indice por Ricardo Gomes
+-- Referências
+-- https://stackoverflow.com/questions/20308514/declaring-an-array-within-an-entity-in-vhdl

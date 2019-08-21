@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "08/21/2019 16:04:35"
+// Generated on "08/21/2019 19:57:15"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    short_or_long_signal_identifier
 // 
@@ -483,11 +483,17 @@ short_or_long_signal_identifier i1 (
 // button_input
 initial
 begin
-	button_input = 1'b0;
-	button_input = #100000 1'b1;
-	button_input = #200000 1'b0;
-	button_input = #400000 1'b1;
-	button_input = #200000 1'b0;
+	button_input = 1'b1;
+	button_input = #50000 1'b0;
+	button_input = #150000 1'b1;
+	button_input = #50000 1'b0;
+	button_input = #50000 1'b1;
+	button_input = #100000 1'b0;
+	button_input = #50000 1'b1;
+	button_input = #50000 1'b0;
+	button_input = #300000 1'b1;
+	button_input = #50000 1'b0;
+	button_input = #50000 1'b1;
 end 
 
 // clock
