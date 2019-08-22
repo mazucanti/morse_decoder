@@ -19,27 +19,34 @@ use work.code_types.all;
 entity short_or_long_signal_identifier is
 	port (clock	: in std_logic;
 			button_input	: in std_logic;
-			--clear, backspace	: in std_logic;
+			clear	: in std_logic;
+			code	: buffer integer_vector);	-- Comentar para Simulacao
 			
-			code_test0, code_test1, code_test2, code_test3, code_test4 : out integer range 0 to 2;
-			index_test	: out integer range 0 to MAX_CODE_LENGTH-1;
-			code_current_index_test	:	out integer range 0 to 2);
+			--code_test0, code_test1, code_test2, code_test3, code_test4 : out integer range 0 to 2);	-- Descomentar para Simulacao
+			--index_test	: out integer range 0 to MAX_CODE_LENGTH-1;
 end short_or_long_signal_identifier;
 
 architecture verifier of short_or_long_signal_identifier is
 	-- Define o tempo em que o sinal mudara de curto para longo
-	constant short_long_border : integer := 25;		-- 0.5s
+	constant short_long_border : integer := 25000000;		-- 0.5s
 	
-	signal	code	: integer_vector	:= (others => 0);		-- Guarda a "letra" salva atualmente (0: desligado, 1: ponto, 2: traco)
+	--signal	code	: integer_vector	:= (others => 0);		-- Guarda a "letra" salva atualmente (0: desligado, 1: ponto, 2: traco)	-- Descomentar para Simulacao
 begin
 -- save state
-	process(clock, button_input)
+	process(clock, button_input, clear)
 		variable count	: integer := 0;
 		variable current_index	: integer range 0 to MAX_CODE_LENGTH := 0;
 	begin
-		if (clock'event and clock = '0') then
+		if (clear = '0') then	-- Se o botao de clear foi pressionado
+			count := 0;
+			current_index := 0;
+			for i in 0 to MAX_CODE_LENGTH-1 loop
+				code(i) <= 0;
+			end loop;
 			
-			if	(button_input = '1') then	-- Se o botao esta solto
+		elsif (clock'event and clock = '0') then
+			
+			if	(button_input = '1') then	-- Se o botao de input esta solto
 
 				if (code(current_index) /= 0) then	-- Se estava apertado antes soma indice
 					current_index := current_index + 1;
@@ -62,16 +69,15 @@ begin
 			
 		end if;
 		
-		index_test <= current_index;
-		--code <= code_variable;
+		--index_test <= current_index;
 	end process;
 		
-	-- [DEBUG]
-	code_test0 <= code(0);
-	code_test1 <= code(1);
-	code_test2 <= code(2);
-	code_test3 <= code(3);
-	code_test4 <= code(4);
+	-- [DEBUG]	-- Descomentar para a Simulação
+	--code_test0 <= code(0);
+	--code_test1 <= code(1);
+	--code_test2 <= code(2);
+	--code_test3 <= code(3);
+	--code_test4 <= code(4);
 
 end verifier;
 

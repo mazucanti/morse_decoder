@@ -29,5 +29,5 @@
 # Loading work.short_or_long_signal_identifier_vlg_check_tst
 # Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
 # Simulation passed !
-# ** Note: $finish    : short_or_long_signal_identifier.vt(449)
+# ** Note: $finish    : short_or_long_signal_identifier.vt(345)
 #    Time: 1 us  Iteration: 0  Instance: /short_or_long_signal_identifier_vlg_vec_tst/tb_out
