@@ -1,4 +1,8 @@
+#Fuck everything
 *
-!*.vhd*
-!.gitignore
-!*.qpf*
+
+#But not our codes
+!**.vhd
+
+#Or the project files
+!**.qpf
