@@ -1,6 +1,6 @@
 Analysis & Synthesis report for short_or_long_signal_identifier
-Thu Aug 22 10:55:37 2019
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Thu Aug 22 11:57:46 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -14,8 +14,9 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -41,15 +42,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Aug 22 10:55:37 2019           ;
-; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Analysis & Synthesis Status        ; Successful - Thu Aug 22 11:57:46 2019           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; short_or_long_signal_identifier                 ;
 ; Top-level Entity Name              ; short_or_long_signal_identifier                 ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 99                                              ;
-;     Total combinational functions  ; 89                                              ;
-;     Dedicated logic registers      ; 49                                              ;
-; Total registers                    ; 49                                              ;
+; Total logic elements               ; 105                                             ;
+;     Total combinational functions  ; 97                                              ;
+;     Dedicated logic registers      ; 45                                              ;
+; Total registers                    ; 45                                              ;
 ; Total pins                         ; 17                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -168,28 +169,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 99    ;
+; Estimated Total logic elements              ; 105   ;
 ;                                             ;       ;
-; Total combinational functions               ; 89    ;
+; Total combinational functions               ; 97    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 14    ;
-;     -- 3 input functions                    ; 10    ;
-;     -- <=2 input functions                  ; 65    ;
+;     -- 4 input functions                    ; 28    ;
+;     -- 3 input functions                    ; 3     ;
+;     -- <=2 input functions                  ; 66    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 58    ;
+;     -- normal mode                          ; 66    ;
 ;     -- arithmetic mode                      ; 31    ;
 ;                                             ;       ;
-; Total registers                             ; 49    ;
-;     -- Dedicated logic registers            ; 49    ;
+; Total registers                             ; 45    ;
+;     -- Dedicated logic registers            ; 45    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 17    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 49    ;
-; Total fan-out                               ; 340   ;
-; Average fan-out                             ; 2.19  ;
+; Maximum fan-out                             ; 45    ;
+; Total fan-out                               ; 368   ;
+; Average fan-out                             ; 2.31  ;
 +---------------------------------------------+-------+
 
 
@@ -198,7 +199,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
 ; Compilation Hierarchy Node       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Library Name ;
 +----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
-; |short_or_long_signal_identifier ; 89 (89)           ; 49 (49)      ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; |short_or_long_signal_identifier ; work         ;
+; |short_or_long_signal_identifier ; 97 (97)           ; 45 (45)      ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; |short_or_long_signal_identifier ; work         ;
 +----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -208,14 +209,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 49    ;
+; Total registers                              ; 45    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 12    ;
+; Number of registers using Clock Enable       ; 13    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |short_or_long_signal_identifier|code[4][0]    ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |short_or_long_signal_identifier|code[3][0]    ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |short_or_long_signal_identifier|code[2][1]    ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |short_or_long_signal_identifier|code[1][0]    ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |short_or_long_signal_identifier|code[0][1]    ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |short_or_long_signal_identifier|current_index ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |short_or_long_signal_identifier|Mux1          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
 
 
 +-------------------------------+
@@ -223,7 +239,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -231,9 +247,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Analysis & Synthesis
+Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Aug 22 10:55:31 2019
+    Info: Processing started: Thu Aug 22 11:57:39 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off short_or_long_signal_identifier -c short_or_long_signal_identifier
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 3 design units, including 1 entities, in source file short_or_long_signal_identifier.vhd
@@ -241,18 +257,20 @@ Info (12021): Found 3 design units, including 1 entities, in source file short_o
     Info (12022): Found design unit 2: short_or_long_signal_identifier-verifier
     Info (12023): Found entity 1: short_or_long_signal_identifier
 Info (12127): Elaborating entity "short_or_long_signal_identifier" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at short_or_long_signal_identifier.vhd(39): signal "current_index" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at short_or_long_signal_identifier.vhd(40): signal "next_value" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10541): VHDL Signal Declaration warning at short_or_long_signal_identifier.vhd(26): used implicit default value for signal "code_current_index_test" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "code_current_index_test[0]" is stuck at GND
+    Warning (13410): Pin "code_current_index_test[1]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 116 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 127 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 99 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 428 megabytes
-    Info: Processing ended: Thu Aug 22 10:55:37 2019
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:04
+    Info (21061): Implemented 110 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4668 megabytes
+    Info: Processing ended: Thu Aug 22 11:57:46 2019
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:05
 
 

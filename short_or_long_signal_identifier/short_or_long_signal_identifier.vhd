@@ -31,59 +31,41 @@ architecture verifier of short_or_long_signal_identifier is
 	constant short_long_border : integer := 25;		-- 0.5s
 	
 	signal	code	: integer_vector	:= (others => 0);		-- Guarda a "letra" salva atualmente (0: desligado, 1: ponto, 2: traco)
-	signal current_index	: integer range 0 to MAX_CODE_LENGTH := 0;
-	signal next_value	: integer range 0 to 2 := 0;
 begin
+-- save state
 	process(clock, button_input)
 		variable count	: integer := 0;
-		variable index_variable	: integer range 0 to MAX_CODE_LENGTH := current_index;
-		variable new_value	: integer range 0 to 2 := next_value;
+		variable current_index	: integer range 0 to MAX_CODE_LENGTH := 0;
 	begin
 		if (clock'event and clock = '0') then
 			
 			if	(button_input = '1') then	-- Se o botao esta solto
 
-				if (new_value /= 0) then	-- Se estava apertado antes soma indice
-					index_variable := index_variable + 1;
-					if (index_variable = MAX_CODE_LENGTH) then
-						index_variable := 0;
+				if (code(current_index) /= 0) then	-- Se estava apertado antes soma indice
+					current_index := current_index + 1;
+					if (current_index = MAX_CODE_LENGTH) then
+						current_index := 0;
 					end if;
 				end if;
 				
-				next_value <= new_value;
-				new_value := 0;
+				code(current_index) <= 0;
 				count := 0;
 				
 			else	
 				count := count + 1;
 				if (count > short_long_border) then		-- Sinal longo
-					new_value := 2;
+					code(current_index) <= 2;
 				else		-- Sinal curto
-					new_value := 1;
+					code(current_index) <= 1;
 				end if;
-				next_value <= new_value;
 			end if;
-			
-			for i in 0 to MAX_CODE_LENGTH-1 loop
-				case current_index is
-					when i => code(i) <= next_value;
-					when others => code(i) <= unaffected;
-				end case;
-			end loop;
 			
 		end if;
 		
-		current_index <= index_variable;
+		index_test <= current_index;
 		--code <= code_variable;
 	end process;
-	
-	index_test <= current_index;
-	code_current_index_test <= next_value;
-	
-	--code_assigner:	for i in 0 to MAX_CODE_LENGTH-1 generate
-	--	code(i) <= next_value when i = current_index else unaffected;
-	--end generate code_assigner;
-	
+		
 	-- [DEBUG]
 	code_test0 <= code(0);
 	code_test1 <= code(1);
