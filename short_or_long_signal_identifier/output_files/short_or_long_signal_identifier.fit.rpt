@@ -1,6 +1,6 @@
 Fitter report for short_or_long_signal_identifier
-Wed Aug 21 19:55:36 2019
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Thu Aug 22 10:55:50 2019
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -35,10 +35,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  27. LAB Distinct Inputs
  28. Fitter Device Options
  29. Operating Settings and Conditions
- 30. Estimated Delay Added for Hold Timing Summary
- 31. Estimated Delay Added for Hold Timing Details
- 32. Fitter Messages
- 33. Fitter Suppressed Messages
+ 30. Fitter Messages
+ 31. Fitter Suppressed Messages
 
 
 
@@ -64,17 +62,17 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Wed Aug 21 19:55:35 2019           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Fitter Status                      ; Successful - Thu Aug 22 10:55:50 2019           ;
+; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; short_or_long_signal_identifier                 ;
 ; Top-level Entity Name              ; short_or_long_signal_identifier                 ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C20F484C7                                    ;
 ; Timing Models                      ; Final                                           ;
 ; Total logic elements               ; 99 / 18,752 ( < 1 % )                           ;
-;     Total combinational functions  ; 99 / 18,752 ( < 1 % )                           ;
-;     Dedicated logic registers      ; 39 / 18,752 ( < 1 % )                           ;
-; Total registers                    ; 39                                              ;
+;     Total combinational functions  ; 89 / 18,752 ( < 1 % )                           ;
+;     Dedicated logic registers      ; 49 / 18,752 ( < 1 % )                           ;
+; Total registers                    ; 49                                              ;
 ; Total pins                         ; 17 / 315 ( 5 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 239,616 ( 0 % )                             ;
@@ -150,8 +148,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 165 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 165 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 160 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 160 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -174,7 +172,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 162     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 157     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -191,45 +189,45 @@ The pin-out file can be found in C:/Users/Shoji/Desktop/morse_decoder/short_or_l
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
 ; Total logic elements                        ; 99 / 18,752 ( < 1 % ) ;
-;     -- Combinational with no register       ; 60                    ;
-;     -- Register only                        ; 0                     ;
+;     -- Combinational with no register       ; 50                    ;
+;     -- Register only                        ; 10                    ;
 ;     -- Combinational with a register        ; 39                    ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
 ;     -- 4 input functions                    ; 14                    ;
-;     -- 3 input functions                    ; 20                    ;
+;     -- 3 input functions                    ; 10                    ;
 ;     -- <=2 input functions                  ; 65                    ;
-;     -- Register only                        ; 0                     ;
+;     -- Register only                        ; 10                    ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 68                    ;
+;     -- normal mode                          ; 58                    ;
 ;     -- arithmetic mode                      ; 31                    ;
 ;                                             ;                       ;
-; Total registers*                            ; 39 / 19,649 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 39 / 18,752 ( < 1 % ) ;
+; Total registers*                            ; 49 / 19,649 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 49 / 18,752 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 897 ( 0 % )       ;
 ;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 10 / 1,172 ( < 1 % )  ;
+; Total LABs:  partially or completely used   ; 11 / 1,172 ( < 1 % )  ;
 ; Virtual pins                                ; 0                     ;
 ; I/O pins                                    ; 17 / 315 ( 5 % )      ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )        ;
 ;                                             ;                       ;
-; Global signals                              ; 6                     ;
+; Global signals                              ; 1                     ;
 ; M4Ks                                        ; 0 / 52 ( 0 % )        ;
 ; Total block memory bits                     ; 0 / 239,616 ( 0 % )   ;
 ; Total block memory implementation bits      ; 0 / 239,616 ( 0 % )   ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )        ;
 ; PLLs                                        ; 0 / 4 ( 0 % )         ;
-; Global clocks                               ; 6 / 16 ( 38 % )       ;
+; Global clocks                               ; 1 / 16 ( 6 % )        ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )         ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )         ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%          ;
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%          ;
-; Maximum fan-out                             ; 37                    ;
+; Maximum fan-out                             ; 49                    ;
 ; Highest non-global fan-out                  ; 37                    ;
-; Total fan-out                               ; 346                   ;
-; Average fan-out                             ; 2.11                  ;
+; Total fan-out                               ; 349                   ;
+; Average fan-out                             ; 2.09                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -243,31 +241,31 @@ The pin-out file can be found in C:/Users/Shoji/Desktop/morse_decoder/short_or_l
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
 ; Total logic elements                        ; 99 / 18752 ( < 1 % ) ; 0 / 18752 ( 0 % )              ;
-;     -- Combinational with no register       ; 60                   ; 0                              ;
-;     -- Register only                        ; 0                    ; 0                              ;
+;     -- Combinational with no register       ; 50                   ; 0                              ;
+;     -- Register only                        ; 10                   ; 0                              ;
 ;     -- Combinational with a register        ; 39                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
 ;     -- 4 input functions                    ; 14                   ; 0                              ;
-;     -- 3 input functions                    ; 20                   ; 0                              ;
+;     -- 3 input functions                    ; 10                   ; 0                              ;
 ;     -- <=2 input functions                  ; 65                   ; 0                              ;
-;     -- Register only                        ; 0                    ; 0                              ;
+;     -- Register only                        ; 10                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 68                   ; 0                              ;
+;     -- normal mode                          ; 58                   ; 0                              ;
 ;     -- arithmetic mode                      ; 31                   ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total registers                             ; 39                   ; 0                              ;
-;     -- Dedicated logic registers            ; 39 / 18752 ( < 1 % ) ; 0 / 18752 ( 0 % )              ;
+; Total registers                             ; 49                   ; 0                              ;
+;     -- Dedicated logic registers            ; 49 / 18752 ( < 1 % ) ; 0 / 18752 ( 0 % )              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 10 / 1172 ( < 1 % )  ; 0 / 1172 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 11 / 1172 ( < 1 % )  ; 0 / 1172 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
 ; I/O pins                                    ; 17                   ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )       ; 0 / 52 ( 0 % )                 ;
 ; Total memory bits                           ; 0                    ; 0                              ;
 ; Total RAM block bits                        ; 0                    ; 0                              ;
-; Clock control block                         ; 6 / 20 ( 30 % )      ; 0 / 20 ( 0 % )                 ;
+; Clock control block                         ; 1 / 20 ( 5 % )       ; 0 / 20 ( 0 % )                 ;
 ;                                             ;                      ;                                ;
 ; Connections                                 ;                      ;                                ;
 ;     -- Input Connections                    ; 0                    ; 0                              ;
@@ -276,8 +274,8 @@ The pin-out file can be found in C:/Users/Shoji/Desktop/morse_decoder/short_or_l
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 346                  ; 0                              ;
-;     -- Registered Connections               ; 74                   ; 0                              ;
+;     -- Total Connections                    ; 349                  ; 0                              ;
+;     -- Registered Connections               ; 84                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 0                              ;
@@ -309,8 +307,8 @@ The pin-out file can be found in C:/Users/Shoji/Desktop/morse_decoder/short_or_l
 +--------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; Name         ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +--------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; button_input ; F13   ; 4        ; 35           ; 27           ; 3           ; 37                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; clock        ; M1    ; 1        ; 0            ; 13           ; 2           ; 3                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; button_input ; A17   ; 4        ; 37           ; 27           ; 2           ; 37                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; clock        ; M1    ; 1        ; 0            ; 13           ; 2           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 +--------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -319,21 +317,21 @@ The pin-out file can be found in C:/Users/Shoji/Desktop/morse_decoder/short_or_l
 +----------------------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; Name                       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +----------------------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; code_current_index_test[0] ; D14   ; 4        ; 35           ; 27           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; code_current_index_test[1] ; B17   ; 4        ; 37           ; 27           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; code_test0[0]              ; C14   ; 4        ; 39           ; 27           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; code_test0[1]              ; H13   ; 4        ; 37           ; 27           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; code_current_index_test[0] ; C13   ; 4        ; 31           ; 27           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; code_current_index_test[1] ; H12   ; 4        ; 31           ; 27           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; code_test0[0]              ; F13   ; 4        ; 35           ; 27           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; code_test0[1]              ; F14   ; 4        ; 35           ; 27           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 ; code_test1[0]              ; E14   ; 4        ; 35           ; 27           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; code_test1[1]              ; G15   ; 4        ; 39           ; 27           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; code_test2[0]              ; B16   ; 4        ; 33           ; 27           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; code_test2[1]              ; A17   ; 4        ; 37           ; 27           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; code_test3[0]              ; F14   ; 4        ; 35           ; 27           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; code_test3[1]              ; F15   ; 4        ; 39           ; 27           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; code_test4[0]              ; A16   ; 4        ; 33           ; 27           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; code_test4[1]              ; A15   ; 4        ; 33           ; 27           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; index_test[0]              ; B11   ; 3        ; 22           ; 27           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; index_test[1]              ; A11   ; 3        ; 22           ; 27           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; index_test[2]              ; E11   ; 3        ; 22           ; 27           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; code_test1[1]              ; D14   ; 4        ; 35           ; 27           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; code_test2[0]              ; G12   ; 4        ; 31           ; 27           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; code_test2[1]              ; F12   ; 4        ; 31           ; 27           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; code_test3[0]              ; B15   ; 4        ; 33           ; 27           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; code_test3[1]              ; A15   ; 4        ; 33           ; 27           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; code_test4[0]              ; A14   ; 4        ; 29           ; 27           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; code_test4[1]              ; B14   ; 4        ; 29           ; 27           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; index_test[0]              ; B17   ; 4        ; 37           ; 27           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; index_test[1]              ; B16   ; 4        ; 33           ; 27           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; index_test[2]              ; A16   ; 4        ; 33           ; 27           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 +----------------------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
@@ -344,8 +342,8 @@ The pin-out file can be found in C:/Users/Shoji/Desktop/morse_decoder/short_or_l
 +----------+------------------+---------------+--------------+
 ; 1        ; 1 / 41 ( 2 % )   ; 3.3V          ; --           ;
 ; 2        ; 2 / 33 ( 6 % )   ; 3.3V          ; --           ;
-; 3        ; 3 / 43 ( 7 % )   ; 3.3V          ; --           ;
-; 4        ; 13 / 40 ( 33 % ) ; 3.3V          ; --           ;
+; 3        ; 0 / 43 ( 0 % )   ; 3.3V          ; --           ;
+; 4        ; 16 / 40 ( 40 % ) ; 3.3V          ; --           ;
 ; 5        ; 0 / 39 ( 0 % )   ; 3.3V          ; --           ;
 ; 6        ; 1 / 36 ( 3 % )   ; 3.3V          ; --           ;
 ; 7        ; 0 / 40 ( 0 % )   ; 3.3V          ; --           ;
@@ -368,13 +366,13 @@ The pin-out file can be found in C:/Users/Shoji/Desktop/morse_decoder/short_or_l
 ; A8       ; 304        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A9       ; 298        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A10      ; 293        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; A11      ; 287        ; 3        ; index_test[1]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A11      ; 287        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A12      ; 283        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; A13      ; 281        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; A14      ; 279        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; A15      ; 273        ; 4        ; code_test4[1]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; A16      ; 271        ; 4        ; code_test4[0]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; A17      ; 265        ; 4        ; code_test2[1]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A14      ; 279        ; 4        ; code_test4[0]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A15      ; 273        ; 4        ; code_test3[1]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A16      ; 271        ; 4        ; index_test[2]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A17      ; 265        ; 4        ; button_input                             ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A18      ; 251        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A19      ; 249        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A20      ; 247        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -434,13 +432,13 @@ The pin-out file can be found in C:/Users/Shoji/Desktop/morse_decoder/short_or_l
 ; B8       ; 303        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B9       ; 297        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B10      ; 292        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B11      ; 286        ; 3        ; index_test[0]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B11      ; 286        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B12      ; 282        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; B13      ; 280        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B14      ; 278        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B15      ; 272        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B16      ; 270        ; 4        ; code_test2[0]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B17      ; 264        ; 4        ; code_current_index_test[1]               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B14      ; 278        ; 4        ; code_test4[1]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B15      ; 272        ; 4        ; code_test3[0]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B16      ; 270        ; 4        ; index_test[1]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B17      ; 264        ; 4        ; index_test[0]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B18      ; 250        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B19      ; 248        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B20      ; 246        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -458,8 +456,8 @@ The pin-out file can be found in C:/Users/Shoji/Desktop/morse_decoder/short_or_l
 ; C10      ; 296        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; C11      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; C12      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; C13      ; 275        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; C14      ; 260        ; 4        ; code_test0[0]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C13      ; 275        ; 4        ; code_current_index_test[0]               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C14      ; 260        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C15      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C16      ; 254        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; C17      ; 245        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -481,7 +479,7 @@ The pin-out file can be found in C:/Users/Shoji/Desktop/morse_decoder/short_or_l
 ; D11      ; 289        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D12      ; 284        ; 3        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; D13      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; D14      ; 267        ; 4        ; code_current_index_test[0]               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D14      ; 267        ; 4        ; code_test1[1]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D15      ; 259        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D16      ; 255        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D17      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -500,7 +498,7 @@ The pin-out file can be found in C:/Users/Shoji/Desktop/morse_decoder/short_or_l
 ; E8       ; 308        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E9       ; 301        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E10      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; E11      ; 288        ; 3        ; index_test[2]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E11      ; 288        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E12      ; 285        ; 3        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; E13      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; E14      ; 266        ; 4        ; code_test1[0]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
@@ -523,10 +521,10 @@ The pin-out file can be found in C:/Users/Shoji/Desktop/morse_decoder/short_or_l
 ; F9       ; 307        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F10      ; 295        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F11      ; 294        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; F12      ; 276        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; F13      ; 269        ; 4        ; button_input                             ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; F14      ; 268        ; 4        ; code_test3[0]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; F15      ; 262        ; 4        ; code_test3[1]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F12      ; 276        ; 4        ; code_test2[1]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F13      ; 269        ; 4        ; code_test0[0]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F14      ; 268        ; 4        ; code_test0[1]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F15      ; 262        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F16      ;            ;          ; VCCA_PLL2                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; F17      ;            ;          ; VCCD_PLL2                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; F18      ;            ;          ; GND_PLL2                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -545,10 +543,10 @@ The pin-out file can be found in C:/Users/Shoji/Desktop/morse_decoder/short_or_l
 ; G9       ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; G10      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; G11      ; 291        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; G12      ; 277        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; G12      ; 277        ; 4        ; code_test2[0]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; G13      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; G14      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; G15      ; 261        ; 4        ; code_test1[1]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G15      ; 261        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G16      ; 252        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G17      ; 231        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G18      ; 232        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -567,8 +565,8 @@ The pin-out file can be found in C:/Users/Shoji/Desktop/morse_decoder/short_or_l
 ; H9       ; 300        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H10      ; 299        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H11      ; 290        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; H12      ; 274        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; H13      ; 263        ; 4        ; code_test0[1]                            ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; H12      ; 274        ; 4        ; code_current_index_test[1]               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; H13      ; 263        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H14      ; 257        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H15      ; 253        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H16      ; 219        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -888,7 +886,7 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------+--------------+
 ; Compilation Hierarchy Node       ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name              ; Library Name ;
 +----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------+--------------+
-; |short_or_long_signal_identifier ; 99 (99)     ; 39 (39)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 17   ; 0            ; 60 (60)      ; 0 (0)             ; 39 (39)          ; |short_or_long_signal_identifier ; work         ;
+; |short_or_long_signal_identifier ; 99 (99)     ; 49 (49)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 17   ; 0            ; 50 (50)      ; 10 (10)           ; 39 (39)          ; |short_or_long_signal_identifier ; work         ;
 +----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -925,43 +923,43 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+-------------------+---------+
 ; clock                      ;                   ;         ;
 ; button_input               ;                   ;         ;
-;      - index_variable[0]~1 ; 0                 ; 6       ;
-;      - next_value~0        ; 0                 ; 6       ;
-;      - next_value~1        ; 0                 ; 6       ;
-;      - new_value~0         ; 0                 ; 6       ;
-;      - new_value~1         ; 0                 ; 6       ;
-;      - count~0             ; 0                 ; 6       ;
-;      - count~1             ; 0                 ; 6       ;
-;      - count~2             ; 0                 ; 6       ;
-;      - count~3             ; 0                 ; 6       ;
-;      - count~4             ; 0                 ; 6       ;
-;      - count~5             ; 0                 ; 6       ;
-;      - count~6             ; 0                 ; 6       ;
-;      - count~7             ; 0                 ; 6       ;
-;      - count~8             ; 0                 ; 6       ;
-;      - count~9             ; 0                 ; 6       ;
-;      - count~10            ; 0                 ; 6       ;
-;      - count~11            ; 0                 ; 6       ;
-;      - count~12            ; 0                 ; 6       ;
-;      - count~13            ; 0                 ; 6       ;
-;      - count~14            ; 0                 ; 6       ;
-;      - count~15            ; 0                 ; 6       ;
-;      - count~16            ; 0                 ; 6       ;
-;      - count~17            ; 0                 ; 6       ;
-;      - count~18            ; 0                 ; 6       ;
-;      - count~19            ; 0                 ; 6       ;
-;      - count~20            ; 0                 ; 6       ;
-;      - count~21            ; 0                 ; 6       ;
-;      - count~22            ; 0                 ; 6       ;
-;      - count~23            ; 0                 ; 6       ;
-;      - count~24            ; 0                 ; 6       ;
-;      - count~25            ; 0                 ; 6       ;
-;      - count~26            ; 0                 ; 6       ;
-;      - count~27            ; 0                 ; 6       ;
-;      - count~28            ; 0                 ; 6       ;
-;      - count~29            ; 0                 ; 6       ;
-;      - count~30            ; 0                 ; 6       ;
-;      - count~31            ; 0                 ; 6       ;
+;      - index_variable[0]~1 ; 1                 ; 6       ;
+;      - next_value~0        ; 1                 ; 6       ;
+;      - next_value~1        ; 1                 ; 6       ;
+;      - new_value~0         ; 1                 ; 6       ;
+;      - new_value~1         ; 1                 ; 6       ;
+;      - count~0             ; 1                 ; 6       ;
+;      - count~1             ; 1                 ; 6       ;
+;      - count~2             ; 1                 ; 6       ;
+;      - count~3             ; 1                 ; 6       ;
+;      - count~4             ; 1                 ; 6       ;
+;      - count~5             ; 1                 ; 6       ;
+;      - count~6             ; 1                 ; 6       ;
+;      - count~7             ; 1                 ; 6       ;
+;      - count~8             ; 1                 ; 6       ;
+;      - count~9             ; 1                 ; 6       ;
+;      - count~10            ; 1                 ; 6       ;
+;      - count~11            ; 1                 ; 6       ;
+;      - count~12            ; 1                 ; 6       ;
+;      - count~13            ; 1                 ; 6       ;
+;      - count~14            ; 1                 ; 6       ;
+;      - count~15            ; 1                 ; 6       ;
+;      - count~16            ; 1                 ; 6       ;
+;      - count~17            ; 1                 ; 6       ;
+;      - count~18            ; 1                 ; 6       ;
+;      - count~19            ; 1                 ; 6       ;
+;      - count~20            ; 1                 ; 6       ;
+;      - count~21            ; 1                 ; 6       ;
+;      - count~22            ; 1                 ; 6       ;
+;      - count~23            ; 1                 ; 6       ;
+;      - count~24            ; 1                 ; 6       ;
+;      - count~25            ; 1                 ; 6       ;
+;      - count~26            ; 1                 ; 6       ;
+;      - count~27            ; 1                 ; 6       ;
+;      - count~28            ; 1                 ; 6       ;
+;      - count~29            ; 1                 ; 6       ;
+;      - count~30            ; 1                 ; 6       ;
+;      - count~31            ; 1                 ; 6       ;
 +----------------------------+-------------------+---------+
 
 
@@ -970,29 +968,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Equal2~0            ; LCCOMB_X24_Y23_N28 ; 2       ; Latch enable ; yes    ; Global Clock         ; GCLK11           ; --                        ;
-; Equal2~1            ; LCCOMB_X24_Y23_N18 ; 2       ; Latch enable ; yes    ; Global Clock         ; GCLK14           ; --                        ;
-; Equal2~2            ; LCCOMB_X24_Y23_N22 ; 2       ; Latch enable ; yes    ; Global Clock         ; GCLK8            ; --                        ;
-; Equal2~3            ; LCCOMB_X24_Y23_N30 ; 2       ; Latch enable ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-; Equal2~4            ; LCCOMB_X24_Y23_N24 ; 2       ; Latch enable ; yes    ; Global Clock         ; GCLK9            ; --                        ;
-; clock               ; PIN_M1             ; 3       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clock               ; PIN_M1             ; 37      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; index_variable[0]~1 ; LCCOMB_X37_Y23_N26 ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Mux1~0              ; LCCOMB_X34_Y26_N14 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Mux1~1              ; LCCOMB_X34_Y26_N16 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Mux1~2              ; LCCOMB_X34_Y26_N6  ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Mux1~3              ; LCCOMB_X34_Y26_N4  ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Mux1~4              ; LCCOMB_X34_Y26_N22 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; clock               ; PIN_M1             ; 49      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; index_variable[0]~1 ; LCCOMB_X35_Y25_N0  ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +---------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                   ;
-+----------+--------------------+---------+----------------------+------------------+---------------------------+
-; Name     ; Location           ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------+--------------------+---------+----------------------+------------------+---------------------------+
-; Equal2~0 ; LCCOMB_X24_Y23_N28 ; 2       ; Global Clock         ; GCLK11           ; --                        ;
-; Equal2~1 ; LCCOMB_X24_Y23_N18 ; 2       ; Global Clock         ; GCLK14           ; --                        ;
-; Equal2~2 ; LCCOMB_X24_Y23_N22 ; 2       ; Global Clock         ; GCLK8            ; --                        ;
-; Equal2~3 ; LCCOMB_X24_Y23_N30 ; 2       ; Global Clock         ; GCLK10           ; --                        ;
-; Equal2~4 ; LCCOMB_X24_Y23_N24 ; 2       ; Global Clock         ; GCLK9            ; --                        ;
-; clock    ; PIN_M1             ; 37      ; Global Clock         ; GCLK3            ; --                        ;
-+----------+--------------------+---------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                      ;
++-------+----------+---------+----------------------+------------------+---------------------------+
+; Name  ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------+----------+---------+----------------------+------------------+---------------------------+
+; clock ; PIN_M1   ; 49      ; Global Clock         ; GCLK3            ; --                        ;
++-------+----------+---------+----------------------+------------------+---------------------------+
 
 
 +---------------------------------+
@@ -1011,17 +1003,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; index_variable[0]~1 ; 3         ;
 ; Add1~60             ; 3         ;
 ; Add1~58             ; 3         ;
-; clock               ; 2         ;
-; code[4][1]          ; 2         ;
-; code[4][0]          ; 2         ;
-; code[3][1]          ; 2         ;
-; code[3][0]          ; 2         ;
-; code[2][1]          ; 2         ;
-; code[2][0]          ; 2         ;
-; code[1][1]          ; 2         ;
-; code[1][0]          ; 2         ;
-; code[0][1]          ; 2         ;
-; code[0][0]          ; 2         ;
 ; LessThan0~11        ; 2         ;
 ; LessThan0~9         ; 2         ;
 ; LessThan0~7         ; 2         ;
@@ -1029,6 +1010,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LessThan0~5         ; 2         ;
 ; new_value[1]        ; 2         ;
 ; new_value[0]        ; 2         ;
+; Mux1~4              ; 2         ;
+; Mux1~3              ; 2         ;
+; Mux1~2              ; 2         ;
+; Mux1~1              ; 2         ;
+; Mux1~0              ; 2         ;
 ; Add1~56             ; 2         ;
 ; Add1~54             ; 2         ;
 ; Add1~52             ; 2         ;
@@ -1134,6 +1120,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; index_variable~3    ; 1         ;
 ; index_variable[1]~2 ; 1         ;
 ; index_variable~0    ; 1         ;
+; code[4][1]          ; 1         ;
+; code[4][0]          ; 1         ;
+; code[3][1]          ; 1         ;
+; code[3][0]          ; 1         ;
+; code[2][1]          ; 1         ;
+; code[2][0]          ; 1         ;
+; code[1][1]          ; 1         ;
+; code[1][0]          ; 1         ;
+; code[0][1]          ; 1         ;
+; code[0][0]          ; 1         ;
 ; Add1~61             ; 1         ;
 ; Add1~59             ; 1         ;
 ; Add1~57             ; 1         ;
@@ -1174,37 +1170,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 135 / 54,004 ( < 1 % ) ;
-; C16 interconnects           ; 2 / 2,100 ( < 1 % )    ;
+; Block interconnects         ; 126 / 54,004 ( < 1 % ) ;
+; C16 interconnects           ; 0 / 2,100 ( 0 % )      ;
 ; C4 interconnects            ; 31 / 36,000 ( < 1 % )  ;
-; Direct links                ; 75 / 54,004 ( < 1 % )  ;
-; Global clocks               ; 6 / 16 ( 38 % )        ;
-; Local interconnects         ; 43 / 18,752 ( < 1 % )  ;
-; R24 interconnects           ; 2 / 1,900 ( < 1 % )    ;
-; R4 interconnects            ; 37 / 46,920 ( < 1 % )  ;
+; Direct links                ; 66 / 54,004 ( < 1 % )  ;
+; Global clocks               ; 1 / 16 ( 6 % )         ;
+; Local interconnects         ; 37 / 18,752 ( < 1 % )  ;
+; R24 interconnects           ; 0 / 1,900 ( 0 % )      ;
+; R4 interconnects            ; 40 / 46,920 ( < 1 % )  ;
 +-----------------------------+------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +--------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 9.90) ; Number of LABs  (Total = 10) ;
+; Number of Logic Elements  (Average = 9.00) ; Number of LABs  (Total = 11) ;
 +--------------------------------------------+------------------------------+
-; 1                                          ; 1                            ;
+; 1                                          ; 2                            ;
 ; 2                                          ; 1                            ;
-; 3                                          ; 1                            ;
-; 4                                          ; 0                            ;
+; 3                                          ; 0                            ;
+; 4                                          ; 2                            ;
 ; 5                                          ; 0                            ;
 ; 6                                          ; 0                            ;
-; 7                                          ; 1                            ;
+; 7                                          ; 0                            ;
 ; 8                                          ; 1                            ;
 ; 9                                          ; 0                            ;
 ; 10                                         ; 0                            ;
 ; 11                                         ; 0                            ;
 ; 12                                         ; 0                            ;
 ; 13                                         ; 0                            ;
-; 14                                         ; 1                            ;
-; 15                                         ; 0                            ;
+; 14                                         ; 0                            ;
+; 15                                         ; 1                            ;
 ; 16                                         ; 4                            ;
 +--------------------------------------------+------------------------------+
 
@@ -1212,30 +1208,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 0.80) ; Number of LABs  (Total = 10) ;
+; LAB-wide Signals  (Average = 1.09) ; Number of LABs  (Total = 11) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 7                            ;
-; 1 Clock enable                     ; 1                            ;
+; 1 Clock                            ; 8                            ;
+; 1 Clock enable                     ; 2                            ;
+; 2 Clock enables                    ; 2                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 13.80) ; Number of LABs  (Total = 10) ;
+; Number of Signals Sourced  (Average = 13.27) ; Number of LABs  (Total = 11) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
-; 2                                            ; 2                            ;
-; 3                                            ; 1                            ;
-; 4                                            ; 0                            ;
+; 1                                            ; 2                            ;
+; 2                                            ; 0                            ;
+; 3                                            ; 0                            ;
+; 4                                            ; 1                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 0                            ;
+; 6                                            ; 1                            ;
 ; 7                                            ; 0                            ;
-; 8                                            ; 0                            ;
-; 9                                            ; 2                            ;
+; 8                                            ; 1                            ;
+; 9                                            ; 0                            ;
 ; 10                                           ; 0                            ;
-; 11                                           ; 0                            ;
+; 11                                           ; 1                            ;
 ; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
 ; 14                                           ; 0                            ;
@@ -1244,13 +1241,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 17                                           ; 0                            ;
 ; 18                                           ; 0                            ;
 ; 19                                           ; 0                            ;
-; 20                                           ; 2                            ;
-; 21                                           ; 0                            ;
+; 20                                           ; 1                            ;
+; 21                                           ; 1                            ;
 ; 22                                           ; 0                            ;
 ; 23                                           ; 0                            ;
 ; 24                                           ; 0                            ;
-; 25                                           ; 1                            ;
-; 26                                           ; 0                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 1                            ;
 ; 27                                           ; 0                            ;
 ; 28                                           ; 0                            ;
 ; 29                                           ; 0                            ;
@@ -1263,24 +1260,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 9.10) ; Number of LABs  (Total = 10) ;
+; Number of Signals Sourced Out  (Average = 8.00) ; Number of LABs  (Total = 11) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 1                            ;
+; 1                                               ; 2                            ;
 ; 2                                               ; 1                            ;
-; 3                                               ; 1                            ;
-; 4                                               ; 0                            ;
-; 5                                               ; 0                            ;
+; 3                                               ; 0                            ;
+; 4                                               ; 2                            ;
+; 5                                               ; 1                            ;
 ; 6                                               ; 0                            ;
-; 7                                               ; 1                            ;
-; 8                                               ; 2                            ;
+; 7                                               ; 0                            ;
+; 8                                               ; 1                            ;
 ; 9                                               ; 0                            ;
 ; 10                                              ; 0                            ;
 ; 11                                              ; 0                            ;
 ; 12                                              ; 0                            ;
 ; 13                                              ; 0                            ;
-; 14                                              ; 1                            ;
-; 15                                              ; 0                            ;
+; 14                                              ; 0                            ;
+; 15                                              ; 1                            ;
 ; 16                                              ; 3                            ;
 +-------------------------------------------------+------------------------------+
 
@@ -1288,26 +1285,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 11.50) ; Number of LABs  (Total = 10) ;
+; Number of Distinct Inputs  (Average = 10.82) ; Number of LABs  (Total = 11) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 0                            ;
-; 3                                            ; 2                            ;
-; 4                                            ; 2                            ;
-; 5                                            ; 0                            ;
+; 2                                            ; 2                            ;
+; 3                                            ; 1                            ;
+; 4                                            ; 1                            ;
+; 5                                            ; 2                            ;
 ; 6                                            ; 0                            ;
 ; 7                                            ; 0                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 1                            ;
+; 10                                           ; 0                            ;
 ; 11                                           ; 0                            ;
 ; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
-; 14                                           ; 1                            ;
+; 14                                           ; 0                            ;
 ; 15                                           ; 0                            ;
 ; 16                                           ; 1                            ;
-; 17                                           ; 1                            ;
+; 17                                           ; 2                            ;
 ; 18                                           ; 1                            ;
 ; 19                                           ; 0                            ;
 ; 20                                           ; 0                            ;
@@ -1316,7 +1313,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 23                                           ; 0                            ;
 ; 24                                           ; 0                            ;
 ; 25                                           ; 0                            ;
-; 26                                           ; 1                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 0                            ;
+; 29                                           ; 0                            ;
+; 30                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -1347,29 +1348,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Low Junction Temperature  ; 0 °C   ;
 ; High Junction Temperature ; 85 °C  ;
 +---------------------------+--------+
-
-
-+------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary              ;
-+-----------------+----------------------+-------------------+
-; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
-+-----------------+----------------------+-------------------+
-; clock           ; index_variable[0]    ; 10.4              ;
-+-----------------+----------------------+-------------------+
-Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
-This will disable optimization of problematic paths and expose them for further analysis using either the TimeQuest Timing Analyzer or the Classic Timing Analyzer.
-
-
-+--------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                ;
-+-------------------+----------------------+-------------------+
-; Source Register   ; Destination Register ; Delay Added in ns ;
-+-------------------+----------------------+-------------------+
-; index_variable[0] ; code[0][0]           ; 1.357             ;
-; index_variable[1] ; code[3][1]           ; 1.298             ;
-; index_variable[2] ; code[3][1]           ; 1.296             ;
-+-------------------+----------------------+-------------------+
-Note: This table only shows the top 3 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1407,25 +1385,11 @@ Critical Warning (169085): No exact pin location assignment(s) for 17 pins of 17
     Info (169086): Pin code_current_index_test[1] not assigned to an exact location on the device
     Info (169086): Pin clock not assigned to an exact location on the device
     Info (169086): Pin button_input not assigned to an exact location on the device
-Warning (335093): TimeQuest Timing Analyzer is analyzing 10 combinational loops as latches.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'short_or_long_signal_identifier.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176353): Automatically promoted node clock (placed in PIN M1 (CLK2, LVDSCLK1p, Input))
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
-    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node index_variable[1]
-        Info (176357): Destination node index_variable[2]
-Info (176353): Automatically promoted node Equal2~0 
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node Equal2~1 
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node Equal2~2 
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node Equal2~3 
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node Equal2~4 
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
@@ -1454,7 +1418,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.59 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.39 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 15 output pins without output pin load capacitance assignment
     Info (306007): Pin "code_test0[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1475,14 +1439,14 @@ Warning (306006): Found 15 output pins without output pin load capacitance assig
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/Shoji/Desktop/morse_decoder/short_or_long_signal_identifier/output_files/short_or_long_signal_identifier.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4891 megabytes
-    Info: Processing ended: Wed Aug 21 19:55:36 2019
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:09
+Info: Quartus II 32-bit Fitter was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 494 megabytes
+    Info: Processing ended: Thu Aug 22 10:55:51 2019
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:11
 
 
 +----------------------------+

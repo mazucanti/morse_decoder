@@ -1,4 +1,14 @@
 |short_or_long_signal_identifier
+clock => code[4][0].CLK
+clock => code[4][1].CLK
+clock => code[3][0].CLK
+clock => code[3][1].CLK
+clock => code[2][0].CLK
+clock => code[2][1].CLK
+clock => code[1][0].CLK
+clock => code[1][1].CLK
+clock => code[0][0].CLK
+clock => code[0][1].CLK
 clock => next_value[0].CLK
 clock => next_value[1].CLK
 clock => count[0].CLK
