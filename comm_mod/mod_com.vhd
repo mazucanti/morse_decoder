@@ -13,21 +13,23 @@ use ieee.std_logic_1164.all;
 use work.code_types.all;
 
 entity mod_com is
-	port (clk, enter: in std_logic;
+	port (enter: in std_logic;
 			--enter: controle de envio de mensagem
-			code : inout integer_vector;
-			symbol : out integer); 
+			code : inout integer_vector);
 			--Mensagem a ser enviada ou recebida
 end entity;
 
 --Arquitetura de envio de mensagem
 architecture send of mod_com is
+begin
+	process(enter)
+		variable symbol_variable	: integer := symbol;
 	begin
-	process(clk)
-		variable index : integer range 0 to MAX_CODE_LENGTH := 0;
-		begin
-		if enter = '0' then
-			
+		symbol_variable := symbol;
+		if enter'event and enter = '0' then
+				symbol <= code(i);
+			end loop;
 		end if;
+		symbol <= symbol_variable;
 	end process;
 end architecture;

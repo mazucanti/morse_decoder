@@ -1,6 +1,6 @@
 |send_control
-clk => w_perm~reg0.CLK
 clk => r_perm~reg0.CLK
+clk => w_perm~reg0.CLK
 clk => count[0].CLK
 clk => count[1].CLK
 clk => count[2].CLK
@@ -26,10 +26,10 @@ clk => count[21].CLK
 clk => count[22].CLK
 clk => count[23].CLK
 r_w => send.DATAIN
-recieve => w_perm~reg0.ENA
-recieve => r_perm~reg0.ENA
-r_perm <= r_perm~reg0.DB_MAX_OUTPUT_PORT_TYPE
-w_perm <= w_perm~reg0.DB_MAX_OUTPUT_PORT_TYPE
+recieve => w_perm.OUTPUTSELECT
+recieve => r_perm.OUTPUTSELECT
+r_perm << r_perm~reg0.DB_MAX_OUTPUT_PORT_TYPE
+w_perm << w_perm~reg0.DB_MAX_OUTPUT_PORT_TYPE
 send <= r_w.DB_MAX_OUTPUT_PORT_TYPE
 
 

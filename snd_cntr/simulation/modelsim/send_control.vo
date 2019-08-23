@@ -13,10 +13,10 @@
 // applicable agreement for further details.
 
 // VENDOR "Altera"
-// PROGRAM "Quartus II 32-bit"
+// PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
-// DATE "08/23/2019 17:39:09"
+// DATE "08/23/2019 19:48:51"
 
 // 
 // Device: Altera EP2C20F484C7 Package FBGA484
@@ -1095,7 +1095,7 @@ defparam \LessThan0~6 .sum_lutc_input = "datac";
 // Location: LCCOMB_X49_Y8_N24
 cycloneii_lcell_comb \r_perm~0 (
 // Equation(s):
-// \r_perm~0_combout  = (\recieve~combout  & (((\r_perm~reg0_regout )))) # (!\recieve~combout  & (!\LessThan0~3_combout  & ((!\LessThan0~6_combout ))))
+// \r_perm~0_combout  = (!\recieve~combout  & (\r_perm~reg0_regout  $ (((!\LessThan0~3_combout  & !\LessThan0~6_combout )))))
 
 	.dataa(\LessThan0~3_combout ),
 	.datab(\recieve~combout ),
@@ -1105,7 +1105,7 @@ cycloneii_lcell_comb \r_perm~0 (
 	.combout(\r_perm~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \r_perm~0 .lut_mask = 16'hC0D1;
+defparam \r_perm~0 .lut_mask = 16'h3021;
 defparam \r_perm~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
@@ -1125,7 +1125,7 @@ cycloneii_lcell_ff \r_perm~reg0 (
 // Location: LCCOMB_X49_Y8_N26
 cycloneii_lcell_comb \w_perm~0 (
 // Equation(s):
-// \w_perm~0_combout  = (\recieve~combout  & (!\LessThan0~3_combout  & ((!\LessThan0~6_combout )))) # (!\recieve~combout  & (((\w_perm~reg0_regout ))))
+// \w_perm~0_combout  = (\recieve~combout  & (\w_perm~reg0_regout  $ (((!\LessThan0~3_combout  & !\LessThan0~6_combout )))))
 
 	.dataa(\LessThan0~3_combout ),
 	.datab(\recieve~combout ),
@@ -1135,7 +1135,7 @@ cycloneii_lcell_comb \w_perm~0 (
 	.combout(\w_perm~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \w_perm~0 .lut_mask = 16'h3074;
+defparam \w_perm~0 .lut_mask = 16'hC084;
 defparam \w_perm~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
