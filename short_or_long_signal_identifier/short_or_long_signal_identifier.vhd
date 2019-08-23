@@ -4,6 +4,8 @@
 -- 1: Curto
 -- 2: Longo
 
+-- Falta implementar o Backspace e fazer o indice parar em MAX_CODE_LENGTH-1
+
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -19,21 +21,20 @@ use work.code_types.all;
 entity short_or_long_signal_identifier is
 	port (clock	: in std_logic;
 			button_input	: in std_logic;
-			clear	: in std_logic;
-			code	: buffer integer_vector);	-- Comentar para Simulacao
+			clear, backspace	: in std_logic;
+			--code	: buffer integer_vector);	-- Comentar para Simulacao
 			
-			--code_test0, code_test1, code_test2, code_test3, code_test4 : out integer range 0 to 2);	-- Descomentar para Simulacao
-			--index_test	: out integer range 0 to MAX_CODE_LENGTH-1;
+			code_test0, code_test1, code_test2, code_test3, code_test4 : out integer range 0 to 2);	-- Descomentar para Simulacao
+			index_test	: out integer range 0 to MAX_CODE_LENGTH-1;
 end short_or_long_signal_identifier;
 
 architecture verifier of short_or_long_signal_identifier is
 	-- Define o tempo em que o sinal mudara de curto para longo
-	constant short_long_border : integer := 25000000;		-- 0.5s
+	constant short_long_border : integer := 25;		-- 0.5s
 	
-	--signal	code	: integer_vector	:= (others => 0);		-- Guarda a "letra" salva atualmente (0: desligado, 1: ponto, 2: traco)	-- Descomentar para Simulacao
+	signal	code	: integer_vector	:= (others => 0);		-- Guarda a "letra" salva atualmente (0: desligado, 1: ponto, 2: traco)	-- Descomentar para Simulacao
 begin
--- save state
-	process(clock, button_input, clear)
+	process(clock, button_input, clear, backspace)
 		variable count	: integer := 0;
 		variable current_index	: integer range 0 to MAX_CODE_LENGTH := 0;
 	begin
@@ -69,15 +70,15 @@ begin
 			
 		end if;
 		
-		--index_test <= current_index;
+		index_test <= current_index;
 	end process;
 		
 	-- [DEBUG]	-- Descomentar para a Simulação
-	--code_test0 <= code(0);
-	--code_test1 <= code(1);
-	--code_test2 <= code(2);
-	--code_test3 <= code(3);
-	--code_test4 <= code(4);
+	code_test0 <= code(0);
+	code_test1 <= code(1);
+	code_test2 <= code(2);
+	code_test3 <= code(3);
+	code_test4 <= code(4);
 
 end verifier;
 
