@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\users\lzrd\Meus Documentos\morse_decoder\snd_cntr\simulation\qsim
+vsend_control
+Z1 I?[]PT_@>6RKmQ`T2_[=GU0
+Z2 Vfk]T8<XGRWWSd7d0RTO8P1
+Z3 dC:\users\lzrd\Meus Documentos\morse_decoder\snd_cntr\simulation\qsim
+Z4 w1566592228
+Z5 8send_control.vo
+Z6 Fsend_control.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 omA2FldAe>CgXG@FY_4GJ1
+!s85 0
+Z10 !s108 1566592232.212000
+Z11 !s107 send_control.vo|
+Z12 !s90 -work|work|send_control.vo|
+!s101 -O0
+vsend_control_vlg_check_tst
+!i10b 1
+!s100 _aK97If>=;2?hd>?3eDZZ0
+I@K>]FHN]G^>YF:R53fFMT2
+VlG5GiCF>6><[MAf5mV=cJ3
+R3
+Z13 w1566592223
+Z14 8send_control.vt
+Z15 Fsend_control.vt
+L0 61
+R7
+r1
+!s85 0
+31
+Z16 !s108 1566592232.641000
+Z17 !s107 send_control.vt|
+Z18 !s90 -work|work|send_control.vt|
+!s101 -O0
+R8
+vsend_control_vlg_sample_tst
+!i10b 1
+!s100 eE011Sh0L5jijB0BJiXoo1
+I8BH;[=z@F[d4z:eg92h0]1
+VV[FTB:LK;:`6hca@^Kn:^3
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+vsend_control_vlg_vec_tst
+!i10b 1
+!s100 _l>@l^__odZ?[B:51n>;I0
+IF`INFzDNQAceneTh3znNa0
+VF@ESOgm017cjlmbDBJXiC3
+R3
+R13
+R14
+R15
+L0 210
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
