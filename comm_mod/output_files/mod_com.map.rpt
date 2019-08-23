@@ -1,6 +1,6 @@
 Analysis & Synthesis report for mod_com
-Fri Aug 23 11:54:24 2019
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
+Fri Aug 23 17:54:54 2019
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -13,9 +13,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web E
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. Logic Cells Representing Combinational Loops
- 10. General Register Statistics
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
  11. Elapsed Time Per Partition
  12. Analysis & Synthesis Messages
 
@@ -40,24 +40,24 @@ applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                            ;
-+------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Aug 23 11:54:24 2019              ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1.78 SJ Web Edition ;
-; Revision Name                      ; mod_com                                            ;
-; Top-level Entity Name              ; mod_com                                            ;
-; Family                             ; Cyclone II                                         ;
-; Total logic elements               ; 35                                                 ;
-;     Total combinational functions  ; 35                                                 ;
-;     Dedicated logic registers      ; 0                                                  ;
-; Total registers                    ; 0                                                  ;
-; Total pins                         ; 6                                                  ;
-; Total virtual pins                 ; 0                                                  ;
-; Total memory bits                  ; 0                                                  ;
-; Embedded Multiplier 9-bit elements ; 0                                                  ;
-; Total PLLs                         ; 0                                                  ;
-+------------------------------------+----------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Aug 23 17:54:54 2019           ;
+; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; mod_com                                         ;
+; Top-level Entity Name              ; mod_com                                         ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 11                                              ;
+;     Total combinational functions  ; 10                                              ;
+;     Dedicated logic registers      ; 6                                               ;
+; Total registers                    ; 6                                               ;
+; Total pins                         ; 44                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -145,60 +145,54 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                          ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                   ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
-; mod_com.vhd                      ; yes             ; User VHDL File  ; /home/ufabc/morse_decoder/comm_mod/mod_com.vhd ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                            ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                     ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------+---------+
+; mod_com.vhd                      ; yes             ; User VHDL File  ; C:/users/lzrd/Meus Documentos/morse_decoder/comm_mod/mod_com.vhd ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 35          ;
-;                                             ;             ;
-; Total combinational functions               ; 35          ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 6           ;
-;     -- 3 input functions                    ; 25          ;
-;     -- <=2 input functions                  ; 4           ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 13          ;
-;     -- arithmetic mode                      ; 22          ;
-;                                             ;             ;
-; Total registers                             ; 0           ;
-;     -- Dedicated logic registers            ; 0           ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 6           ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-; Maximum fan-out node                        ; LessThan0~6 ;
-; Maximum fan-out                             ; 27          ;
-; Total fan-out                               ; 109         ;
-; Average fan-out                             ; 2.66        ;
-+---------------------------------------------+-------------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 11       ;
+;                                             ;          ;
+; Total combinational functions               ; 10       ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 5        ;
+;     -- 3 input functions                    ; 5        ;
+;     -- <=2 input functions                  ; 0        ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 10       ;
+;     -- arithmetic mode                      ; 0        ;
+;                                             ;          ;
+; Total registers                             ; 6        ;
+;     -- Dedicated logic registers            ; 6        ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 44       ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+; Maximum fan-out node                        ; index[1] ;
+; Maximum fan-out                             ; 8        ;
+; Total fan-out                               ; 55       ;
+; Average fan-out                             ; 0.92     ;
++---------------------------------------------+----------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -206,56 +200,47 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |mod_com                   ; 35 (35)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |mod_com            ; work         ;
+; |mod_com                   ; 10 (10)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 44   ; 0            ; |mod_com            ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; r_perm$latch                                       ; recieve             ; yes                    ;
-; w_perm$latch                                       ; recieve             ; yes                    ;
-; Number of user-specified and inferred latches = 2  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+-------------------------------------------------------------+
-; Logic Cells Representing Combinational Loops                ;
-+--------------------------------------------------------+----+
-; Logic Cell Name                                        ;    ;
-+--------------------------------------------------------+----+
-; count~24                                               ;    ;
-; Add0~0                                                 ;    ;
-; count~25                                               ;    ;
-; count~26                                               ;    ;
-; count~27                                               ;    ;
-; count~28                                               ;    ;
-; count~29                                               ;    ;
-; count~30                                               ;    ;
-; count~31                                               ;    ;
-; count~32                                               ;    ;
-; count~33                                               ;    ;
-; count~34                                               ;    ;
-; count~35                                               ;    ;
-; count~36                                               ;    ;
-; count~37                                               ;    ;
-; count~38                                               ;    ;
-; count~39                                               ;    ;
-; count~40                                               ;    ;
-; count~41                                               ;    ;
-; count~42                                               ;    ;
-; count~43                                               ;    ;
-; count~44                                               ;    ;
-; count~45                                               ;    ;
-; count~46                                               ;    ;
-; count~47                                               ;    ;
-; Number of logic cells representing combinational loops ; 25 ;
-+--------------------------------------------------------+----+
-Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; symbol[30]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; symbol[29]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; symbol[28]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; symbol[27]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; symbol[26]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; symbol[25]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; symbol[24]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; symbol[23]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; symbol[22]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; symbol[21]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; symbol[20]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; symbol[19]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; symbol[18]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; symbol[17]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; symbol[16]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; symbol[15]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; symbol[14]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; symbol[13]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; symbol[12]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; symbol[11]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; symbol[10]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; symbol[9]~reg0                         ; Stuck at GND due to stuck port data_in ;
+; symbol[8]~reg0                         ; Stuck at GND due to stuck port data_in ;
+; symbol[7]~reg0                         ; Stuck at GND due to stuck port data_in ;
+; symbol[6]~reg0                         ; Stuck at GND due to stuck port data_in ;
+; symbol[5]~reg0                         ; Stuck at GND due to stuck port data_in ;
+; symbol[4]~reg0                         ; Stuck at GND due to stuck port data_in ;
+; symbol[3]~reg0                         ; Stuck at GND due to stuck port data_in ;
+; symbol[2]~reg0                         ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 29 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -263,14 +248,25 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 6     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 6     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; symbol[0]~reg0                         ; 1       ;
+; symbol[31]~reg0                        ; 1       ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
 
 
 +-------------------------------+
@@ -286,33 +282,69 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
-    Info: Processing started: Fri Aug 23 11:54:21 2019
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Aug 23 17:54:51 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mod_com -c mod_com
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 3 design units, including 1 entities, in source file mod_com.vhd
     Info (12022): Found design unit 1: code_types
     Info (12022): Found design unit 2: mod_com-send
     Info (12023): Found entity 1: mod_com
 Info (12127): Elaborating entity "mod_com" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at mod_com.vhd(38): signal "recieve" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at mod_com.vhd(34): inferring latch(es) for signal or variable "r_perm", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at mod_com.vhd(34): inferring latch(es) for signal or variable "w_perm", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "w_perm" at mod_com.vhd(34)
-Info (10041): Inferred latch for "r_perm" at mod_com.vhd(34)
+Warning (10492): VHDL Process Statement warning at mod_com.vhd(29): signal "enter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (13039): The following bidir pins have no drivers
+    Warning (13040): Bidir "code[4][0]" has no driver
+    Warning (13040): Bidir "code[4][1]" has no driver
+    Warning (13040): Bidir "code[3][0]" has no driver
+    Warning (13040): Bidir "code[3][1]" has no driver
+    Warning (13040): Bidir "code[2][0]" has no driver
+    Warning (13040): Bidir "code[2][1]" has no driver
+    Warning (13040): Bidir "code[1][0]" has no driver
+    Warning (13040): Bidir "code[1][1]" has no driver
+    Warning (13040): Bidir "code[0][0]" has no driver
+    Warning (13040): Bidir "code[0][1]" has no driver
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "symbol[2]" is stuck at GND
+    Warning (13410): Pin "symbol[3]" is stuck at GND
+    Warning (13410): Pin "symbol[4]" is stuck at GND
+    Warning (13410): Pin "symbol[5]" is stuck at GND
+    Warning (13410): Pin "symbol[6]" is stuck at GND
+    Warning (13410): Pin "symbol[7]" is stuck at GND
+    Warning (13410): Pin "symbol[8]" is stuck at GND
+    Warning (13410): Pin "symbol[9]" is stuck at GND
+    Warning (13410): Pin "symbol[10]" is stuck at GND
+    Warning (13410): Pin "symbol[11]" is stuck at GND
+    Warning (13410): Pin "symbol[12]" is stuck at GND
+    Warning (13410): Pin "symbol[13]" is stuck at GND
+    Warning (13410): Pin "symbol[14]" is stuck at GND
+    Warning (13410): Pin "symbol[15]" is stuck at GND
+    Warning (13410): Pin "symbol[16]" is stuck at GND
+    Warning (13410): Pin "symbol[17]" is stuck at GND
+    Warning (13410): Pin "symbol[18]" is stuck at GND
+    Warning (13410): Pin "symbol[19]" is stuck at GND
+    Warning (13410): Pin "symbol[20]" is stuck at GND
+    Warning (13410): Pin "symbol[21]" is stuck at GND
+    Warning (13410): Pin "symbol[22]" is stuck at GND
+    Warning (13410): Pin "symbol[23]" is stuck at GND
+    Warning (13410): Pin "symbol[24]" is stuck at GND
+    Warning (13410): Pin "symbol[25]" is stuck at GND
+    Warning (13410): Pin "symbol[26]" is stuck at GND
+    Warning (13410): Pin "symbol[27]" is stuck at GND
+    Warning (13410): Pin "symbol[28]" is stuck at GND
+    Warning (13410): Pin "symbol[29]" is stuck at GND
+    Warning (13410): Pin "symbol[30]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk"
-Info (21057): Implemented 41 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 35 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 659 megabytes
-    Info: Processing ended: Fri Aug 23 11:54:24 2019
+Info (21057): Implemented 55 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21060): Implemented 10 bidirectional pins
+    Info (21061): Implemented 11 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 43 warnings
+    Info: Peak virtual memory: 0 megabytes
+    Info: Processing ended: Fri Aug 23 17:54:54 2019
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:00
 
 

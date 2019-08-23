@@ -23,13 +23,17 @@ end entity;
 --Arquitetura de envio de mensagem
 architecture send of mod_com is
 	begin
-	process(clk, enter)
-		variable index : std_logic;
+	process(clk)
+		variable index : integer range 0 to MAX_CODE_LENGTH := 0;
 		begin
 		if enter = '0' then
-			if clk'event and clk'0' then
-				symbol <= code(index);
-				index := index + 1;
+			if clk'event and clk='0' then
+				if index < MAX_CODE_LENGTH then
+					symbol <= code(index);
+					index := index + 1;
+				else
+					index := 0;
+				end if;
 			end if;
 		end if;
 	end process;
