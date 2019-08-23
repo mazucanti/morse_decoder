@@ -6,6 +6,8 @@ entity main is
 	port (clock	: in std_logic;
 	
 			input_button	: in std_logic;
+			backspace_in_code	: in std_logic;
+			backspace_ready	: out std_logic;
 			clear_code	: in std_logic;
 			led	: out std_logic_vector(0 to MAX_CODE_LENGTH-1));
 			
@@ -30,9 +32,11 @@ architecture main_loop of main is
 	component short_or_long_signal_identifier is
 		port (clock	: in std_logic;
 			button_input	: in std_logic;
-			clear	: in std_logic;
+			backspace, clear	: in std_logic;
 				
-			code	: buffer integer_vector);
+			code	: buffer integer_vector;
+			
+			backspace_ready_signal	: out std_logic);
 
 			--code_test0, code_test1, code_test2, code_test3, code_test4 : out integer range 0 to 2);
 			--index_test	: out integer range 0 to MAX_CODE_LENGTH-1;
@@ -49,7 +53,7 @@ begin
 	------------------------------------------------------------------
 	
 	-- Preenchimento do codigo da letra (code)	
-	code_control: short_or_long_signal_identifier port map (clock, input_button, clear_code, code);
+	code_control: short_or_long_signal_identifier port map (clock, input_button, backspace_in_code, clear_code, code, backspace_ready);
 
 	------------------------------------------
 	

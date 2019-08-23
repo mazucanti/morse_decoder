@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "08/22/2019 18:46:08"
+// Generated on "08/23/2019 11:26:43"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    short_or_long_signal_identifier
 // 
@@ -27,11 +27,13 @@
 
 `timescale 1 ps/ 1 ps
 module short_or_long_signal_identifier_vlg_sample_tst(
+	backspace,
 	button_input,
 	clear,
 	clock,
 	sampler_tx
 );
+input  backspace;
 input  button_input;
 input  clear;
 input  clock;
@@ -39,7 +41,7 @@ output sampler_tx;
 
 reg sample;
 time current_time;
-always @(button_input or clear or clock)
+always @(backspace or button_input or clear or clock)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -64,6 +66,7 @@ module short_or_long_signal_identifier_vlg_check_tst (
 	code_test2,
 	code_test3,
 	code_test4,
+	index_test,
 	sampler_rx
 );
 input [1:0] code_test0;
@@ -71,6 +74,7 @@ input [1:0] code_test1;
 input [1:0] code_test2;
 input [1:0] code_test3;
 input [1:0] code_test4;
+input [2:0] index_test;
 input sampler_rx;
 
 reg [1:0] code_test0_expected;
@@ -78,31 +82,35 @@ reg [1:0] code_test1_expected;
 reg [1:0] code_test2_expected;
 reg [1:0] code_test3_expected;
 reg [1:0] code_test4_expected;
+reg [2:0] index_test_expected;
 
 reg [1:0] code_test0_prev;
 reg [1:0] code_test1_prev;
 reg [1:0] code_test2_prev;
 reg [1:0] code_test3_prev;
 reg [1:0] code_test4_prev;
+reg [2:0] index_test_prev;
 
 reg [1:0] code_test0_expected_prev;
 reg [1:0] code_test1_expected_prev;
 reg [1:0] code_test2_expected_prev;
 reg [1:0] code_test3_expected_prev;
 reg [1:0] code_test4_expected_prev;
+reg [2:0] index_test_expected_prev;
 
 reg [1:0] last_code_test0_exp;
 reg [1:0] last_code_test1_exp;
 reg [1:0] last_code_test2_exp;
 reg [1:0] last_code_test3_exp;
 reg [1:0] last_code_test4_exp;
+reg [2:0] last_index_test_exp;
 
 reg trigger;
 
 integer i;
 integer nummismatches;
 
-reg [1:5] on_first_change ;
+reg [1:6] on_first_change ;
 
 
 initial
@@ -110,7 +118,7 @@ begin
 trigger = 0;
 i = 0;
 nummismatches = 0;
-on_first_change = 5'b1;
+on_first_change = 6'b1;
 end
 
 // update real /o prevs
@@ -122,6 +130,7 @@ begin
 	code_test2_prev = code_test2;
 	code_test3_prev = code_test3;
 	code_test4_prev = code_test4;
+	index_test_prev = index_test;
 end
 
 // update expected /o prevs
@@ -133,6 +142,7 @@ begin
 	code_test2_expected_prev = code_test2_expected;
 	code_test3_expected_prev = code_test3_expected;
 	code_test4_expected_prev = code_test4_expected;
+	index_test_expected_prev = index_test_expected;
 end
 
 
@@ -186,8 +196,23 @@ initial
 begin
 	code_test4_expected[0] = 1'bX;
 end 
+// expected index_test[ 2 ]
+initial
+begin
+	index_test_expected[2] = 1'bX;
+end 
+// expected index_test[ 1 ]
+initial
+begin
+	index_test_expected[1] = 1'bX;
+end 
+// expected index_test[ 0 ]
+initial
+begin
+	index_test_expected[0] = 1'bX;
+end 
 // generate trigger
-always @(code_test0_expected or code_test0 or code_test1_expected or code_test1 or code_test2_expected or code_test2 or code_test3_expected or code_test3 or code_test4_expected or code_test4)
+always @(code_test0_expected or code_test0 or code_test1_expected or code_test1 or code_test2_expected or code_test2 or code_test3_expected or code_test3 or code_test4_expected or code_test4 or index_test_expected or index_test)
 begin
 	trigger <= ~trigger;
 end
@@ -197,8 +222,8 @@ begin
 `ifdef debug_tbench
 	$display("Scanning pattern %d @time = %t",i,$realtime );
 	i = i + 1;
-	$display("| expected code_test0 = %b | expected code_test1 = %b | expected code_test2 = %b | expected code_test3 = %b | expected code_test4 = %b | ",code_test0_expected_prev,code_test1_expected_prev,code_test2_expected_prev,code_test3_expected_prev,code_test4_expected_prev);
-	$display("| real code_test0 = %b | real code_test1 = %b | real code_test2 = %b | real code_test3 = %b | real code_test4 = %b | ",code_test0_prev,code_test1_prev,code_test2_prev,code_test3_prev,code_test4_prev);
+	$display("| expected code_test0 = %b | expected code_test1 = %b | expected code_test2 = %b | expected code_test3 = %b | expected code_test4 = %b | expected index_test = %b | ",code_test0_expected_prev,code_test1_expected_prev,code_test2_expected_prev,code_test3_expected_prev,code_test4_expected_prev,index_test_expected_prev);
+	$display("| real code_test0 = %b | real code_test1 = %b | real code_test2 = %b | real code_test3 = %b | real code_test4 = %b | real index_test = %b | ",code_test0_prev,code_test1_prev,code_test2_prev,code_test3_prev,code_test4_prev,index_test_prev);
 `endif
 	if (
 		( code_test0_expected_prev[0] !== 1'bx ) && ( code_test0_prev[0] !== code_test0_expected_prev[0] )
@@ -330,6 +355,45 @@ begin
 		on_first_change[5] = 1'b0;
 		last_code_test4_exp[1] = code_test4_expected_prev[1];
 	end
+	if (
+		( index_test_expected_prev[0] !== 1'bx ) && ( index_test_prev[0] !== index_test_expected_prev[0] )
+		&& ((index_test_expected_prev[0] !== last_index_test_exp[0]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port index_test[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", index_test_expected_prev);
+		$display ("     Real value = %b", index_test_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_index_test_exp[0] = index_test_expected_prev[0];
+	end
+	if (
+		( index_test_expected_prev[1] !== 1'bx ) && ( index_test_prev[1] !== index_test_expected_prev[1] )
+		&& ((index_test_expected_prev[1] !== last_index_test_exp[1]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port index_test[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", index_test_expected_prev);
+		$display ("     Real value = %b", index_test_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_index_test_exp[1] = index_test_expected_prev[1];
+	end
+	if (
+		( index_test_expected_prev[2] !== 1'bx ) && ( index_test_prev[2] !== index_test_expected_prev[2] )
+		&& ((index_test_expected_prev[2] !== last_index_test_exp[2]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port index_test[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", index_test_expected_prev);
+		$display ("     Real value = %b", index_test_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_index_test_exp[2] = index_test_expected_prev[2];
+	end
 
 	trigger <= ~trigger;
 end
@@ -349,6 +413,7 @@ endmodule
 module short_or_long_signal_identifier_vlg_vec_tst();
 // constants                                           
 // general purpose registers
+reg backspace;
 reg button_input;
 reg clear;
 reg clock;
@@ -358,12 +423,14 @@ wire [1:0] code_test1;
 wire [1:0] code_test2;
 wire [1:0] code_test3;
 wire [1:0] code_test4;
+wire [2:0] index_test;
 
 wire sampler;                             
 
 // assign statements (if any)                          
 short_or_long_signal_identifier i1 (
 // port map - connection between master ports and signals/registers   
+	.backspace(backspace),
 	.button_input(button_input),
 	.clear(clear),
 	.clock(clock),
@@ -371,7 +438,8 @@ short_or_long_signal_identifier i1 (
 	.code_test1(code_test1),
 	.code_test2(code_test2),
 	.code_test3(code_test3),
-	.code_test4(code_test4)
+	.code_test4(code_test4),
+	.index_test(index_test)
 );
 
 // button_input
@@ -393,10 +461,6 @@ end
 initial
 begin
 	clear = 1'b1;
-	clear = #100000 1'b0;
-	clear = #150000 1'b1;
-	clear = #400000 1'b0;
-	clear = #50000 1'b1;
 end 
 
 // clock
@@ -407,7 +471,16 @@ begin
 	#1000;
 end 
 
+// backspace
+initial
+begin
+	backspace = 1'b1;
+	backspace = #320000 1'b0;
+	backspace = #10000 1'b1;
+end 
+
 short_or_long_signal_identifier_vlg_sample_tst tb_sample (
+	.backspace(backspace),
 	.button_input(button_input),
 	.clear(clear),
 	.clock(clock),
@@ -420,6 +493,7 @@ short_or_long_signal_identifier_vlg_check_tst tb_out(
 	.code_test2(code_test2),
 	.code_test3(code_test3),
 	.code_test4(code_test4),
+	.index_test(index_test),
 	.sampler_rx(sampler)
 );
 endmodule

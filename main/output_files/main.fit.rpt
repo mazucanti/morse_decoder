@@ -1,5 +1,5 @@
 Fitter report for main
-Thu Aug 22 18:48:19 2019
+Fri Aug 23 11:46:46 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -62,18 +62,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Thu Aug 22 18:48:19 2019           ;
+; Fitter Status                      ; Successful - Fri Aug 23 11:46:46 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; main                                            ;
 ; Top-level Entity Name              ; main                                            ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C20F484C7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 125 / 18,752 ( < 1 % )                          ;
-;     Total combinational functions  ; 116 / 18,752 ( < 1 % )                          ;
-;     Dedicated logic registers      ; 53 / 18,752 ( < 1 % )                           ;
-; Total registers                    ; 53                                              ;
-; Total pins                         ; 8 / 315 ( 3 % )                                 ;
+; Total logic elements               ; 182 / 18,752 ( < 1 % )                          ;
+;     Total combinational functions  ; 180 / 18,752 ( < 1 % )                          ;
+;     Dedicated logic registers      ; 86 / 18,752 ( < 1 % )                           ;
+; Total registers                    ; 86                                              ;
+; Total pins                         ; 10 / 315 ( 3 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 239,616 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                  ;
@@ -149,8 +149,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 182 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 182 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 280 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 280 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -173,7 +173,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 179     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 277     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -189,28 +189,28 @@ The pin-out file can be found in C:/Users/pedro.shoji/Desktop/morse_decoder/main
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 125 / 18,752 ( < 1 % ) ;
-;     -- Combinational with no register       ; 72                     ;
-;     -- Register only                        ; 9                      ;
-;     -- Combinational with a register        ; 44                     ;
+; Total logic elements                        ; 182 / 18,752 ( < 1 % ) ;
+;     -- Combinational with no register       ; 96                     ;
+;     -- Register only                        ; 2                      ;
+;     -- Combinational with a register        ; 84                     ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 37                     ;
-;     -- 3 input functions                    ; 4                      ;
-;     -- <=2 input functions                  ; 75                     ;
-;     -- Register only                        ; 9                      ;
+;     -- 4 input functions                    ; 58                     ;
+;     -- 3 input functions                    ; 14                     ;
+;     -- <=2 input functions                  ; 108                    ;
+;     -- Register only                        ; 2                      ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 79                     ;
-;     -- arithmetic mode                      ; 37                     ;
+;     -- normal mode                          ; 112                    ;
+;     -- arithmetic mode                      ; 68                     ;
 ;                                             ;                        ;
-; Total registers*                            ; 53 / 19,649 ( < 1 % )  ;
-;     -- Dedicated logic registers            ; 53 / 18,752 ( < 1 % )  ;
+; Total registers*                            ; 86 / 19,649 ( < 1 % )  ;
+;     -- Dedicated logic registers            ; 86 / 18,752 ( < 1 % )  ;
 ;     -- I/O registers                        ; 0 / 897 ( 0 % )        ;
 ;                                             ;                        ;
-; Total LABs:  partially or completely used   ; 10 / 1,172 ( < 1 % )   ;
+; Total LABs:  partially or completely used   ; 14 / 1,172 ( 1 % )     ;
 ; Virtual pins                                ; 0                      ;
-; I/O pins                                    ; 8 / 315 ( 3 % )        ;
+; I/O pins                                    ; 10 / 315 ( 3 % )       ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )         ;
 ;                                             ;                        ;
 ; Global signals                              ; 1                      ;
@@ -225,10 +225,10 @@ The pin-out file can be found in C:/Users/pedro.shoji/Desktop/morse_decoder/main
 ; CRC blocks                                  ; 0 / 1 ( 0 % )          ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%           ;
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%           ;
-; Maximum fan-out                             ; 53                     ;
-; Highest non-global fan-out                  ; 45                     ;
-; Total fan-out                               ; 482                    ;
-; Average fan-out                             ; 2.59                   ;
+; Maximum fan-out                             ; 86                     ;
+; Highest non-global fan-out                  ; 78                     ;
+; Total fan-out                               ; 879                    ;
+; Average fan-out                             ; 3.13                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -241,28 +241,28 @@ The pin-out file can be found in C:/Users/pedro.shoji/Desktop/morse_decoder/main
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 125 / 18752 ( < 1 % ) ; 0 / 18752 ( 0 % )              ;
-;     -- Combinational with no register       ; 72                    ; 0                              ;
-;     -- Register only                        ; 9                     ; 0                              ;
-;     -- Combinational with a register        ; 44                    ; 0                              ;
+; Total logic elements                        ; 182 / 18752 ( < 1 % ) ; 0 / 18752 ( 0 % )              ;
+;     -- Combinational with no register       ; 96                    ; 0                              ;
+;     -- Register only                        ; 2                     ; 0                              ;
+;     -- Combinational with a register        ; 84                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 37                    ; 0                              ;
-;     -- 3 input functions                    ; 4                     ; 0                              ;
-;     -- <=2 input functions                  ; 75                    ; 0                              ;
-;     -- Register only                        ; 9                     ; 0                              ;
+;     -- 4 input functions                    ; 58                    ; 0                              ;
+;     -- 3 input functions                    ; 14                    ; 0                              ;
+;     -- <=2 input functions                  ; 108                   ; 0                              ;
+;     -- Register only                        ; 2                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 79                    ; 0                              ;
-;     -- arithmetic mode                      ; 37                    ; 0                              ;
+;     -- normal mode                          ; 112                   ; 0                              ;
+;     -- arithmetic mode                      ; 68                    ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total registers                             ; 53                    ; 0                              ;
-;     -- Dedicated logic registers            ; 53 / 18752 ( < 1 % )  ; 0 / 18752 ( 0 % )              ;
+; Total registers                             ; 86                    ; 0                              ;
+;     -- Dedicated logic registers            ; 86 / 18752 ( < 1 % )  ; 0 / 18752 ( 0 % )              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 10 / 1172 ( < 1 % )   ; 0 / 1172 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 14 / 1172 ( 1 % )     ; 0 / 1172 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
-; I/O pins                                    ; 8                     ; 0                              ;
+; I/O pins                                    ; 10                    ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )        ; 0 / 52 ( 0 % )                 ;
 ; Total memory bits                           ; 0                     ; 0                              ;
 ; Total RAM block bits                        ; 0                     ; 0                              ;
@@ -275,16 +275,16 @@ The pin-out file can be found in C:/Users/pedro.shoji/Desktop/morse_decoder/main
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 482                   ; 0                              ;
-;     -- Registered Connections               ; 104                   ; 0                              ;
+;     -- Total Connections                    ; 879                   ; 0                              ;
+;     -- Registered Connections               ; 182                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 0                     ; 0                              ;
 ;     -- hard_block:auto_generated_inst       ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Partition Interface                         ;                       ;                                ;
-;     -- Input Ports                          ; 3                     ; 0                              ;
-;     -- Output Ports                         ; 5                     ; 0                              ;
+;     -- Input Ports                          ; 4                     ; 0                              ;
+;     -- Output Ports                         ; 6                     ; 0                              ;
 ;     -- Bidir Ports                          ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Registered Ports                            ;                       ;                                ;
@@ -303,44 +303,46 @@ The pin-out file can be found in C:/Users/pedro.shoji/Desktop/morse_decoder/main
 +---------------------------------------------+-----------------------+--------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Input Pins                                                                                                                                                                                                                                                         ;
-+--------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; Name         ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
-+--------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; clear_code   ; T21   ; 6        ; 50           ; 9            ; 1           ; 45                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; clock        ; L1    ; 2        ; 0            ; 13           ; 0           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; input_button ; R22   ; 6        ; 50           ; 10           ; 1           ; 45                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-+--------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                                                                                                                              ;
++-------------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; Name              ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
++-------------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; backspace_in_code ; R21   ; 6        ; 50           ; 10           ; 2           ; 50                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; clear_code        ; T21   ; 6        ; 50           ; 9            ; 1           ; 78                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; clock             ; L1    ; 2        ; 0            ; 13           ; 0           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; input_button      ; R22   ; 6        ; 50           ; 10           ; 1           ; 41                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
++-------------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Output Pins                                                                                                                                                                                                                                                                                                                          ;
-+--------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
-+--------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; led[0] ; W22   ; 6        ; 50           ; 5            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; led[1] ; V21   ; 6        ; 50           ; 6            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; led[2] ; V22   ; 6        ; 50           ; 7            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; led[3] ; U21   ; 6        ; 50           ; 7            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; led[4] ; U22   ; 6        ; 50           ; 7            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-+--------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                                                                   ;
++-----------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
+; Name            ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
++-----------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
+; backspace_ready ; R20   ; 6        ; 50           ; 10           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; led[0]          ; W22   ; 6        ; 50           ; 5            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; led[1]          ; V21   ; 6        ; 50           ; 6            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; led[2]          ; V22   ; 6        ; 50           ; 7            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; led[3]          ; U21   ; 6        ; 50           ; 7            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; led[4]          ; U22   ; 6        ; 50           ; 7            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
++-----------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
-+-----------------------------------------------------------+
-; I/O Bank Usage                                            ;
-+----------+-----------------+---------------+--------------+
-; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
-+----------+-----------------+---------------+--------------+
-; 1        ; 0 / 41 ( 0 % )  ; 3.3V          ; --           ;
-; 2        ; 3 / 33 ( 9 % )  ; 3.3V          ; --           ;
-; 3        ; 0 / 43 ( 0 % )  ; 3.3V          ; --           ;
-; 4        ; 0 / 40 ( 0 % )  ; 3.3V          ; --           ;
-; 5        ; 0 / 39 ( 0 % )  ; 3.3V          ; --           ;
-; 6        ; 8 / 36 ( 22 % ) ; 3.3V          ; --           ;
-; 7        ; 0 / 40 ( 0 % )  ; 3.3V          ; --           ;
-; 8        ; 0 / 43 ( 0 % )  ; 3.3V          ; --           ;
-+----------+-----------------+---------------+--------------+
++------------------------------------------------------------+
+; I/O Bank Usage                                             ;
++----------+------------------+---------------+--------------+
+; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
++----------+------------------+---------------+--------------+
+; 1        ; 0 / 41 ( 0 % )   ; 3.3V          ; --           ;
+; 2        ; 3 / 33 ( 9 % )   ; 3.3V          ; --           ;
+; 3        ; 0 / 43 ( 0 % )   ; 3.3V          ; --           ;
+; 4        ; 0 / 40 ( 0 % )   ; 3.3V          ; --           ;
+; 5        ; 0 / 39 ( 0 % )   ; 3.3V          ; --           ;
+; 6        ; 10 / 36 ( 28 % ) ; 3.3V          ; --           ;
+; 7        ; 0 / 40 ( 0 % )   ; 3.3V          ; --           ;
+; 8        ; 0 / 43 ( 0 % )   ; 3.3V          ; --           ;
++----------+------------------+---------------+--------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -719,8 +721,8 @@ The pin-out file can be found in C:/Users/pedro.shoji/Desktop/morse_decoder/main
 ; R17      ; 177        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R18      ; 184        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R19      ; 185        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; R20      ; 192        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; R21      ; 190        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; R20      ; 192        ; 6        ; backspace_ready                          ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; R21      ; 190        ; 6        ; backspace_in_code                        ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; R22      ; 191        ; 6        ; input_button                             ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; T1       ; 59         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T2       ; 60         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -878,148 +880,232 @@ Note: User assignments will override these defaults. The user specified values a
 +---------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                              ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                      ; Library Name ;
 +---------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------+--------------+
-; |main                                                   ; 125 (1)     ; 53 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 8    ; 0            ; 72 (1)       ; 9 (0)             ; 44 (0)           ; |main                                                    ; work         ;
+; |main                                                   ; 182 (2)     ; 86 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 10   ; 0            ; 96 (2)       ; 2 (0)             ; 84 (0)           ; |main                                                    ; work         ;
 ;    |modulo_pwm:\brightness_loop:0:led_intensity_module| ; 9 (9)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 8 (8)            ; |main|modulo_pwm:\brightness_loop:0:led_intensity_module ; work         ;
 ;    |modulo_pwm:\brightness_loop:1:led_intensity_module| ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |main|modulo_pwm:\brightness_loop:1:led_intensity_module ; work         ;
 ;    |modulo_pwm:\brightness_loop:2:led_intensity_module| ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |main|modulo_pwm:\brightness_loop:2:led_intensity_module ; work         ;
 ;    |modulo_pwm:\brightness_loop:3:led_intensity_module| ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 1 (1)            ; |main|modulo_pwm:\brightness_loop:3:led_intensity_module ; work         ;
 ;    |modulo_pwm:\brightness_loop:4:led_intensity_module| ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |main|modulo_pwm:\brightness_loop:4:led_intensity_module ; work         ;
-;    |short_or_long_signal_identifier:code_control|       ; 108 (108)   ; 45 (45)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 63 (63)      ; 9 (9)             ; 36 (36)          ; |main|short_or_long_signal_identifier:code_control       ; work         ;
+;    |short_or_long_signal_identifier:code_control|       ; 164 (164)   ; 78 (78)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 86 (86)      ; 2 (2)             ; 76 (76)          ; |main|short_or_long_signal_identifier:code_control       ; work         ;
 +---------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------+
-; Delay Chain Summary                                                                   ;
-+--------------+----------+---------------+---------------+-----------------------+-----+
-; Name         ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
-+--------------+----------+---------------+---------------+-----------------------+-----+
-; led[4]       ; Output   ; --            ; --            ; --                    ; --  ;
-; led[3]       ; Output   ; --            ; --            ; --                    ; --  ;
-; led[2]       ; Output   ; --            ; --            ; --                    ; --  ;
-; led[1]       ; Output   ; --            ; --            ; --                    ; --  ;
-; led[0]       ; Output   ; --            ; --            ; --                    ; --  ;
-; input_button ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; clock        ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; clear_code   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-+--------------+----------+---------------+---------------+-----------------------+-----+
++--------------------------------------------------------------------------------------------+
+; Delay Chain Summary                                                                        ;
++-------------------+----------+---------------+---------------+-----------------------+-----+
+; Name              ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
++-------------------+----------+---------------+---------------+-----------------------+-----+
+; backspace_ready   ; Output   ; --            ; --            ; --                    ; --  ;
+; led[4]            ; Output   ; --            ; --            ; --                    ; --  ;
+; led[3]            ; Output   ; --            ; --            ; --                    ; --  ;
+; led[2]            ; Output   ; --            ; --            ; --                    ; --  ;
+; led[1]            ; Output   ; --            ; --            ; --                    ; --  ;
+; led[0]            ; Output   ; --            ; --            ; --                    ; --  ;
+; backspace_in_code ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; input_button      ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; clock             ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; clear_code        ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
++-------------------+----------+---------------+---------------+-----------------------+-----+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                                     ;
-+----------------------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                                  ; Pad To Core Index ; Setting ;
-+----------------------------------------------------------------------+-------------------+---------+
-; input_button                                                         ;                   ;         ;
-;      - short_or_long_signal_identifier:code_control|code~1           ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|current_index[2] ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|current_index[0] ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|current_index[1] ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|code[4][0]~2     ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|code[4][0]~4     ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|code~5           ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|code[3][1]~7     ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|code[0][1]~8     ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|code[2][1]~10    ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|code[1][1]~12    ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|code[0][1]~14    ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|code[0][1]~15    ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~0          ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~1          ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~2          ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~3          ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~4          ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~5          ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~6          ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~7          ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~8          ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~9          ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~10         ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~11         ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~12         ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~13         ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~14         ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~15         ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~16         ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~17         ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~18         ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~19         ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~20         ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~21         ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~22         ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~23         ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~24         ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~25         ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~26         ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~27         ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~28         ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~29         ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~30         ; 0                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count~31         ; 0                 ; 6       ;
-; clock                                                                ;                   ;         ;
-; clear_code                                                           ;                   ;         ;
-;      - short_or_long_signal_identifier:code_control|code[4][0]       ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|code[4][1]       ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|code[3][0]       ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|code[3][1]       ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|code[2][0]       ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|code[2][1]       ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|code[1][0]       ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|code[1][1]       ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|code[0][0]       ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|code[0][1]       ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[0]         ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[1]         ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[2]         ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[3]         ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[4]         ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[5]         ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[6]         ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[7]         ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[8]         ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[9]         ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[10]        ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[11]        ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[12]        ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[13]        ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[14]        ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[15]        ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[16]        ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[17]        ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[18]        ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[19]        ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[20]        ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[21]        ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[22]        ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[23]        ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[24]        ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[25]        ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[26]        ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[27]        ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[28]        ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[29]        ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[30]        ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|count[31]        ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|current_index[2] ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|current_index[0] ; 1                 ; 6       ;
-;      - short_or_long_signal_identifier:code_control|current_index[1] ; 1                 ; 6       ;
-+----------------------------------------------------------------------+-------------------+---------+
++--------------------------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                                               ;
++--------------------------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                                            ; Pad To Core Index ; Setting ;
++--------------------------------------------------------------------------------+-------------------+---------+
+; backspace_in_code                                                              ;                   ;         ;
+;      - short_or_long_signal_identifier:code_control|backspace_ready~0          ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[25]                  ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[24]                  ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[23]                  ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[22]                  ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[21]                  ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[20]                  ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[19]                  ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[18]                  ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[17]                  ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[16]                  ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[15]                  ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[14]                  ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[13]                  ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[12]                  ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[11]                  ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[10]                  ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[9]                   ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[8]                   ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[7]                   ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[6]                   ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[5]                   ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[4]                   ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[3]                   ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[2]                   ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[1]                   ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[0]                   ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[26]                  ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[27]                  ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[28]                  ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[29]                  ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[30]                  ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[31]                  ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|code~4                     ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|code[4][1]~7               ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|code[4][1]~8               ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|current_index[2]~9         ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|code~10                    ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|code[3][1]~12              ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|code[2][0]~16              ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|code[1][0]~18              ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|code[0][0]~20              ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|current_index[2]~10        ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|current_index[1]~11        ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|current_index[0]~12        ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[14]~34 ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[14]~35 ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|current_index[2]~13        ; 0                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|current_index[1]~14        ; 0                 ; 6       ;
+;      - backspace_in_code~_wirecell                                             ; 0                 ; 6       ;
+; input_button                                                                   ;                   ;         ;
+;      - short_or_long_signal_identifier:code_control|backspace_ready~0          ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|code~4                     ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|code[4][1]~7               ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|current_index[2]~9         ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|code~10                    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[14]~34 ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[14]~35 ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~0                    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~1                    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~2                    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~3                    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~4                    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~5                    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~6                    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~7                    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~8                    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~9                    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~10                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~11                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~12                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~13                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~14                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~15                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~16                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~17                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~18                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~19                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~20                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~21                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~22                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~23                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~24                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~25                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~26                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~27                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~28                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~29                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~30                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count~31                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|current_index[2]~13        ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|current_index[1]~14        ; 1                 ; 6       ;
+; clock                                                                          ;                   ;         ;
+; clear_code                                                                     ;                   ;         ;
+;      - short_or_long_signal_identifier:code_control|code[4][0]                 ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|code[4][1]                 ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|code[3][0]                 ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|code[3][1]                 ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|code[2][0]                 ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|code[2][1]                 ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|code[1][0]                 ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|code[1][1]                 ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|code[0][0]                 ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|code[0][1]                 ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|current_index[0]           ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|current_index[1]           ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|current_index[2]           ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[0]     ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[1]     ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[2]     ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[3]     ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[4]     ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[5]     ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[6]     ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[7]     ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[8]     ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[9]     ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[10]    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[11]    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[12]    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[13]    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[14]    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[15]    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[16]    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[17]    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[18]    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[19]    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[20]    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[21]    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[22]    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[23]    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[24]    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[25]    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[26]    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[27]    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[28]    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[29]    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[30]    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_wait_time[31]    ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|backspace_ready            ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[25]                  ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[24]                  ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[23]                  ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[22]                  ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[21]                  ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[20]                  ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[19]                  ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[18]                  ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[17]                  ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[16]                  ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[15]                  ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[14]                  ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[13]                  ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[12]                  ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[11]                  ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[10]                  ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[9]                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[8]                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[7]                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[6]                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[5]                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[4]                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[3]                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[2]                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[1]                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[0]                   ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[26]                  ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[27]                  ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[28]                  ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[29]                  ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[30]                  ; 1                 ; 6       ;
+;      - short_or_long_signal_identifier:code_control|count[31]                  ; 1                 ; 6       ;
++--------------------------------------------------------------------------------+-------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                         ;
-+------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                                       ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; clear_code                                                 ; PIN_T21            ; 45      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; clock                                                      ; PIN_L1             ; 53      ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; input_button                                               ; PIN_R22            ; 45      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; short_or_long_signal_identifier:code_control|code[0][1]~15 ; LCCOMB_X38_Y11_N4  ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; short_or_long_signal_identifier:code_control|code[1][1]~13 ; LCCOMB_X39_Y11_N2  ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; short_or_long_signal_identifier:code_control|code[2][1]~11 ; LCCOMB_X38_Y11_N8  ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; short_or_long_signal_identifier:code_control|code[3][1]~9  ; LCCOMB_X38_Y11_N22 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; short_or_long_signal_identifier:code_control|code[4][0]~4  ; LCCOMB_X38_Y11_N0  ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-+------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                      ;
++-------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                                                    ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; backspace_in_code                                                       ; PIN_R21            ; 50      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; clear_code                                                              ; PIN_T21            ; 78      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; clock                                                                   ; PIN_L1             ; 86      ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[14]~34 ; LCCOMB_X38_Y14_N0  ; 32      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[14]~36 ; LCCOMB_X38_Y14_N24 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; short_or_long_signal_identifier:code_control|code[0][0]~21              ; LCCOMB_X37_Y14_N12 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; short_or_long_signal_identifier:code_control|code[1][0]~19              ; LCCOMB_X35_Y14_N16 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; short_or_long_signal_identifier:code_control|code[2][0]~17              ; LCCOMB_X36_Y14_N20 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; short_or_long_signal_identifier:code_control|code[3][1]~14              ; LCCOMB_X36_Y14_N28 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; short_or_long_signal_identifier:code_control|code[4][1]~9               ; LCCOMB_X36_Y14_N0  ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
++-------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +--------------------------------------------------------------------------------------------------+
@@ -1027,224 +1113,353 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------+----------------------+------------------+---------------------------+
 ; Name  ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------+----------+---------+----------------------+------------------+---------------------------+
-; clock ; PIN_L1   ; 53      ; Global Clock         ; GCLK2            ; --                        ;
+; clock ; PIN_L1   ; 86      ; Global Clock         ; GCLK2            ; --                        ;
 +-------+----------+---------+----------------------+------------------+---------------------------+
 
 
-+--------------------------------------------------------------------------+
-; Non-Global High Fan-Out Signals                                          ;
-+----------------------------------------------------------------+---------+
-; Name                                                           ; Fan-Out ;
-+----------------------------------------------------------------+---------+
-; clear_code                                                     ; 45      ;
-; input_button                                                   ; 45      ;
-; short_or_long_signal_identifier:code_control|current_index[1]  ; 13      ;
-; short_or_long_signal_identifier:code_control|current_index[0]  ; 11      ;
-; short_or_long_signal_identifier:code_control|current_index[2]  ; 7       ;
-; short_or_long_signal_identifier:code_control|current_index~0   ; 6       ;
-; short_or_long_signal_identifier:code_control|code~6            ; 5       ;
-; short_or_long_signal_identifier:code_control|code~1            ; 5       ;
-; modulo_pwm:\brightness_loop:3:led_intensity_module|LessThan0~2 ; 5       ;
-; modulo_pwm:\brightness_loop:4:led_intensity_module|LessThan0~2 ; 5       ;
-; short_or_long_signal_identifier:code_control|current_index~2   ; 4       ;
-; short_or_long_signal_identifier:code_control|current_index~1   ; 4       ;
-; short_or_long_signal_identifier:code_control|Equal0~0          ; 4       ;
-; short_or_long_signal_identifier:code_control|Add1~62           ; 4       ;
-; short_or_long_signal_identifier:code_control|code[0][1]~8      ; 3       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0]        ; 3       ;
-; short_or_long_signal_identifier:code_control|Add1~48           ; 3       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]        ; 3       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]        ; 3       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]        ; 3       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7]        ; 3       ;
-; short_or_long_signal_identifier:code_control|code[0][1]~15     ; 2       ;
-; short_or_long_signal_identifier:code_control|code[1][1]~13     ; 2       ;
-; short_or_long_signal_identifier:code_control|code[2][1]~11     ; 2       ;
-; short_or_long_signal_identifier:code_control|code[3][1]~9      ; 2       ;
-; short_or_long_signal_identifier:code_control|code[4][0]~4      ; 2       ;
-; short_or_long_signal_identifier:code_control|code[0][1]~3      ; 2       ;
-; short_or_long_signal_identifier:code_control|LessThan0~9       ; 2       ;
-; short_or_long_signal_identifier:code_control|LessThan0~8       ; 2       ;
-; short_or_long_signal_identifier:code_control|LessThan0~7       ; 2       ;
-; short_or_long_signal_identifier:code_control|code[0][0]        ; 2       ;
-; short_or_long_signal_identifier:code_control|code[0][1]        ; 2       ;
-; short_or_long_signal_identifier:code_control|code[1][0]        ; 2       ;
-; short_or_long_signal_identifier:code_control|code[1][1]        ; 2       ;
-; short_or_long_signal_identifier:code_control|code[2][0]        ; 2       ;
-; short_or_long_signal_identifier:code_control|code[2][1]        ; 2       ;
-; short_or_long_signal_identifier:code_control|code[3][0]        ; 2       ;
-; short_or_long_signal_identifier:code_control|code[3][1]        ; 2       ;
-; short_or_long_signal_identifier:code_control|code[4][0]        ; 2       ;
-; short_or_long_signal_identifier:code_control|code[4][1]        ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~60           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~58           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~56           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~54           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~52           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~50           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~46           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~44           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~42           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~40           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~38           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~36           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~34           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~32           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~30           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~28           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~26           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~24           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~22           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~20           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~18           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~16           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~14           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~12           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~10           ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~8            ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~6            ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~4            ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~2            ; 2       ;
-; short_or_long_signal_identifier:code_control|Add1~0            ; 2       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]        ; 2       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]        ; 2       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]        ; 2       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0]~21     ; 1       ;
-; modulo_pwm:\brightness_loop:4:led_intensity_module|LessThan0~3 ; 1       ;
-; short_or_long_signal_identifier:code_control|count~31          ; 1       ;
-; short_or_long_signal_identifier:code_control|count~30          ; 1       ;
-; short_or_long_signal_identifier:code_control|count~29          ; 1       ;
-; short_or_long_signal_identifier:code_control|count~28          ; 1       ;
-; short_or_long_signal_identifier:code_control|count~27          ; 1       ;
-; short_or_long_signal_identifier:code_control|count~26          ; 1       ;
-; short_or_long_signal_identifier:code_control|count~25          ; 1       ;
-; short_or_long_signal_identifier:code_control|count~24          ; 1       ;
-; short_or_long_signal_identifier:code_control|count~23          ; 1       ;
-; short_or_long_signal_identifier:code_control|count~22          ; 1       ;
-; short_or_long_signal_identifier:code_control|count~21          ; 1       ;
-; short_or_long_signal_identifier:code_control|count~20          ; 1       ;
-; short_or_long_signal_identifier:code_control|count~19          ; 1       ;
-; short_or_long_signal_identifier:code_control|count~18          ; 1       ;
-; short_or_long_signal_identifier:code_control|count~17          ; 1       ;
-; short_or_long_signal_identifier:code_control|count~16          ; 1       ;
-; short_or_long_signal_identifier:code_control|count~15          ; 1       ;
-; short_or_long_signal_identifier:code_control|count~14          ; 1       ;
-; short_or_long_signal_identifier:code_control|count~13          ; 1       ;
-; short_or_long_signal_identifier:code_control|count~12          ; 1       ;
-; short_or_long_signal_identifier:code_control|count~11          ; 1       ;
-; short_or_long_signal_identifier:code_control|count~10          ; 1       ;
-; short_or_long_signal_identifier:code_control|count~9           ; 1       ;
-; short_or_long_signal_identifier:code_control|count~8           ; 1       ;
-; short_or_long_signal_identifier:code_control|count~7           ; 1       ;
-; short_or_long_signal_identifier:code_control|count~6           ; 1       ;
-; short_or_long_signal_identifier:code_control|count~5           ; 1       ;
-; short_or_long_signal_identifier:code_control|count~4           ; 1       ;
-; short_or_long_signal_identifier:code_control|count~3           ; 1       ;
-; short_or_long_signal_identifier:code_control|count~2           ; 1       ;
-; short_or_long_signal_identifier:code_control|count~1           ; 1       ;
-; short_or_long_signal_identifier:code_control|count~0           ; 1       ;
-; short_or_long_signal_identifier:code_control|code[0][1]~14     ; 1       ;
-; short_or_long_signal_identifier:code_control|code[1][1]~12     ; 1       ;
-; short_or_long_signal_identifier:code_control|code[2][1]~10     ; 1       ;
-; short_or_long_signal_identifier:code_control|code[3][1]~7      ; 1       ;
-; short_or_long_signal_identifier:code_control|code~5            ; 1       ;
-; short_or_long_signal_identifier:code_control|Mux1~1            ; 1       ;
-; short_or_long_signal_identifier:code_control|Mux1~0            ; 1       ;
-; short_or_long_signal_identifier:code_control|Mux0~1            ; 1       ;
-; short_or_long_signal_identifier:code_control|Mux0~0            ; 1       ;
-; short_or_long_signal_identifier:code_control|code[4][0]~2      ; 1       ;
-; short_or_long_signal_identifier:code_control|code~0            ; 1       ;
-; short_or_long_signal_identifier:code_control|count[25]         ; 1       ;
-; short_or_long_signal_identifier:code_control|count[26]         ; 1       ;
-; short_or_long_signal_identifier:code_control|count[27]         ; 1       ;
-; short_or_long_signal_identifier:code_control|count[28]         ; 1       ;
-; short_or_long_signal_identifier:code_control|count[29]         ; 1       ;
-; short_or_long_signal_identifier:code_control|count[30]         ; 1       ;
-; short_or_long_signal_identifier:code_control|count[31]         ; 1       ;
-; short_or_long_signal_identifier:code_control|LessThan0~6       ; 1       ;
-; short_or_long_signal_identifier:code_control|LessThan0~5       ; 1       ;
-; short_or_long_signal_identifier:code_control|LessThan0~4       ; 1       ;
-; short_or_long_signal_identifier:code_control|LessThan0~3       ; 1       ;
-; short_or_long_signal_identifier:code_control|LessThan0~2       ; 1       ;
-; short_or_long_signal_identifier:code_control|LessThan0~1       ; 1       ;
-; short_or_long_signal_identifier:code_control|LessThan0~0       ; 1       ;
-; short_or_long_signal_identifier:code_control|count[23]         ; 1       ;
-; short_or_long_signal_identifier:code_control|count[24]         ; 1       ;
-; short_or_long_signal_identifier:code_control|count[18]         ; 1       ;
-; short_or_long_signal_identifier:code_control|count[19]         ; 1       ;
-; short_or_long_signal_identifier:code_control|count[20]         ; 1       ;
-; short_or_long_signal_identifier:code_control|count[21]         ; 1       ;
-; short_or_long_signal_identifier:code_control|count[22]         ; 1       ;
-; short_or_long_signal_identifier:code_control|count[17]         ; 1       ;
-; short_or_long_signal_identifier:code_control|count[0]          ; 1       ;
-; short_or_long_signal_identifier:code_control|count[1]          ; 1       ;
-; short_or_long_signal_identifier:code_control|count[2]          ; 1       ;
-; short_or_long_signal_identifier:code_control|count[3]          ; 1       ;
-; short_or_long_signal_identifier:code_control|count[4]          ; 1       ;
-; short_or_long_signal_identifier:code_control|count[5]          ; 1       ;
-; short_or_long_signal_identifier:code_control|count[6]          ; 1       ;
-; short_or_long_signal_identifier:code_control|count[7]          ; 1       ;
-; short_or_long_signal_identifier:code_control|count[8]          ; 1       ;
-; short_or_long_signal_identifier:code_control|count[9]          ; 1       ;
-; short_or_long_signal_identifier:code_control|count[10]         ; 1       ;
-; short_or_long_signal_identifier:code_control|count[11]         ; 1       ;
-; short_or_long_signal_identifier:code_control|count[12]         ; 1       ;
-; short_or_long_signal_identifier:code_control|count[13]         ; 1       ;
-; short_or_long_signal_identifier:code_control|count[14]         ; 1       ;
-; short_or_long_signal_identifier:code_control|count[15]         ; 1       ;
-; short_or_long_signal_identifier:code_control|count[16]         ; 1       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|LessThan0~0 ; 1       ;
-; modulo_pwm:\brightness_loop:1:led_intensity_module|LessThan0~0 ; 1       ;
-; modulo_pwm:\brightness_loop:2:led_intensity_module|LessThan0~0 ; 1       ;
-; modulo_pwm:\brightness_loop:3:led_intensity_module|LessThan0~3 ; 1       ;
-; modulo_pwm:\brightness_loop:3:led_intensity_module|LessThan0~1 ; 1       ;
-; modulo_pwm:\brightness_loop:3:led_intensity_module|LessThan0~0 ; 1       ;
-; Equal9~0                                                       ; 1       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7]~19     ; 1       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]~18     ; 1       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]~17     ; 1       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]~16     ; 1       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]~15     ; 1       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]~14     ; 1       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]~13     ; 1       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]~12     ; 1       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]~11     ; 1       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]~10     ; 1       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]~9      ; 1       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]~8      ; 1       ;
-; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]~7      ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~61           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~59           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~57           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~55           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~53           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~51           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~49           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~47           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~45           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~43           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~41           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~39           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~37           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~35           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~33           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~31           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~29           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~27           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~25           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~23           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~21           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~19           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~17           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~15           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~13           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~11           ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~9            ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~7            ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~5            ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~3            ; 1       ;
-; short_or_long_signal_identifier:code_control|Add1~1            ; 1       ;
-+----------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                   ;
++-------------------------------------------------------------------------+---------+
+; Name                                                                    ; Fan-Out ;
++-------------------------------------------------------------------------+---------+
+; clear_code                                                              ; 78      ;
+; backspace_in_code                                                       ; 50      ;
+; input_button                                                            ; 41      ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[14]~36 ; 32      ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[14]~34 ; 32      ;
+; ~GND                                                                    ; 20      ;
+; short_or_long_signal_identifier:code_control|current_index[0]           ; 17      ;
+; short_or_long_signal_identifier:code_control|current_index[1]           ; 16      ;
+; backspace_in_code~_wirecell                                             ; 12      ;
+; short_or_long_signal_identifier:code_control|code[4][1]~7               ; 12      ;
+; short_or_long_signal_identifier:code_control|current_index[2]           ; 10      ;
+; short_or_long_signal_identifier:code_control|code~11                    ; 5       ;
+; short_or_long_signal_identifier:code_control|current_index~7            ; 5       ;
+; short_or_long_signal_identifier:code_control|current_index~5            ; 5       ;
+; short_or_long_signal_identifier:code_control|code~5                     ; 5       ;
+; short_or_long_signal_identifier:code_control|code[0][0]~2               ; 5       ;
+; modulo_pwm:\brightness_loop:3:led_intensity_module|LessThan0~2          ; 5       ;
+; modulo_pwm:\brightness_loop:4:led_intensity_module|LessThan0~0          ; 5       ;
+; short_or_long_signal_identifier:code_control|current_index[2]~9         ; 4       ;
+; short_or_long_signal_identifier:code_control|current_index~8            ; 4       ;
+; short_or_long_signal_identifier:code_control|Add2~62                    ; 4       ;
+; short_or_long_signal_identifier:code_control|code[4][1]~3               ; 3       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0]                 ; 3       ;
+; short_or_long_signal_identifier:code_control|Add2~48                    ; 3       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]                 ; 3       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]                 ; 3       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]                 ; 3       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7]                 ; 3       ;
+; short_or_long_signal_identifier:code_control|code[4][1]~22              ; 2       ;
+; short_or_long_signal_identifier:code_control|code[0][0]~21              ; 2       ;
+; short_or_long_signal_identifier:code_control|code[1][0]~19              ; 2       ;
+; short_or_long_signal_identifier:code_control|Decoder0~3                 ; 2       ;
+; short_or_long_signal_identifier:code_control|code[2][0]~17              ; 2       ;
+; short_or_long_signal_identifier:code_control|Decoder0~2                 ; 2       ;
+; short_or_long_signal_identifier:code_control|code[3][1]~14              ; 2       ;
+; short_or_long_signal_identifier:code_control|code[3][1]~13              ; 2       ;
+; short_or_long_signal_identifier:code_control|Decoder0~1                 ; 2       ;
+; short_or_long_signal_identifier:code_control|code[4][1]~9               ; 2       ;
+; short_or_long_signal_identifier:code_control|Decoder0~0                 ; 2       ;
+; short_or_long_signal_identifier:code_control|Mux0~1                     ; 2       ;
+; short_or_long_signal_identifier:code_control|Mux1~1                     ; 2       ;
+; short_or_long_signal_identifier:code_control|LessThan1~9                ; 2       ;
+; short_or_long_signal_identifier:code_control|LessThan1~1                ; 2       ;
+; short_or_long_signal_identifier:code_control|LessThan1~0                ; 2       ;
+; short_or_long_signal_identifier:code_control|Equal0~9                   ; 2       ;
+; short_or_long_signal_identifier:code_control|Equal0~4                   ; 2       ;
+; short_or_long_signal_identifier:code_control|code[0][0]                 ; 2       ;
+; short_or_long_signal_identifier:code_control|code[0][1]                 ; 2       ;
+; short_or_long_signal_identifier:code_control|code[1][0]                 ; 2       ;
+; short_or_long_signal_identifier:code_control|code[1][1]                 ; 2       ;
+; short_or_long_signal_identifier:code_control|code[2][0]                 ; 2       ;
+; short_or_long_signal_identifier:code_control|code[2][1]                 ; 2       ;
+; short_or_long_signal_identifier:code_control|code[3][0]                 ; 2       ;
+; short_or_long_signal_identifier:code_control|code[3][1]                 ; 2       ;
+; short_or_long_signal_identifier:code_control|code[4][0]                 ; 2       ;
+; short_or_long_signal_identifier:code_control|code[4][1]                 ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_ready            ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~60                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~58                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~56                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~54                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~52                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~50                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~46                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~44                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~42                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~40                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~38                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~36                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~34                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~32                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~30                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~28                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~26                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~24                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~22                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~20                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~18                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~16                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~14                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~12                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~10                    ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~8                     ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~6                     ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~4                     ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~2                     ; 2       ;
+; short_or_long_signal_identifier:code_control|Add2~0                     ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[31]    ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[30]    ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[29]    ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[28]    ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[27]    ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[26]    ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[25]    ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[24]    ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[23]    ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[22]    ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[21]    ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[20]    ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[19]    ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[18]    ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[17]    ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[16]    ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[15]    ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[14]    ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[13]    ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[12]    ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[11]    ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[10]    ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[9]     ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[8]     ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[7]     ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[6]     ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[5]     ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[4]     ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[3]     ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[2]     ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[1]     ; 2       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[0]     ; 2       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]                 ; 2       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]                 ; 2       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]                 ; 2       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0]~21              ; 1       ;
+; short_or_long_signal_identifier:code_control|current_index[1]~14        ; 1       ;
+; short_or_long_signal_identifier:code_control|current_index[2]~13        ; 1       ;
+; short_or_long_signal_identifier:code_control|count~31                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count~30                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count~29                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count~28                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count~27                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count~26                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count~25                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count~24                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count~23                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count~22                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count~21                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count~20                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count~19                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count~18                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count~17                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count~16                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count~15                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count~14                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count~13                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count~12                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count~11                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count~10                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count~9                    ; 1       ;
+; short_or_long_signal_identifier:code_control|count~8                    ; 1       ;
+; short_or_long_signal_identifier:code_control|count~7                    ; 1       ;
+; short_or_long_signal_identifier:code_control|count~6                    ; 1       ;
+; short_or_long_signal_identifier:code_control|count~5                    ; 1       ;
+; short_or_long_signal_identifier:code_control|count~4                    ; 1       ;
+; short_or_long_signal_identifier:code_control|count~3                    ; 1       ;
+; short_or_long_signal_identifier:code_control|count~2                    ; 1       ;
+; short_or_long_signal_identifier:code_control|count~1                    ; 1       ;
+; short_or_long_signal_identifier:code_control|count~0                    ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[14]~35 ; 1       ;
+; short_or_long_signal_identifier:code_control|current_index[0]~12        ; 1       ;
+; short_or_long_signal_identifier:code_control|current_index[1]~11        ; 1       ;
+; short_or_long_signal_identifier:code_control|current_index[2]~10        ; 1       ;
+; short_or_long_signal_identifier:code_control|Add1~0                     ; 1       ;
+; short_or_long_signal_identifier:code_control|code[0][0]~20              ; 1       ;
+; short_or_long_signal_identifier:code_control|code[1][0]~18              ; 1       ;
+; short_or_long_signal_identifier:code_control|code[2][0]~16              ; 1       ;
+; short_or_long_signal_identifier:code_control|code[2][0]~15              ; 1       ;
+; short_or_long_signal_identifier:code_control|code[3][1]~12              ; 1       ;
+; short_or_long_signal_identifier:code_control|code~10                    ; 1       ;
+; short_or_long_signal_identifier:code_control|current_index~6            ; 1       ;
+; short_or_long_signal_identifier:code_control|code[4][1]~8               ; 1       ;
+; short_or_long_signal_identifier:code_control|Mux0~0                     ; 1       ;
+; short_or_long_signal_identifier:code_control|Mux1~0                     ; 1       ;
+; short_or_long_signal_identifier:code_control|current_index~4            ; 1       ;
+; short_or_long_signal_identifier:code_control|code[4][1]~6               ; 1       ;
+; short_or_long_signal_identifier:code_control|code~4                     ; 1       ;
+; short_or_long_signal_identifier:code_control|count[31]                  ; 1       ;
+; short_or_long_signal_identifier:code_control|LessThan1~8                ; 1       ;
+; short_or_long_signal_identifier:code_control|LessThan1~7                ; 1       ;
+; short_or_long_signal_identifier:code_control|LessThan1~6                ; 1       ;
+; short_or_long_signal_identifier:code_control|LessThan1~5                ; 1       ;
+; short_or_long_signal_identifier:code_control|LessThan1~4                ; 1       ;
+; short_or_long_signal_identifier:code_control|LessThan1~3                ; 1       ;
+; short_or_long_signal_identifier:code_control|LessThan1~2                ; 1       ;
+; short_or_long_signal_identifier:code_control|count[30]                  ; 1       ;
+; short_or_long_signal_identifier:code_control|count[29]                  ; 1       ;
+; short_or_long_signal_identifier:code_control|count[28]                  ; 1       ;
+; short_or_long_signal_identifier:code_control|count[27]                  ; 1       ;
+; short_or_long_signal_identifier:code_control|count[26]                  ; 1       ;
+; short_or_long_signal_identifier:code_control|count[0]                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count[1]                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count[2]                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count[3]                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count[4]                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count[5]                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count[6]                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count[7]                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count[8]                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count[9]                   ; 1       ;
+; short_or_long_signal_identifier:code_control|count[10]                  ; 1       ;
+; short_or_long_signal_identifier:code_control|count[11]                  ; 1       ;
+; short_or_long_signal_identifier:code_control|count[12]                  ; 1       ;
+; short_or_long_signal_identifier:code_control|count[13]                  ; 1       ;
+; short_or_long_signal_identifier:code_control|count[14]                  ; 1       ;
+; short_or_long_signal_identifier:code_control|count[15]                  ; 1       ;
+; short_or_long_signal_identifier:code_control|count[16]                  ; 1       ;
+; short_or_long_signal_identifier:code_control|count[17]                  ; 1       ;
+; short_or_long_signal_identifier:code_control|count[18]                  ; 1       ;
+; short_or_long_signal_identifier:code_control|count[19]                  ; 1       ;
+; short_or_long_signal_identifier:code_control|count[20]                  ; 1       ;
+; short_or_long_signal_identifier:code_control|count[21]                  ; 1       ;
+; short_or_long_signal_identifier:code_control|count[22]                  ; 1       ;
+; short_or_long_signal_identifier:code_control|count[23]                  ; 1       ;
+; short_or_long_signal_identifier:code_control|count[24]                  ; 1       ;
+; short_or_long_signal_identifier:code_control|count[25]                  ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_ready~0          ; 1       ;
+; short_or_long_signal_identifier:code_control|Equal0~8                   ; 1       ;
+; short_or_long_signal_identifier:code_control|Equal0~7                   ; 1       ;
+; short_or_long_signal_identifier:code_control|Equal0~6                   ; 1       ;
+; short_or_long_signal_identifier:code_control|Equal0~5                   ; 1       ;
+; short_or_long_signal_identifier:code_control|Equal0~3                   ; 1       ;
+; short_or_long_signal_identifier:code_control|Equal0~2                   ; 1       ;
+; short_or_long_signal_identifier:code_control|Equal0~1                   ; 1       ;
+; short_or_long_signal_identifier:code_control|Equal0~0                   ; 1       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|LessThan0~0          ; 1       ;
+; modulo_pwm:\brightness_loop:1:led_intensity_module|LessThan0~0          ; 1       ;
+; modulo_pwm:\brightness_loop:2:led_intensity_module|LessThan0~0          ; 1       ;
+; modulo_pwm:\brightness_loop:3:led_intensity_module|LessThan0~3          ; 1       ;
+; modulo_pwm:\brightness_loop:4:led_intensity_module|LessThan0~1          ; 1       ;
+; modulo_pwm:\brightness_loop:3:led_intensity_module|LessThan0~1          ; 1       ;
+; modulo_pwm:\brightness_loop:3:led_intensity_module|LessThan0~0          ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[31]~97 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[30]~96 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[30]~95 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[29]~94 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[29]~93 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[28]~92 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[28]~91 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[27]~90 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[27]~89 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[26]~88 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[26]~87 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[25]~86 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[25]~85 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[24]~84 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[24]~83 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[23]~82 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[23]~81 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[22]~80 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[22]~79 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[21]~78 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[21]~77 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[20]~76 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[20]~75 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[19]~74 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[19]~73 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[18]~72 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[18]~71 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[17]~70 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[17]~69 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[16]~68 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[16]~67 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[15]~66 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[15]~65 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[14]~64 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[14]~63 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[13]~62 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[13]~61 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[12]~60 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[12]~59 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[11]~58 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[11]~57 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[10]~56 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[10]~55 ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[9]~54  ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[9]~53  ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[8]~52  ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[8]~51  ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[7]~50  ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[7]~49  ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[6]~48  ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[6]~47  ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[5]~46  ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[5]~45  ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[4]~44  ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[4]~43  ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[3]~42  ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[3]~41  ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[2]~40  ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[2]~39  ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[1]~38  ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[1]~37  ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[0]~33  ; 1       ;
+; short_or_long_signal_identifier:code_control|backspace_wait_time[0]~32  ; 1       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7]~19              ; 1       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]~18              ; 1       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]~17              ; 1       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]~16              ; 1       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]~15              ; 1       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]~14              ; 1       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]~13              ; 1       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]~12              ; 1       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]~11              ; 1       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]~10              ; 1       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]~9               ; 1       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]~8               ; 1       ;
+; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]~7               ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~61                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~59                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~57                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~55                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~53                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~51                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~49                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~47                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~45                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~43                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~41                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~39                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~37                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~35                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~33                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~31                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~29                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~27                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~25                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~23                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~21                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~19                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~17                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~15                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~13                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~11                    ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~9                     ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~7                     ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~5                     ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~3                     ; 1       ;
+; short_or_long_signal_identifier:code_control|Add2~1                     ; 1       ;
++-------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------+
@@ -1252,130 +1467,65 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 147 / 54,004 ( < 1 % ) ;
-; C16 interconnects           ; 0 / 2,100 ( 0 % )      ;
-; C4 interconnects            ; 13 / 36,000 ( < 1 % )  ;
-; Direct links                ; 96 / 54,004 ( < 1 % )  ;
+; Block interconnects         ; 226 / 54,004 ( < 1 % ) ;
+; C16 interconnects           ; 1 / 2,100 ( < 1 % )    ;
+; C4 interconnects            ; 47 / 36,000 ( < 1 % )  ;
+; Direct links                ; 125 / 54,004 ( < 1 % ) ;
 ; Global clocks               ; 1 / 16 ( 6 % )         ;
-; Local interconnects         ; 61 / 18,752 ( < 1 % )  ;
-; R24 interconnects           ; 3 / 1,900 ( < 1 % )    ;
-; R4 interconnects            ; 46 / 46,920 ( < 1 % )  ;
+; Local interconnects         ; 116 / 18,752 ( < 1 % ) ;
+; R24 interconnects           ; 8 / 1,900 ( < 1 % )    ;
+; R4 interconnects            ; 88 / 46,920 ( < 1 % )  ;
 +-----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 12.50) ; Number of LABs  (Total = 10) ;
+; Number of Logic Elements  (Average = 13.00) ; Number of LABs  (Total = 14) ;
 +---------------------------------------------+------------------------------+
 ; 1                                           ; 0                            ;
-; 2                                           ; 0                            ;
+; 2                                           ; 1                            ;
 ; 3                                           ; 0                            ;
 ; 4                                           ; 0                            ;
-; 5                                           ; 2                            ;
-; 6                                           ; 0                            ;
+; 5                                           ; 0                            ;
+; 6                                           ; 1                            ;
 ; 7                                           ; 0                            ;
-; 8                                           ; 1                            ;
+; 8                                           ; 0                            ;
 ; 9                                           ; 0                            ;
-; 10                                          ; 0                            ;
+; 10                                          ; 1                            ;
 ; 11                                          ; 1                            ;
-; 12                                          ; 0                            ;
-; 13                                          ; 0                            ;
+; 12                                          ; 1                            ;
+; 13                                          ; 1                            ;
 ; 14                                          ; 0                            ;
 ; 15                                          ; 0                            ;
-; 16                                          ; 6                            ;
+; 16                                          ; 8                            ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.40) ; Number of LABs  (Total = 10) ;
+; LAB-wide Signals  (Average = 1.93) ; Number of LABs  (Total = 14) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 6                            ;
-; 1 Clock                            ; 7                            ;
-; 2 Clock enables                    ; 1                            ;
+; 1 Async. clear                     ; 9                            ;
+; 1 Clock                            ; 10                           ;
+; 1 Clock enable                     ; 6                            ;
+; 1 Sync. load                       ; 2                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 17.40) ; Number of LABs  (Total = 10) ;
+; Number of Signals Sourced  (Average = 19.07) ; Number of LABs  (Total = 14) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 0                            ;
-; 3                                            ; 0                            ;
-; 4                                            ; 0                            ;
-; 5                                            ; 2                            ;
-; 6                                            ; 0                            ;
-; 7                                            ; 0                            ;
-; 8                                            ; 0                            ;
-; 9                                            ; 0                            ;
-; 10                                           ; 1                            ;
-; 11                                           ; 0                            ;
-; 12                                           ; 0                            ;
-; 13                                           ; 0                            ;
-; 14                                           ; 0                            ;
-; 15                                           ; 0                            ;
-; 16                                           ; 1                            ;
-; 17                                           ; 0                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 2                            ;
-; 20                                           ; 1                            ;
-; 21                                           ; 0                            ;
-; 22                                           ; 1                            ;
-; 23                                           ; 0                            ;
-; 24                                           ; 0                            ;
-; 25                                           ; 0                            ;
-; 26                                           ; 1                            ;
-; 27                                           ; 0                            ;
-; 28                                           ; 0                            ;
-; 29                                           ; 0                            ;
-; 30                                           ; 0                            ;
-; 31                                           ; 0                            ;
-; 32                                           ; 1                            ;
-+----------------------------------------------+------------------------------+
-
-
-+--------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                        ;
-+-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 9.90) ; Number of LABs  (Total = 10) ;
-+-------------------------------------------------+------------------------------+
-; 0                                               ; 0                            ;
-; 1                                               ; 0                            ;
-; 2                                               ; 0                            ;
-; 3                                               ; 1                            ;
-; 4                                               ; 0                            ;
-; 5                                               ; 2                            ;
-; 6                                               ; 1                            ;
-; 7                                               ; 0                            ;
-; 8                                               ; 0                            ;
-; 9                                               ; 1                            ;
-; 10                                              ; 0                            ;
-; 11                                              ; 0                            ;
-; 12                                              ; 2                            ;
-; 13                                              ; 0                            ;
-; 14                                              ; 0                            ;
-; 15                                              ; 1                            ;
-; 16                                              ; 2                            ;
-+-------------------------------------------------+------------------------------+
-
-
-+-----------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                         ;
-+----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 13.10) ; Number of LABs  (Total = 10) ;
-+----------------------------------------------+------------------------------+
-; 0                                            ; 0                            ;
-; 1                                            ; 1                            ;
-; 2                                            ; 0                            ;
+; 2                                            ; 1                            ;
 ; 3                                            ; 0                            ;
 ; 4                                            ; 0                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 2                            ;
+; 6                                            ; 1                            ;
 ; 7                                            ; 0                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
@@ -1385,11 +1535,85 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 13                                           ; 1                            ;
 ; 14                                           ; 1                            ;
 ; 15                                           ; 0                            ;
-; 16                                           ; 0                            ;
-; 17                                           ; 2                            ;
+; 16                                           ; 2                            ;
+; 17                                           ; 0                            ;
 ; 18                                           ; 1                            ;
+; 19                                           ; 0                            ;
+; 20                                           ; 1                            ;
+; 21                                           ; 2                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 1                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 0                            ;
+; 29                                           ; 0                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 0                            ;
+; 32                                           ; 3                            ;
++----------------------------------------------+------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                         ;
++--------------------------------------------------+------------------------------+
+; Number of Signals Sourced Out  (Average = 10.64) ; Number of LABs  (Total = 14) ;
++--------------------------------------------------+------------------------------+
+; 0                                                ; 0                            ;
+; 1                                                ; 0                            ;
+; 2                                                ; 2                            ;
+; 3                                                ; 1                            ;
+; 4                                                ; 0                            ;
+; 5                                                ; 1                            ;
+; 6                                                ; 0                            ;
+; 7                                                ; 0                            ;
+; 8                                                ; 0                            ;
+; 9                                                ; 0                            ;
+; 10                                               ; 1                            ;
+; 11                                               ; 2                            ;
+; 12                                               ; 1                            ;
+; 13                                               ; 1                            ;
+; 14                                               ; 0                            ;
+; 15                                               ; 0                            ;
+; 16                                               ; 5                            ;
++--------------------------------------------------+------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                         ;
++----------------------------------------------+------------------------------+
+; Number of Distinct Inputs  (Average = 15.14) ; Number of LABs  (Total = 14) ;
++----------------------------------------------+------------------------------+
+; 0                                            ; 0                            ;
+; 1                                            ; 0                            ;
+; 2                                            ; 0                            ;
+; 3                                            ; 2                            ;
+; 4                                            ; 0                            ;
+; 5                                            ; 0                            ;
+; 6                                            ; 1                            ;
+; 7                                            ; 1                            ;
+; 8                                            ; 0                            ;
+; 9                                            ; 0                            ;
+; 10                                           ; 0                            ;
+; 11                                           ; 0                            ;
+; 12                                           ; 0                            ;
+; 13                                           ; 1                            ;
+; 14                                           ; 1                            ;
+; 15                                           ; 1                            ;
+; 16                                           ; 1                            ;
+; 17                                           ; 0                            ;
+; 18                                           ; 0                            ;
 ; 19                                           ; 1                            ;
 ; 20                                           ; 1                            ;
+; 21                                           ; 0                            ;
+; 22                                           ; 2                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 1                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -1455,13 +1679,14 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X38_Y0 to location X50_Y13
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X25_Y14 to location X37_Y27
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.25 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.23 seconds.
 Info (306004): Started post-fitting delay annotation
-Warning (306006): Found 5 output pins without output pin load capacitance assignment
+Warning (306006): Found 6 output pins without output pin load capacitance assignment
+    Info (306007): Pin "backspace_ready" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "led[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "led[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "led[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1470,14 +1695,14 @@ Warning (306006): Found 5 output pins without output pin load capacitance assign
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/pedro.shoji/Desktop/morse_decoder/main/output_files/main.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 621 megabytes
-    Info: Processing ended: Thu Aug 22 18:48:19 2019
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Processing ended: Fri Aug 23 11:46:46 2019
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
 
 
 +----------------------------+
