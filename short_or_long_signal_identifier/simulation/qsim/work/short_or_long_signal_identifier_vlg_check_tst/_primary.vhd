@@ -2,6 +2,7 @@ library verilog;
 use verilog.vl_types.all;
 entity short_or_long_signal_identifier_vlg_check_tst is
     port(
+        backspace_ready_signal: in     vl_logic;
         code_test0      : in     vl_logic_vector(1 downto 0);
         code_test1      : in     vl_logic_vector(1 downto 0);
         code_test2      : in     vl_logic_vector(1 downto 0);

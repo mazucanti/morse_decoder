@@ -6,6 +6,7 @@ entity short_or_long_signal_identifier is
         button_input    : in     vl_logic;
         backspace       : in     vl_logic;
         clear           : in     vl_logic;
+        backspace_ready_signal: out    vl_logic;
         code_test0      : out    vl_logic_vector(1 downto 0);
         code_test1      : out    vl_logic_vector(1 downto 0);
         code_test2      : out    vl_logic_vector(1 downto 0);
