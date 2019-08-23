@@ -7,13 +7,12 @@ entity send_control is
 --w_perm gera um led indicador de que algo pode ser recebido
 --r_perm gera um led indicador de que algo pode ser enviado
 	port (clk, r_w, recieve: in std_logic;
-			r_perm, w_perm, send: out std_logic); 
+			r_perm, w_perm: out std_logic;
+			send : buffer std_logic); 
 end entity;
 
 architecture behav of send_control is
 	begin
-	--r_w e diferente para cada placa, por isso essa etapa extra
-	send <= r_w;
 	process(clk)
 	--reduçao de clock para 4Hz
 		variable count : integer range 0 to 12500000;

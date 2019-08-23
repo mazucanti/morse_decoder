@@ -13,10 +13,10 @@
 -- applicable agreement for further details.
 
 -- VENDOR "Altera"
--- PROGRAM "Quartus II 32-bit"
--- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
+-- PROGRAM "Quartus II 64-Bit"
+-- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition"
 
--- DATE "08/23/2019 14:23:51"
+-- DATE "08/23/2019 15:47:09"
 
 -- 
 -- Device: Altera EP2C20F484C7 Package FBGA484
