@@ -13,14 +13,14 @@ use ieee.std_logic_1164.all;
 use work.code_types.all;
 
 entity mod_com is
-	port --(clk, enter, r_w, recieve : in std_logic; 
-			(clk, r_w, recieve: in std_logic;
+	port (clk, r_w, recieve: in std_logic;
+			r_perm, w_perm, send: out std_logic); 
+			--(clk, enter, r_w, recieve : in std_logic; 
 			--enter: controle de envio de mensagem
-			--r_w controla o modo de escrita ou registro de mensagem
-			--recebe sinal de permissao
+			
 			--code : inout integer_vector; 
 			--Mensagem a ser enviada ou recebida
-			r_perm, w_perm, send: out std_logic); 
+			
 			--send envia o sinal de permissao
 			--w_perm gera um led indicador de que algo pode ser recebido
 			--r_perm gera um led indicador de que algo pode ser enviado
