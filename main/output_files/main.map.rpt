@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Thu Aug 22 18:48:12 2019
+Fri Aug 23 19:09:08 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,15 +15,16 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
   9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |main
- 12. Port Connectivity Checks: "modulo_pwm:\brightness_loop:4:led_intensity_module"
- 13. Port Connectivity Checks: "modulo_pwm:\brightness_loop:3:led_intensity_module"
- 14. Port Connectivity Checks: "modulo_pwm:\brightness_loop:2:led_intensity_module"
- 15. Port Connectivity Checks: "modulo_pwm:\brightness_loop:1:led_intensity_module"
- 16. Port Connectivity Checks: "modulo_pwm:\brightness_loop:0:led_intensity_module"
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |main
+ 13. Port Connectivity Checks: "modulo_pwm:\brightness_loop:4:led_intensity_module"
+ 14. Port Connectivity Checks: "modulo_pwm:\brightness_loop:3:led_intensity_module"
+ 15. Port Connectivity Checks: "modulo_pwm:\brightness_loop:2:led_intensity_module"
+ 16. Port Connectivity Checks: "modulo_pwm:\brightness_loop:1:led_intensity_module"
+ 17. Port Connectivity Checks: "modulo_pwm:\brightness_loop:0:led_intensity_module"
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -49,16 +50,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Aug 22 18:48:12 2019           ;
+; Analysis & Synthesis Status        ; Successful - Fri Aug 23 19:09:08 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; main                                            ;
 ; Top-level Entity Name              ; main                                            ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 124                                             ;
-;     Total combinational functions  ; 116                                             ;
-;     Dedicated logic registers      ; 53                                              ;
-; Total registers                    ; 53                                              ;
-; Total pins                         ; 8                                               ;
+; Total logic elements               ; 192                                             ;
+;     Total combinational functions  ; 184                                             ;
+;     Dedicated logic registers      ; 86                                              ;
+; Total registers                    ; 86                                              ;
+; Total pins                         ; 10                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -162,15 +163,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                ;
-+------------------------------------------------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                                       ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                   ; Library ;
-+------------------------------------------------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
-; ../modulo_pwm/modulo_pwm.vhd                                           ; yes             ; User VHDL File  ; C:/Users/pedro.shoji/Desktop/morse_decoder/modulo_pwm/modulo_pwm.vhd                                           ;         ;
-; ../short_or_long_signal_identifier/short_or_long_signal_identifier.vhd ; yes             ; User VHDL File  ; C:/Users/pedro.shoji/Desktop/morse_decoder/short_or_long_signal_identifier/short_or_long_signal_identifier.vhd ;         ;
-; main.vhd                                                               ; yes             ; User VHDL File  ; C:/Users/pedro.shoji/Desktop/morse_decoder/main/main.vhd                                                       ;         ;
-+------------------------------------------------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                         ;
++------------------------------------------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                       ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                            ; Library ;
++------------------------------------------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; ../modulo_pwm/modulo_pwm.vhd                                           ; yes             ; User VHDL File  ; C:/Users/pedro.shoji/Documents/GitHub/morse_decoder/modulo_pwm/modulo_pwm.vhd                                           ;         ;
+; ../short_or_long_signal_identifier/short_or_long_signal_identifier.vhd ; yes             ; User VHDL File  ; C:/Users/pedro.shoji/Documents/GitHub/morse_decoder/short_or_long_signal_identifier/short_or_long_signal_identifier.vhd ;         ;
+; main.vhd                                                               ; yes             ; User VHDL File  ; C:/Users/pedro.shoji/Documents/GitHub/morse_decoder/main/main.vhd                                                       ;         ;
++------------------------------------------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -178,28 +179,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 124   ;
+; Estimated Total logic elements              ; 192   ;
 ;                                             ;       ;
-; Total combinational functions               ; 116   ;
+; Total combinational functions               ; 184   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 37    ;
-;     -- 3 input functions                    ; 4     ;
-;     -- <=2 input functions                  ; 75    ;
+;     -- 4 input functions                    ; 60    ;
+;     -- 3 input functions                    ; 15    ;
+;     -- <=2 input functions                  ; 109   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 79    ;
-;     -- arithmetic mode                      ; 37    ;
+;     -- normal mode                          ; 116   ;
+;     -- arithmetic mode                      ; 68    ;
 ;                                             ;       ;
-; Total registers                             ; 53    ;
-;     -- Dedicated logic registers            ; 53    ;
+; Total registers                             ; 86    ;
+;     -- Dedicated logic registers            ; 86    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 8     ;
+; I/O pins                                    ; 10    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 53    ;
-; Total fan-out                               ; 476   ;
-; Average fan-out                             ; 2.69  ;
+; Maximum fan-out                             ; 86    ;
+; Total fan-out                               ; 890   ;
+; Average fan-out                             ; 3.18  ;
 +---------------------------------------------+-------+
 
 
@@ -208,13 +209,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                      ; Library Name ;
 +---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------+--------------+
-; |main                                                   ; 116 (1)           ; 53 (0)       ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |main                                                    ; work         ;
+; |main                                                   ; 184 (2)           ; 86 (0)       ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |main                                                    ; work         ;
 ;    |modulo_pwm:\brightness_loop:0:led_intensity_module| ; 9 (9)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|modulo_pwm:\brightness_loop:0:led_intensity_module ; work         ;
 ;    |modulo_pwm:\brightness_loop:1:led_intensity_module| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|modulo_pwm:\brightness_loop:1:led_intensity_module ; work         ;
 ;    |modulo_pwm:\brightness_loop:2:led_intensity_module| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|modulo_pwm:\brightness_loop:2:led_intensity_module ; work         ;
 ;    |modulo_pwm:\brightness_loop:3:led_intensity_module| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|modulo_pwm:\brightness_loop:3:led_intensity_module ; work         ;
 ;    |modulo_pwm:\brightness_loop:4:led_intensity_module| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|modulo_pwm:\brightness_loop:4:led_intensity_module ; work         ;
-;    |short_or_long_signal_identifier:code_control|       ; 98 (98)           ; 45 (45)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|short_or_long_signal_identifier:code_control       ; work         ;
+;    |short_or_long_signal_identifier:code_control|       ; 165 (165)         ; 78 (78)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|short_or_long_signal_identifier:code_control       ; work         ;
 +---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -265,29 +266,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 53    ;
+; Total registers                              ; 86    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 45    ;
+; Number of registers using Synchronous Load   ; 32    ;
+; Number of registers using Asynchronous Clear ; 78    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 13    ;
+; Number of registers using Clock Enable       ; 74    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|short_or_long_signal_identifier:code_control|code[4][0]    ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|short_or_long_signal_identifier:code_control|code[3][1]    ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|short_or_long_signal_identifier:code_control|code[2][1]    ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|short_or_long_signal_identifier:code_control|code[1][1]    ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|short_or_long_signal_identifier:code_control|code[0][1]    ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |main|short_or_long_signal_identifier:code_control|current_index ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |main|short_or_long_signal_identifier:code_control|Mux0          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
++------------------------------------------------------------------------+
+; Inverted Register Statistics                                           ;
++--------------------------------------------------------------+---------+
+; Inverted Register                                            ; Fan out ;
++--------------------------------------------------------------+---------+
+; short_or_long_signal_identifier:code_control|backspace_ready ; 3       ;
+; Total number of inverted registers = 1                       ;         ;
++--------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |main|short_or_long_signal_identifier:code_control|current_index[0]        ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |main|short_or_long_signal_identifier:code_control|backspace_wait_time[14] ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |main|short_or_long_signal_identifier:code_control|code[4][1]              ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |main|short_or_long_signal_identifier:code_control|code[3][1]              ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |main|short_or_long_signal_identifier:code_control|code[2][0]              ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |main|short_or_long_signal_identifier:code_control|code[1][0]              ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |main|short_or_long_signal_identifier:code_control|code[0][0]              ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |main|short_or_long_signal_identifier:code_control|current_index           ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |main|short_or_long_signal_identifier:code_control|Mux1                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------+
@@ -350,7 +363,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -360,13 +373,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Aug 22 18:48:10 2019
+    Info: Processing started: Fri Aug 23 19:09:03 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file /users/pedro.shoji/desktop/morse_decoder/modulo_pwm/modulo_pwm.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/pedro.shoji/documents/github/morse_decoder/modulo_pwm/modulo_pwm.vhd
     Info (12022): Found design unit 1: modulo_pwm-a
     Info (12023): Found entity 1: modulo_pwm
-Info (12021): Found 3 design units, including 1 entities, in source file /users/pedro.shoji/desktop/morse_decoder/short_or_long_signal_identifier/short_or_long_signal_identifier.vhd
+Info (12021): Found 3 design units, including 1 entities, in source file /users/pedro.shoji/documents/github/morse_decoder/short_or_long_signal_identifier/short_or_long_signal_identifier.vhd
     Info (12022): Found design unit 1: code_types
     Info (12022): Found design unit 2: short_or_long_signal_identifier-verifier
     Info (12023): Found entity 1: short_or_long_signal_identifier
@@ -377,16 +390,18 @@ Info (12127): Elaborating entity "main" for the top level hierarchy
 Info (12128): Elaborating entity "modulo_pwm" for hierarchy "modulo_pwm:\brightness_loop:0:led_intensity_module"
 Warning (10492): VHDL Process Statement warning at modulo_pwm.vhd(25): signal "duty" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "short_or_long_signal_identifier" for hierarchy "short_or_long_signal_identifier:code_control"
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 137 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 129 logic cells
+Info (21057): Implemented 204 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 6 output pins
+    Info (21061): Implemented 194 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 488 megabytes
-    Info: Processing ended: Thu Aug 22 18:48:12 2019
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Processing ended: Fri Aug 23 19:09:08 2019
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:03
 
 

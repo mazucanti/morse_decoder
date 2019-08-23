@@ -439,8 +439,8 @@ GND*                         : R16       :        :                   :         
 GND*                         : R17       :        :                   :         : 6         :                
 GND*                         : R18       :        :                   :         : 6         :                
 GND*                         : R19       :        :                   :         : 6         :                
-GND*                         : R20       :        :                   :         : 6         :                
-GND*                         : R21       :        :                   :         : 6         :                
+backspace_ready              : R20       : output : 3.3-V LVTTL       :         : 6         : Y              
+backspace_in_code            : R21       : input  : 3.3-V LVTTL       :         : 6         : Y              
 input_button                 : R22       : input  : 3.3-V LVTTL       :         : 6         : Y              
 GND*                         : T1        :        :                   :         : 1         :                
 GND*                         : T2        :        :                   :         : 1         :                
