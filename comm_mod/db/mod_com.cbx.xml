@@ -1,5 +1,7 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="mod_com">
+		<CBX_INST_ENTRY INSTANCE_NAME="|mod_com|lpm_mux:Mux0" CBX_FILE_NAME="mux_3nc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mod_com|lpm_mux:Mux1" CBX_FILE_NAME="mux_3nc.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
