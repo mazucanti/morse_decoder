@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for main
-Fri Aug 23 11:46:51 2019
+Fri Aug 23 15:45:14 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -106,7 +106,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 133.74 MHz ; 133.74 MHz      ; clock      ;      ;
+; 112.25 MHz ; 112.25 MHz      ; clock      ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -116,7 +116,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+---------------+
 ; Clock ; Slack  ; End Point TNS ;
 +-------+--------+---------------+
-; clock ; -6.477 ; -325.323      ;
+; clock ; -7.909 ; -374.673      ;
 +-------+--------+---------------+
 
 
@@ -155,106 +155,106 @@ No paths to report.
 +--------+----------------------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                                                            ; To Node                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+----------------------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -6.477 ; short_or_long_signal_identifier:code_control|count[0]                ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 7.519      ;
-; -6.415 ; short_or_long_signal_identifier:code_control|count[0]                ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 7.457      ;
-; -6.396 ; short_or_long_signal_identifier:code_control|count[1]                ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 7.438      ;
-; -6.334 ; short_or_long_signal_identifier:code_control|count[1]                ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 7.376      ;
-; -6.318 ; short_or_long_signal_identifier:code_control|count[2]                ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 7.360      ;
-; -6.256 ; short_or_long_signal_identifier:code_control|count[2]                ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 7.298      ;
-; -6.240 ; short_or_long_signal_identifier:code_control|count[3]                ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 7.282      ;
-; -6.221 ; short_or_long_signal_identifier:code_control|count[0]                ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.262      ;
-; -6.216 ; short_or_long_signal_identifier:code_control|count[0]                ; short_or_long_signal_identifier:code_control|code[4][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.257      ;
-; -6.208 ; short_or_long_signal_identifier:code_control|count[0]                ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.249      ;
-; -6.191 ; short_or_long_signal_identifier:code_control|count[0]                ; short_or_long_signal_identifier:code_control|code[4][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.232      ;
-; -6.187 ; short_or_long_signal_identifier:code_control|count[0]                ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.228      ;
-; -6.178 ; short_or_long_signal_identifier:code_control|count[3]                ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 7.220      ;
-; -6.157 ; short_or_long_signal_identifier:code_control|count[4]                ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 7.199      ;
-; -6.140 ; short_or_long_signal_identifier:code_control|count[1]                ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.181      ;
-; -6.135 ; short_or_long_signal_identifier:code_control|count[1]                ; short_or_long_signal_identifier:code_control|code[4][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.176      ;
-; -6.127 ; short_or_long_signal_identifier:code_control|count[1]                ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.168      ;
-; -6.119 ; short_or_long_signal_identifier:code_control|count[5]                ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 7.161      ;
-; -6.110 ; short_or_long_signal_identifier:code_control|count[1]                ; short_or_long_signal_identifier:code_control|code[4][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.151      ;
-; -6.106 ; short_or_long_signal_identifier:code_control|count[1]                ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.147      ;
-; -6.095 ; short_or_long_signal_identifier:code_control|count[4]                ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 7.137      ;
-; -6.062 ; short_or_long_signal_identifier:code_control|count[2]                ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.103      ;
-; -6.057 ; short_or_long_signal_identifier:code_control|count[5]                ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 7.099      ;
-; -6.057 ; short_or_long_signal_identifier:code_control|count[2]                ; short_or_long_signal_identifier:code_control|code[4][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.098      ;
-; -6.049 ; short_or_long_signal_identifier:code_control|count[2]                ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.090      ;
-; -6.037 ; short_or_long_signal_identifier:code_control|count[6]                ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 7.079      ;
-; -6.032 ; short_or_long_signal_identifier:code_control|count[2]                ; short_or_long_signal_identifier:code_control|code[4][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.073      ;
-; -6.028 ; short_or_long_signal_identifier:code_control|count[2]                ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.069      ;
-; -5.984 ; short_or_long_signal_identifier:code_control|count[3]                ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.025      ;
-; -5.979 ; short_or_long_signal_identifier:code_control|count[3]                ; short_or_long_signal_identifier:code_control|code[4][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.020      ;
-; -5.975 ; short_or_long_signal_identifier:code_control|count[6]                ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 7.017      ;
-; -5.971 ; short_or_long_signal_identifier:code_control|count[3]                ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 7.012      ;
-; -5.954 ; short_or_long_signal_identifier:code_control|count[3]                ; short_or_long_signal_identifier:code_control|code[4][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.995      ;
-; -5.950 ; short_or_long_signal_identifier:code_control|count[3]                ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.991      ;
-; -5.939 ; short_or_long_signal_identifier:code_control|count[0]                ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.980      ;
-; -5.934 ; short_or_long_signal_identifier:code_control|count[0]                ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.975      ;
-; -5.925 ; short_or_long_signal_identifier:code_control|count[7]                ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 6.967      ;
-; -5.901 ; short_or_long_signal_identifier:code_control|count[4]                ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.942      ;
-; -5.896 ; short_or_long_signal_identifier:code_control|count[4]                ; short_or_long_signal_identifier:code_control|code[4][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.937      ;
-; -5.888 ; short_or_long_signal_identifier:code_control|count[4]                ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.929      ;
-; -5.871 ; short_or_long_signal_identifier:code_control|count[4]                ; short_or_long_signal_identifier:code_control|code[4][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.912      ;
-; -5.867 ; short_or_long_signal_identifier:code_control|count[4]                ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.908      ;
-; -5.863 ; short_or_long_signal_identifier:code_control|count[7]                ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 6.905      ;
-; -5.863 ; short_or_long_signal_identifier:code_control|count[5]                ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.904      ;
-; -5.858 ; short_or_long_signal_identifier:code_control|count[5]                ; short_or_long_signal_identifier:code_control|code[4][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.899      ;
-; -5.858 ; short_or_long_signal_identifier:code_control|count[1]                ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.899      ;
-; -5.853 ; short_or_long_signal_identifier:code_control|count[1]                ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.894      ;
-; -5.850 ; short_or_long_signal_identifier:code_control|count[5]                ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.891      ;
-; -5.833 ; short_or_long_signal_identifier:code_control|count[5]                ; short_or_long_signal_identifier:code_control|code[4][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.874      ;
-; -5.832 ; short_or_long_signal_identifier:code_control|count[0]                ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.873      ;
-; -5.829 ; short_or_long_signal_identifier:code_control|count[5]                ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.870      ;
-; -5.782 ; short_or_long_signal_identifier:code_control|count[8]                ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 6.824      ;
-; -5.781 ; short_or_long_signal_identifier:code_control|count[6]                ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.822      ;
-; -5.780 ; short_or_long_signal_identifier:code_control|count[2]                ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.821      ;
-; -5.776 ; short_or_long_signal_identifier:code_control|count[6]                ; short_or_long_signal_identifier:code_control|code[4][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.817      ;
-; -5.775 ; short_or_long_signal_identifier:code_control|count[2]                ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.816      ;
-; -5.768 ; short_or_long_signal_identifier:code_control|count[6]                ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.809      ;
-; -5.751 ; short_or_long_signal_identifier:code_control|count[6]                ; short_or_long_signal_identifier:code_control|code[4][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.792      ;
-; -5.751 ; short_or_long_signal_identifier:code_control|count[1]                ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.792      ;
-; -5.747 ; short_or_long_signal_identifier:code_control|count[6]                ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.788      ;
-; -5.720 ; short_or_long_signal_identifier:code_control|count[8]                ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 6.762      ;
-; -5.702 ; short_or_long_signal_identifier:code_control|count[3]                ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.743      ;
-; -5.697 ; short_or_long_signal_identifier:code_control|count[3]                ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.738      ;
-; -5.673 ; short_or_long_signal_identifier:code_control|count[2]                ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.714      ;
-; -5.669 ; short_or_long_signal_identifier:code_control|count[7]                ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.710      ;
-; -5.664 ; short_or_long_signal_identifier:code_control|count[7]                ; short_or_long_signal_identifier:code_control|code[4][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.705      ;
-; -5.662 ; short_or_long_signal_identifier:code_control|count[9]                ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 6.704      ;
-; -5.656 ; short_or_long_signal_identifier:code_control|count[7]                ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.697      ;
-; -5.639 ; short_or_long_signal_identifier:code_control|count[7]                ; short_or_long_signal_identifier:code_control|code[4][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.680      ;
-; -5.635 ; short_or_long_signal_identifier:code_control|count[7]                ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.676      ;
-; -5.619 ; short_or_long_signal_identifier:code_control|count[4]                ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.660      ;
-; -5.614 ; short_or_long_signal_identifier:code_control|count[4]                ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.655      ;
-; -5.600 ; short_or_long_signal_identifier:code_control|count[9]                ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 6.642      ;
-; -5.595 ; short_or_long_signal_identifier:code_control|count[3]                ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.636      ;
-; -5.592 ; short_or_long_signal_identifier:code_control|code[0][0]              ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; -0.001     ; 6.629      ;
-; -5.592 ; short_or_long_signal_identifier:code_control|code[0][0]              ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; -0.001     ; 6.629      ;
-; -5.581 ; short_or_long_signal_identifier:code_control|count[5]                ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.622      ;
-; -5.577 ; short_or_long_signal_identifier:code_control|count[10]               ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 6.619      ;
-; -5.576 ; short_or_long_signal_identifier:code_control|count[5]                ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.617      ;
-; -5.566 ; short_or_long_signal_identifier:code_control|code[1][0]              ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.000      ; 6.604      ;
-; -5.566 ; short_or_long_signal_identifier:code_control|code[1][0]              ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.000      ; 6.604      ;
-; -5.526 ; short_or_long_signal_identifier:code_control|count[8]                ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.567      ;
-; -5.521 ; short_or_long_signal_identifier:code_control|count[8]                ; short_or_long_signal_identifier:code_control|code[4][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.562      ;
-; -5.515 ; short_or_long_signal_identifier:code_control|count[10]               ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 6.557      ;
-; -5.513 ; short_or_long_signal_identifier:code_control|count[8]                ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.554      ;
-; -5.512 ; short_or_long_signal_identifier:code_control|count[4]                ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.553      ;
-; -5.506 ; short_or_long_signal_identifier:code_control|count[11]               ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 6.548      ;
-; -5.502 ; short_or_long_signal_identifier:code_control|backspace_wait_time[3]  ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.007      ; 6.547      ;
-; -5.502 ; short_or_long_signal_identifier:code_control|backspace_wait_time[3]  ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.007      ; 6.547      ;
-; -5.499 ; short_or_long_signal_identifier:code_control|count[6]                ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.540      ;
-; -5.496 ; short_or_long_signal_identifier:code_control|count[8]                ; short_or_long_signal_identifier:code_control|code[4][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.537      ;
-; -5.494 ; short_or_long_signal_identifier:code_control|count[6]                ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.535      ;
-; -5.492 ; short_or_long_signal_identifier:code_control|count[8]                ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.533      ;
-; -5.474 ; short_or_long_signal_identifier:code_control|count[5]                ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 6.515      ;
-; -5.465 ; short_or_long_signal_identifier:code_control|count[12]               ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 6.507      ;
-; -5.452 ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.007      ; 6.497      ;
-; -5.452 ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.007      ; 6.497      ;
-; -5.443 ; short_or_long_signal_identifier:code_control|backspace_wait_time[3]  ; short_or_long_signal_identifier:code_control|code[4][1] ; clock        ; clock       ; 1.000        ; 0.007      ; 6.488      ;
-; -5.443 ; short_or_long_signal_identifier:code_control|backspace_wait_time[3]  ; short_or_long_signal_identifier:code_control|code[4][0] ; clock        ; clock       ; 1.000        ; 0.007      ; 6.488      ;
-; -5.430 ; short_or_long_signal_identifier:code_control|backspace_wait_time[3]  ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.007      ; 6.475      ;
+; -7.909 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.950      ;
+; -7.909 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.950      ;
+; -7.800 ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.841      ;
+; -7.800 ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.841      ;
+; -7.752 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.792      ;
+; -7.752 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.792      ;
+; -7.727 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.001      ; 8.766      ;
+; -7.724 ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.765      ;
+; -7.724 ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.765      ;
+; -7.706 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.747      ;
+; -7.706 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.747      ;
+; -7.646 ; short_or_long_signal_identifier:code_control|backspace_wait_time[0]  ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.684      ;
+; -7.646 ; short_or_long_signal_identifier:code_control|backspace_wait_time[0]  ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.684      ;
+; -7.643 ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.683      ;
+; -7.643 ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.683      ;
+; -7.618 ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.001      ; 8.657      ;
+; -7.589 ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.630      ;
+; -7.589 ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.630      ;
+; -7.567 ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.607      ;
+; -7.567 ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.607      ;
+; -7.566 ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.607      ;
+; -7.566 ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.607      ;
+; -7.566 ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.607      ;
+; -7.566 ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.607      ;
+; -7.563 ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.001      ; 8.602      ;
+; -7.563 ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.001      ; 8.602      ;
+; -7.549 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.589      ;
+; -7.549 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.589      ;
+; -7.542 ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.001      ; 8.581      ;
+; -7.536 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.576      ;
+; -7.536 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.576      ;
+; -7.526 ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.567      ;
+; -7.526 ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.567      ;
+; -7.524 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.001      ; 8.563      ;
+; -7.518 ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.556      ;
+; -7.518 ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.556      ;
+; -7.503 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.001      ; 8.542      ;
+; -7.502 ; short_or_long_signal_identifier:code_control|backspace_wait_time[6]  ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.540      ;
+; -7.502 ; short_or_long_signal_identifier:code_control|backspace_wait_time[6]  ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.540      ;
+; -7.498 ; short_or_long_signal_identifier:code_control|backspace_wait_time[30] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.539      ;
+; -7.498 ; short_or_long_signal_identifier:code_control|backspace_wait_time[30] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.539      ;
+; -7.489 ; short_or_long_signal_identifier:code_control|backspace_wait_time[0]  ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; -0.001     ; 8.526      ;
+; -7.489 ; short_or_long_signal_identifier:code_control|backspace_wait_time[0]  ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; -0.001     ; 8.526      ;
+; -7.464 ; short_or_long_signal_identifier:code_control|backspace_wait_time[0]  ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; -0.002     ; 8.500      ;
+; -7.458 ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.001      ; 8.497      ;
+; -7.458 ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.001      ; 8.497      ;
+; -7.450 ; short_or_long_signal_identifier:code_control|backspace_wait_time[18] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.491      ;
+; -7.450 ; short_or_long_signal_identifier:code_control|backspace_wait_time[18] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.491      ;
+; -7.432 ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.472      ;
+; -7.432 ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.472      ;
+; -7.427 ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.467      ;
+; -7.427 ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.467      ;
+; -7.422 ; short_or_long_signal_identifier:code_control|backspace_wait_time[16] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.463      ;
+; -7.422 ; short_or_long_signal_identifier:code_control|backspace_wait_time[16] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.463      ;
+; -7.413 ; short_or_long_signal_identifier:code_control|backspace_wait_time[22] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.454      ;
+; -7.413 ; short_or_long_signal_identifier:code_control|backspace_wait_time[22] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.454      ;
+; -7.409 ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.449      ;
+; -7.409 ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.449      ;
+; -7.409 ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.449      ;
+; -7.409 ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.449      ;
+; -7.407 ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.001      ; 8.446      ;
+; -7.406 ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.444      ;
+; -7.406 ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.444      ;
+; -7.399 ; short_or_long_signal_identifier:code_control|backspace_wait_time[1]  ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.437      ;
+; -7.399 ; short_or_long_signal_identifier:code_control|backspace_wait_time[1]  ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.437      ;
+; -7.394 ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.001      ; 8.433      ;
+; -7.384 ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.001      ; 8.423      ;
+; -7.384 ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.001      ; 8.423      ;
+; -7.381 ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; -0.001     ; 8.418      ;
+; -7.378 ; short_or_long_signal_identifier:code_control|backspace_wait_time[7]  ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.416      ;
+; -7.378 ; short_or_long_signal_identifier:code_control|backspace_wait_time[7]  ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.416      ;
+; -7.369 ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.409      ;
+; -7.369 ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.409      ;
+; -7.361 ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; -0.001     ; 8.398      ;
+; -7.361 ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; -0.001     ; 8.398      ;
+; -7.351 ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.391      ;
+; -7.351 ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.391      ;
+; -7.345 ; short_or_long_signal_identifier:code_control|backspace_wait_time[6]  ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; -0.001     ; 8.382      ;
+; -7.345 ; short_or_long_signal_identifier:code_control|backspace_wait_time[6]  ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; -0.001     ; 8.382      ;
+; -7.344 ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.001      ; 8.383      ;
+; -7.341 ; short_or_long_signal_identifier:code_control|backspace_wait_time[30] ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.381      ;
+; -7.341 ; short_or_long_signal_identifier:code_control|backspace_wait_time[30] ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.381      ;
+; -7.336 ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; -0.002     ; 8.372      ;
+; -7.333 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.373      ;
+; -7.333 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.373      ;
+; -7.320 ; short_or_long_signal_identifier:code_control|backspace_wait_time[6]  ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; -0.002     ; 8.356      ;
+; -7.318 ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.001      ; 8.357      ;
+; -7.316 ; short_or_long_signal_identifier:code_control|backspace_wait_time[30] ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.001      ; 8.355      ;
+; -7.301 ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.339      ;
+; -7.301 ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.339      ;
+; -7.300 ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.001      ; 8.339      ;
+; -7.300 ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.001      ; 8.339      ;
+; -7.300 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.001      ; 8.339      ;
+; -7.293 ; short_or_long_signal_identifier:code_control|backspace_wait_time[18] ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.333      ;
+; -7.293 ; short_or_long_signal_identifier:code_control|backspace_wait_time[18] ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 8.333      ;
+; -7.288 ; short_or_long_signal_identifier:code_control|backspace_wait_time[26] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.329      ;
+; -7.288 ; short_or_long_signal_identifier:code_control|backspace_wait_time[26] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 8.329      ;
+; -7.276 ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; -0.001     ; 8.313      ;
+; -7.274 ; short_or_long_signal_identifier:code_control|backspace_wait_time[2]  ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.312      ;
+; -7.274 ; short_or_long_signal_identifier:code_control|backspace_wait_time[2]  ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.000      ; 8.312      ;
 +--------+----------------------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -264,105 +264,105 @@ No paths to report.
 ; Slack ; From Node                                                            ; To Node                                                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+----------------------------------------------------------------------+----------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; 0.445 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; short_or_long_signal_identifier:code_control|current_index[0]        ; short_or_long_signal_identifier:code_control|current_index[0]        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; short_or_long_signal_identifier:code_control|current_index[1]        ; short_or_long_signal_identifier:code_control|current_index[1]        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; short_or_long_signal_identifier:code_control|backspace_ready         ; short_or_long_signal_identifier:code_control|backspace_ready         ; clock        ; clock       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.629 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.915      ;
 ; 0.629 ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.915      ;
-; 0.650 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.936      ;
-; 0.945 ; short_or_long_signal_identifier:code_control|backspace_wait_time[1]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.231      ;
 ; 0.945 ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.231      ;
-; 0.946 ; short_or_long_signal_identifier:code_control|backspace_wait_time[9]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[9]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.232      ;
 ; 0.946 ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.232      ;
-; 0.947 ; short_or_long_signal_identifier:code_control|backspace_wait_time[7]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[7]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.233      ;
-; 0.947 ; short_or_long_signal_identifier:code_control|backspace_wait_time[11] ; short_or_long_signal_identifier:code_control|backspace_wait_time[11] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.233      ;
 ; 0.947 ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.233      ;
 ; 0.947 ; short_or_long_signal_identifier:code_control|backspace_wait_time[15] ; short_or_long_signal_identifier:code_control|backspace_wait_time[15] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.233      ;
 ; 0.947 ; short_or_long_signal_identifier:code_control|backspace_wait_time[23] ; short_or_long_signal_identifier:code_control|backspace_wait_time[23] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.233      ;
 ; 0.947 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.233      ;
 ; 0.947 ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.233      ;
-; 0.968 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.254      ;
 ; 0.968 ; short_or_long_signal_identifier:code_control|backspace_wait_time[16] ; short_or_long_signal_identifier:code_control|backspace_wait_time[16] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.254      ;
-; 0.968 ; short_or_long_signal_identifier:code_control|backspace_wait_time[0]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[0]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.254      ;
-; 0.975 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.261      ;
-; 0.976 ; short_or_long_signal_identifier:code_control|backspace_wait_time[2]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[2]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.262      ;
+; 0.970 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.256      ;
+; 0.971 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.257      ;
+; 0.974 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.260      ;
+; 0.976 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.262      ;
 ; 0.976 ; short_or_long_signal_identifier:code_control|backspace_wait_time[18] ; short_or_long_signal_identifier:code_control|backspace_wait_time[18] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.262      ;
-; 0.977 ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.263      ;
-; 0.977 ; short_or_long_signal_identifier:code_control|backspace_wait_time[14] ; short_or_long_signal_identifier:code_control|backspace_wait_time[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.263      ;
 ; 0.977 ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.263      ;
 ; 0.977 ; short_or_long_signal_identifier:code_control|backspace_wait_time[30] ; short_or_long_signal_identifier:code_control|backspace_wait_time[30] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.263      ;
-; 0.979 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.265      ;
-; 0.980 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.266      ;
-; 0.987 ; short_or_long_signal_identifier:code_control|backspace_wait_time[3]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[3]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.273      ;
-; 0.987 ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.273      ;
+; 0.977 ; short_or_long_signal_identifier:code_control|backspace_wait_time[14] ; short_or_long_signal_identifier:code_control|backspace_wait_time[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.263      ;
+; 0.978 ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.264      ;
 ; 0.987 ; short_or_long_signal_identifier:code_control|backspace_wait_time[19] ; short_or_long_signal_identifier:code_control|backspace_wait_time[19] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.273      ;
 ; 0.987 ; short_or_long_signal_identifier:code_control|backspace_wait_time[21] ; short_or_long_signal_identifier:code_control|backspace_wait_time[21] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.273      ;
-; 1.012 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.298      ;
-; 1.018 ; short_or_long_signal_identifier:code_control|backspace_wait_time[8]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[8]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.304      ;
+; 1.014 ; short_or_long_signal_identifier:code_control|backspace_wait_time[10] ; short_or_long_signal_identifier:code_control|backspace_wait_time[10] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.300      ;
+; 1.015 ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.301      ;
+; 1.016 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.302      ;
+; 1.016 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.302      ;
 ; 1.018 ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.304      ;
-; 1.019 ; short_or_long_signal_identifier:code_control|backspace_wait_time[6]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[6]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.305      ;
-; 1.019 ; short_or_long_signal_identifier:code_control|backspace_wait_time[10] ; short_or_long_signal_identifier:code_control|backspace_wait_time[10] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.305      ;
-; 1.019 ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.305      ;
 ; 1.019 ; short_or_long_signal_identifier:code_control|backspace_wait_time[22] ; short_or_long_signal_identifier:code_control|backspace_wait_time[22] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.305      ;
 ; 1.019 ; short_or_long_signal_identifier:code_control|backspace_wait_time[26] ; short_or_long_signal_identifier:code_control|backspace_wait_time[26] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.305      ;
 ; 1.019 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.305      ;
-; 1.034 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.320      ;
-; 1.038 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.324      ;
-; 1.299 ; short_or_long_signal_identifier:code_control|current_index[1]        ; short_or_long_signal_identifier:code_control|current_index[1]        ; clock        ; clock       ; 0.000        ; 0.000      ; 1.585      ;
-; 1.400 ; short_or_long_signal_identifier:code_control|backspace_wait_time[0]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.686      ;
+; 1.235 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.521      ;
 ; 1.400 ; short_or_long_signal_identifier:code_control|backspace_wait_time[16] ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.686      ;
-; 1.400 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.686      ;
-; 1.407 ; short_or_long_signal_identifier:code_control|backspace_wait_time[1]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[2]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.693      ;
+; 1.402 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.688      ;
+; 1.403 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.689      ;
+; 1.406 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.692      ;
 ; 1.407 ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; short_or_long_signal_identifier:code_control|backspace_wait_time[18] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.693      ;
-; 1.407 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.693      ;
-; 1.408 ; short_or_long_signal_identifier:code_control|backspace_wait_time[2]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[3]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.694      ;
 ; 1.408 ; short_or_long_signal_identifier:code_control|backspace_wait_time[18] ; short_or_long_signal_identifier:code_control|backspace_wait_time[19] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.694      ;
-; 1.408 ; short_or_long_signal_identifier:code_control|backspace_wait_time[9]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[10] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.694      ;
+; 1.408 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.694      ;
 ; 1.408 ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; short_or_long_signal_identifier:code_control|backspace_wait_time[26] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.694      ;
 ; 1.409 ; short_or_long_signal_identifier:code_control|backspace_wait_time[30] ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.695      ;
 ; 1.409 ; short_or_long_signal_identifier:code_control|backspace_wait_time[14] ; short_or_long_signal_identifier:code_control|backspace_wait_time[15] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.695      ;
-; 1.409 ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; short_or_long_signal_identifier:code_control|backspace_wait_time[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.695      ;
 ; 1.409 ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; short_or_long_signal_identifier:code_control|backspace_wait_time[30] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.695      ;
-; 1.409 ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.695      ;
+; 1.409 ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; short_or_long_signal_identifier:code_control|backspace_wait_time[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.695      ;
 ; 1.409 ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; short_or_long_signal_identifier:code_control|backspace_wait_time[21] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.695      ;
-; 1.409 ; short_or_long_signal_identifier:code_control|backspace_wait_time[11] ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.695      ;
 ; 1.409 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.695      ;
-; 1.411 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.697      ;
-; 1.412 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.698      ;
-; 1.443 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.729      ;
-; 1.448 ; short_or_long_signal_identifier:code_control|backspace_wait_time[8]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[9]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.734      ;
+; 1.445 ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.731      ;
 ; 1.448 ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.734      ;
-; 1.449 ; short_or_long_signal_identifier:code_control|backspace_wait_time[6]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[7]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.735      ;
-; 1.449 ; short_or_long_signal_identifier:code_control|backspace_wait_time[10] ; short_or_long_signal_identifier:code_control|backspace_wait_time[11] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.735      ;
-; 1.449 ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.735      ;
+; 1.449 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.735      ;
 ; 1.449 ; short_or_long_signal_identifier:code_control|backspace_wait_time[22] ; short_or_long_signal_identifier:code_control|backspace_wait_time[23] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.735      ;
 ; 1.449 ; short_or_long_signal_identifier:code_control|backspace_wait_time[26] ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.735      ;
 ; 1.449 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.735      ;
-; 1.449 ; short_or_long_signal_identifier:code_control|backspace_wait_time[3]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.735      ;
+; 1.449 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.735      ;
 ; 1.449 ; short_or_long_signal_identifier:code_control|backspace_wait_time[19] ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.735      ;
-; 1.449 ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[6]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.735      ;
 ; 1.449 ; short_or_long_signal_identifier:code_control|backspace_wait_time[21] ; short_or_long_signal_identifier:code_control|backspace_wait_time[22] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.735      ;
-; 1.467 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.753      ;
-; 1.471 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.757      ;
-; 1.480 ; short_or_long_signal_identifier:code_control|backspace_wait_time[0]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[2]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.766      ;
 ; 1.480 ; short_or_long_signal_identifier:code_control|backspace_wait_time[16] ; short_or_long_signal_identifier:code_control|backspace_wait_time[18] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.766      ;
-; 1.480 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.766      ;
-; 1.487 ; short_or_long_signal_identifier:code_control|backspace_wait_time[1]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[3]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.773      ;
+; 1.482 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.768      ;
+; 1.483 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.769      ;
+; 1.486 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.772      ;
 ; 1.487 ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; short_or_long_signal_identifier:code_control|backspace_wait_time[19] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.773      ;
-; 1.487 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.773      ;
-; 1.488 ; short_or_long_signal_identifier:code_control|backspace_wait_time[9]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[11] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.774      ;
+; 1.488 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.774      ;
 ; 1.488 ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.774      ;
-; 1.488 ; short_or_long_signal_identifier:code_control|backspace_wait_time[2]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.774      ;
 ; 1.488 ; short_or_long_signal_identifier:code_control|backspace_wait_time[18] ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.774      ;
 ; 1.489 ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.775      ;
 ; 1.489 ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; short_or_long_signal_identifier:code_control|backspace_wait_time[15] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.775      ;
-; 1.489 ; short_or_long_signal_identifier:code_control|backspace_wait_time[11] ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.775      ;
 ; 1.489 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.775      ;
-; 1.489 ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[6]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.775      ;
 ; 1.489 ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; short_or_long_signal_identifier:code_control|backspace_wait_time[22] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.775      ;
-; 1.491 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.777      ;
-; 1.492 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.778      ;
-; 1.504 ; short_or_long_signal_identifier:code_control|count[31]               ; short_or_long_signal_identifier:code_control|count[31]               ; clock        ; clock       ; 0.000        ; 0.000      ; 1.790      ;
-; 1.507 ; short_or_long_signal_identifier:code_control|backspace_wait_time[15] ; short_or_long_signal_identifier:code_control|backspace_wait_time[16] ; clock        ; clock       ; 0.000        ; 0.002      ; 1.795      ;
-; 1.510 ; short_or_long_signal_identifier:code_control|backspace_wait_time[7]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[8]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.796      ;
 ; 1.510 ; short_or_long_signal_identifier:code_control|backspace_wait_time[23] ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.796      ;
+; 1.511 ; short_or_long_signal_identifier:code_control|backspace_wait_time[15] ; short_or_long_signal_identifier:code_control|backspace_wait_time[16] ; clock        ; clock       ; 0.000        ; -0.002     ; 1.795      ;
+; 1.524 ; short_or_long_signal_identifier:code_control|backspace_wait_time[10] ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.810      ;
+; 1.525 ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; short_or_long_signal_identifier:code_control|backspace_wait_time[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.811      ;
+; 1.528 ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; short_or_long_signal_identifier:code_control|backspace_wait_time[26] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.814      ;
+; 1.529 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.815      ;
+; 1.529 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|backspace_wait_time[30] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.815      ;
+; 1.529 ; short_or_long_signal_identifier:code_control|backspace_wait_time[19] ; short_or_long_signal_identifier:code_control|backspace_wait_time[21] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.815      ;
+; 1.529 ; short_or_long_signal_identifier:code_control|backspace_wait_time[26] ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.815      ;
+; 1.529 ; short_or_long_signal_identifier:code_control|backspace_wait_time[21] ; short_or_long_signal_identifier:code_control|backspace_wait_time[23] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.815      ;
+; 1.560 ; short_or_long_signal_identifier:code_control|backspace_wait_time[16] ; short_or_long_signal_identifier:code_control|backspace_wait_time[19] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.846      ;
+; 1.562 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.848      ;
+; 1.563 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.849      ;
+; 1.566 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.852      ;
+; 1.567 ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.853      ;
+; 1.568 ; short_or_long_signal_identifier:code_control|backspace_wait_time[18] ; short_or_long_signal_identifier:code_control|backspace_wait_time[21] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.854      ;
+; 1.568 ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.854      ;
+; 1.569 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|backspace_wait_time[30] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.855      ;
+; 1.569 ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; short_or_long_signal_identifier:code_control|backspace_wait_time[23] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.855      ;
+; 1.572 ; short_or_long_signal_identifier:code_control|backspace_wait_time[14] ; short_or_long_signal_identifier:code_control|backspace_wait_time[16] ; clock        ; clock       ; 0.000        ; -0.002     ; 1.856      ;
+; 1.590 ; short_or_long_signal_identifier:code_control|backspace_wait_time[23] ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.876      ;
+; 1.591 ; short_or_long_signal_identifier:code_control|backspace_wait_time[15] ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; clock        ; clock       ; 0.000        ; -0.002     ; 1.875      ;
+; 1.604 ; short_or_long_signal_identifier:code_control|backspace_wait_time[10] ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.890      ;
+; 1.605 ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; short_or_long_signal_identifier:code_control|backspace_wait_time[15] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.891      ;
+; 1.608 ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.894      ;
+; 1.609 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7]              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.895      ;
+; 1.609 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.895      ;
+; 1.609 ; short_or_long_signal_identifier:code_control|backspace_wait_time[26] ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.895      ;
+; 1.609 ; short_or_long_signal_identifier:code_control|backspace_wait_time[19] ; short_or_long_signal_identifier:code_control|backspace_wait_time[22] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.895      ;
+; 1.623 ; short_or_long_signal_identifier:code_control|backspace_wait_time[22] ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.909      ;
+; 1.636 ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; clock        ; clock       ; 0.000        ; -0.001     ; 1.921      ;
+; 1.640 ; short_or_long_signal_identifier:code_control|backspace_wait_time[16] ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.926      ;
 +-------+----------------------------------------------------------------------+----------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -474,14 +474,14 @@ No paths to report.
 +--------+--------------+----------------+------------------+-------+------------+----------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------+
-; Setup Times                                                                   ;
-+-------------------+------------+-------+-------+------------+-----------------+
-; Data Port         ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-------------------+------------+-------+-------+------------+-----------------+
-; backspace_in_code ; clock      ; 7.343 ; 7.343 ; Fall       ; clock           ;
-; input_button      ; clock      ; 7.547 ; 7.547 ; Fall       ; clock           ;
-+-------------------+------------+-------+-------+------------+-----------------+
++---------------------------------------------------------------------------------+
+; Setup Times                                                                     ;
++-------------------+------------+--------+--------+------------+-----------------+
+; Data Port         ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------------+------------+--------+--------+------------+-----------------+
+; backspace_in_code ; clock      ; 10.495 ; 10.495 ; Fall       ; clock           ;
+; input_button      ; clock      ; 7.045  ; 7.045  ; Fall       ; clock           ;
++-------------------+------------+--------+--------+------------+-----------------+
 
 
 +---------------------------------------------------------------------------------+
@@ -489,8 +489,8 @@ No paths to report.
 +-------------------+------------+--------+--------+------------+-----------------+
 ; Data Port         ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-------------------+------------+--------+--------+------------+-----------------+
-; backspace_in_code ; clock      ; -3.727 ; -3.727 ; Fall       ; clock           ;
-; input_button      ; clock      ; -3.771 ; -3.771 ; Fall       ; clock           ;
+; backspace_in_code ; clock      ; -5.317 ; -5.317 ; Fall       ; clock           ;
+; input_button      ; clock      ; -3.808 ; -3.808 ; Fall       ; clock           ;
 +-------------------+------------+--------+--------+------------+-----------------+
 
 
@@ -499,13 +499,13 @@ No paths to report.
 +-----------------+------------+--------+--------+------------+-----------------+
 ; Data Port       ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------------+------------+--------+--------+------------+-----------------+
-; backspace_ready ; clock      ; 7.757  ; 7.757  ; Fall       ; clock           ;
-; led[*]          ; clock      ; 11.888 ; 11.888 ; Fall       ; clock           ;
-;  led[0]         ; clock      ; 11.625 ; 11.625 ; Fall       ; clock           ;
-;  led[1]         ; clock      ; 11.607 ; 11.607 ; Fall       ; clock           ;
-;  led[2]         ; clock      ; 10.414 ; 10.414 ; Fall       ; clock           ;
-;  led[3]         ; clock      ; 11.888 ; 11.888 ; Fall       ; clock           ;
-;  led[4]         ; clock      ; 11.794 ; 11.794 ; Fall       ; clock           ;
+; backspace_ready ; clock      ; 8.245  ; 8.245  ; Fall       ; clock           ;
+; led[*]          ; clock      ; 12.525 ; 12.525 ; Fall       ; clock           ;
+;  led[0]         ; clock      ; 12.525 ; 12.525 ; Fall       ; clock           ;
+;  led[1]         ; clock      ; 11.746 ; 11.746 ; Fall       ; clock           ;
+;  led[2]         ; clock      ; 10.808 ; 10.808 ; Fall       ; clock           ;
+;  led[3]         ; clock      ; 11.240 ; 11.240 ; Fall       ; clock           ;
+;  led[4]         ; clock      ; 12.120 ; 12.120 ; Fall       ; clock           ;
 +-----------------+------------+--------+--------+------------+-----------------+
 
 
@@ -514,13 +514,13 @@ No paths to report.
 +-----------------+------------+-------+-------+------------+-----------------+
 ; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------------+------------+-------+-------+------------+-----------------+
-; backspace_ready ; clock      ; 7.757 ; 7.757 ; Fall       ; clock           ;
-; led[*]          ; clock      ; 8.550 ; 8.550 ; Fall       ; clock           ;
-;  led[0]         ; clock      ; 9.157 ; 9.157 ; Fall       ; clock           ;
-;  led[1]         ; clock      ; 8.550 ; 8.550 ; Fall       ; clock           ;
-;  led[2]         ; clock      ; 9.196 ; 9.196 ; Fall       ; clock           ;
-;  led[3]         ; clock      ; 8.654 ; 8.654 ; Fall       ; clock           ;
-;  led[4]         ; clock      ; 8.967 ; 8.967 ; Fall       ; clock           ;
+; backspace_ready ; clock      ; 8.245 ; 8.245 ; Fall       ; clock           ;
+; led[*]          ; clock      ; 8.505 ; 8.505 ; Fall       ; clock           ;
+;  led[0]         ; clock      ; 9.709 ; 9.709 ; Fall       ; clock           ;
+;  led[1]         ; clock      ; 9.682 ; 9.682 ; Fall       ; clock           ;
+;  led[2]         ; clock      ; 8.505 ; 8.505 ; Fall       ; clock           ;
+;  led[3]         ; clock      ; 9.007 ; 9.007 ; Fall       ; clock           ;
+;  led[4]         ; clock      ; 9.134 ; 9.134 ; Fall       ; clock           ;
 +-----------------+------------+-------+-------+------------+-----------------+
 
 
@@ -529,7 +529,7 @@ No paths to report.
 +-------+--------+---------------+
 ; Clock ; Slack  ; End Point TNS ;
 +-------+--------+---------------+
-; clock ; -1.970 ; -77.884       ;
+; clock ; -2.336 ; -95.257       ;
 +-------+--------+---------------+
 
 
@@ -563,112 +563,112 @@ No paths to report.
 +-------+--------+-----------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Setup: 'clock'                                                                                                                                                                                    ;
-+--------+---------------------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                                                           ; To Node                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+---------------------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -1.970 ; short_or_long_signal_identifier:code_control|count[0]               ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 3.006      ;
-; -1.949 ; short_or_long_signal_identifier:code_control|count[0]               ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.985      ;
-; -1.934 ; short_or_long_signal_identifier:code_control|count[1]               ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.970      ;
-; -1.913 ; short_or_long_signal_identifier:code_control|count[1]               ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.949      ;
-; -1.901 ; short_or_long_signal_identifier:code_control|count[2]               ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.937      ;
-; -1.880 ; short_or_long_signal_identifier:code_control|count[0]               ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.915      ;
-; -1.880 ; short_or_long_signal_identifier:code_control|count[2]               ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.916      ;
-; -1.877 ; short_or_long_signal_identifier:code_control|count[0]               ; short_or_long_signal_identifier:code_control|code[4][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.912      ;
-; -1.876 ; short_or_long_signal_identifier:code_control|count[0]               ; short_or_long_signal_identifier:code_control|code[4][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.911      ;
-; -1.873 ; short_or_long_signal_identifier:code_control|count[0]               ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.908      ;
-; -1.871 ; short_or_long_signal_identifier:code_control|count[0]               ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.906      ;
-; -1.868 ; short_or_long_signal_identifier:code_control|count[3]               ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.904      ;
-; -1.847 ; short_or_long_signal_identifier:code_control|count[3]               ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.883      ;
-; -1.844 ; short_or_long_signal_identifier:code_control|count[1]               ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.879      ;
-; -1.841 ; short_or_long_signal_identifier:code_control|count[1]               ; short_or_long_signal_identifier:code_control|code[4][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.876      ;
-; -1.840 ; short_or_long_signal_identifier:code_control|count[1]               ; short_or_long_signal_identifier:code_control|code[4][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.875      ;
-; -1.837 ; short_or_long_signal_identifier:code_control|count[1]               ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.872      ;
-; -1.835 ; short_or_long_signal_identifier:code_control|count[1]               ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.870      ;
-; -1.830 ; short_or_long_signal_identifier:code_control|count[4]               ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.866      ;
-; -1.811 ; short_or_long_signal_identifier:code_control|count[2]               ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.846      ;
-; -1.810 ; short_or_long_signal_identifier:code_control|count[5]               ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.846      ;
-; -1.809 ; short_or_long_signal_identifier:code_control|count[4]               ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.845      ;
-; -1.808 ; short_or_long_signal_identifier:code_control|count[2]               ; short_or_long_signal_identifier:code_control|code[4][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.843      ;
-; -1.807 ; short_or_long_signal_identifier:code_control|count[2]               ; short_or_long_signal_identifier:code_control|code[4][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.842      ;
-; -1.804 ; short_or_long_signal_identifier:code_control|count[2]               ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.839      ;
-; -1.802 ; short_or_long_signal_identifier:code_control|count[2]               ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.837      ;
-; -1.789 ; short_or_long_signal_identifier:code_control|count[5]               ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.825      ;
-; -1.781 ; short_or_long_signal_identifier:code_control|count[0]               ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.816      ;
-; -1.778 ; short_or_long_signal_identifier:code_control|count[3]               ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.813      ;
-; -1.776 ; short_or_long_signal_identifier:code_control|count[0]               ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.811      ;
-; -1.775 ; short_or_long_signal_identifier:code_control|count[3]               ; short_or_long_signal_identifier:code_control|code[4][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.810      ;
-; -1.774 ; short_or_long_signal_identifier:code_control|count[3]               ; short_or_long_signal_identifier:code_control|code[4][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.809      ;
-; -1.773 ; short_or_long_signal_identifier:code_control|count[6]               ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.809      ;
-; -1.771 ; short_or_long_signal_identifier:code_control|count[3]               ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.806      ;
-; -1.769 ; short_or_long_signal_identifier:code_control|count[3]               ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.804      ;
-; -1.752 ; short_or_long_signal_identifier:code_control|count[6]               ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.788      ;
-; -1.745 ; short_or_long_signal_identifier:code_control|count[1]               ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.780      ;
-; -1.740 ; short_or_long_signal_identifier:code_control|count[4]               ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.775      ;
-; -1.740 ; short_or_long_signal_identifier:code_control|count[1]               ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.775      ;
-; -1.737 ; short_or_long_signal_identifier:code_control|count[4]               ; short_or_long_signal_identifier:code_control|code[4][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.772      ;
-; -1.736 ; short_or_long_signal_identifier:code_control|count[4]               ; short_or_long_signal_identifier:code_control|code[4][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.771      ;
-; -1.733 ; short_or_long_signal_identifier:code_control|count[4]               ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.768      ;
-; -1.731 ; short_or_long_signal_identifier:code_control|count[4]               ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.766      ;
-; -1.722 ; short_or_long_signal_identifier:code_control|count[7]               ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.758      ;
-; -1.720 ; short_or_long_signal_identifier:code_control|count[5]               ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.755      ;
-; -1.717 ; short_or_long_signal_identifier:code_control|count[5]               ; short_or_long_signal_identifier:code_control|code[4][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.752      ;
-; -1.716 ; short_or_long_signal_identifier:code_control|count[5]               ; short_or_long_signal_identifier:code_control|code[4][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.751      ;
-; -1.713 ; short_or_long_signal_identifier:code_control|count[5]               ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.748      ;
-; -1.712 ; short_or_long_signal_identifier:code_control|count[2]               ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.747      ;
-; -1.711 ; short_or_long_signal_identifier:code_control|count[5]               ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.746      ;
-; -1.707 ; short_or_long_signal_identifier:code_control|count[2]               ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.742      ;
-; -1.706 ; short_or_long_signal_identifier:code_control|count[0]               ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.741      ;
-; -1.701 ; short_or_long_signal_identifier:code_control|count[7]               ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.737      ;
-; -1.683 ; short_or_long_signal_identifier:code_control|count[6]               ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.718      ;
-; -1.680 ; short_or_long_signal_identifier:code_control|count[6]               ; short_or_long_signal_identifier:code_control|code[4][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.715      ;
-; -1.679 ; short_or_long_signal_identifier:code_control|count[6]               ; short_or_long_signal_identifier:code_control|code[4][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.714      ;
-; -1.679 ; short_or_long_signal_identifier:code_control|count[3]               ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.714      ;
-; -1.676 ; short_or_long_signal_identifier:code_control|count[6]               ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.711      ;
-; -1.674 ; short_or_long_signal_identifier:code_control|count[6]               ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.709      ;
-; -1.674 ; short_or_long_signal_identifier:code_control|count[3]               ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.709      ;
-; -1.670 ; short_or_long_signal_identifier:code_control|count[1]               ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.705      ;
-; -1.642 ; short_or_long_signal_identifier:code_control|count[8]               ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.678      ;
-; -1.641 ; short_or_long_signal_identifier:code_control|count[4]               ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.676      ;
-; -1.637 ; short_or_long_signal_identifier:code_control|count[2]               ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.672      ;
-; -1.636 ; short_or_long_signal_identifier:code_control|count[4]               ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.671      ;
-; -1.632 ; short_or_long_signal_identifier:code_control|count[7]               ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.667      ;
-; -1.629 ; short_or_long_signal_identifier:code_control|count[7]               ; short_or_long_signal_identifier:code_control|code[4][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.664      ;
-; -1.628 ; short_or_long_signal_identifier:code_control|count[7]               ; short_or_long_signal_identifier:code_control|code[4][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.663      ;
-; -1.625 ; short_or_long_signal_identifier:code_control|count[7]               ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.660      ;
-; -1.623 ; short_or_long_signal_identifier:code_control|count[7]               ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.658      ;
-; -1.621 ; short_or_long_signal_identifier:code_control|count[8]               ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.657      ;
-; -1.621 ; short_or_long_signal_identifier:code_control|count[5]               ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.656      ;
-; -1.616 ; short_or_long_signal_identifier:code_control|count[5]               ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.651      ;
-; -1.604 ; short_or_long_signal_identifier:code_control|count[3]               ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.639      ;
-; -1.595 ; short_or_long_signal_identifier:code_control|count[9]               ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.631      ;
-; -1.584 ; short_or_long_signal_identifier:code_control|count[6]               ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.619      ;
-; -1.579 ; short_or_long_signal_identifier:code_control|count[6]               ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.614      ;
-; -1.574 ; short_or_long_signal_identifier:code_control|count[9]               ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.610      ;
-; -1.566 ; short_or_long_signal_identifier:code_control|count[4]               ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.601      ;
-; -1.559 ; short_or_long_signal_identifier:code_control|count[10]              ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.595      ;
-; -1.552 ; short_or_long_signal_identifier:code_control|count[8]               ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.587      ;
-; -1.549 ; short_or_long_signal_identifier:code_control|count[8]               ; short_or_long_signal_identifier:code_control|code[4][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.584      ;
-; -1.548 ; short_or_long_signal_identifier:code_control|count[8]               ; short_or_long_signal_identifier:code_control|code[4][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.583      ;
-; -1.546 ; short_or_long_signal_identifier:code_control|count[5]               ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.581      ;
-; -1.545 ; short_or_long_signal_identifier:code_control|count[8]               ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.580      ;
-; -1.543 ; short_or_long_signal_identifier:code_control|count[8]               ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.578      ;
-; -1.538 ; short_or_long_signal_identifier:code_control|count[10]              ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.574      ;
-; -1.533 ; short_or_long_signal_identifier:code_control|count[7]               ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.568      ;
-; -1.529 ; short_or_long_signal_identifier:code_control|count[11]              ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.565      ;
-; -1.528 ; short_or_long_signal_identifier:code_control|count[7]               ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.563      ;
-; -1.509 ; short_or_long_signal_identifier:code_control|count[6]               ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.544      ;
-; -1.508 ; short_or_long_signal_identifier:code_control|count[11]              ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.544      ;
-; -1.507 ; short_or_long_signal_identifier:code_control|backspace_wait_time[3] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.007      ; 2.546      ;
-; -1.507 ; short_or_long_signal_identifier:code_control|backspace_wait_time[3] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.007      ; 2.546      ;
-; -1.505 ; short_or_long_signal_identifier:code_control|count[12]              ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.004      ; 2.541      ;
-; -1.505 ; short_or_long_signal_identifier:code_control|count[9]               ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.540      ;
-; -1.502 ; short_or_long_signal_identifier:code_control|count[9]               ; short_or_long_signal_identifier:code_control|code[4][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.537      ;
-; -1.501 ; short_or_long_signal_identifier:code_control|count[9]               ; short_or_long_signal_identifier:code_control|code[4][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.536      ;
-; -1.498 ; short_or_long_signal_identifier:code_control|count[9]               ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.533      ;
-; -1.496 ; short_or_long_signal_identifier:code_control|count[9]               ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 2.531      ;
-+--------+---------------------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clock'                                                                                                                                                                                     ;
++--------+----------------------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                            ; To Node                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.336 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.371      ;
+; -2.336 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.371      ;
+; -2.327 ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.362      ;
+; -2.327 ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.362      ;
+; -2.305 ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.340      ;
+; -2.305 ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.340      ;
+; -2.301 ; short_or_long_signal_identifier:code_control|backspace_wait_time[0]  ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.333      ;
+; -2.301 ; short_or_long_signal_identifier:code_control|backspace_wait_time[0]  ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.333      ;
+; -2.298 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.333      ;
+; -2.298 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.333      ;
+; -2.283 ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.318      ;
+; -2.283 ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.318      ;
+; -2.276 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.310      ;
+; -2.276 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.310      ;
+; -2.273 ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.001      ; 3.306      ;
+; -2.273 ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.001      ; 3.306      ;
+; -2.270 ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.305      ;
+; -2.270 ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.305      ;
+; -2.267 ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.301      ;
+; -2.267 ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.301      ;
+; -2.251 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.285      ;
+; -2.246 ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.278      ;
+; -2.246 ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.278      ;
+; -2.245 ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.279      ;
+; -2.245 ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.279      ;
+; -2.242 ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.276      ;
+; -2.241 ; short_or_long_signal_identifier:code_control|backspace_wait_time[0]  ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; -0.001     ; 3.272      ;
+; -2.241 ; short_or_long_signal_identifier:code_control|backspace_wait_time[0]  ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; -0.001     ; 3.272      ;
+; -2.238 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.272      ;
+; -2.238 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.272      ;
+; -2.238 ; short_or_long_signal_identifier:code_control|backspace_wait_time[6]  ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.270      ;
+; -2.238 ; short_or_long_signal_identifier:code_control|backspace_wait_time[6]  ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.270      ;
+; -2.229 ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.264      ;
+; -2.229 ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.264      ;
+; -2.223 ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.257      ;
+; -2.223 ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.257      ;
+; -2.220 ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.254      ;
+; -2.216 ; short_or_long_signal_identifier:code_control|backspace_wait_time[0]  ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; -0.001     ; 3.247      ;
+; -2.213 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.247      ;
+; -2.213 ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.245      ;
+; -2.213 ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.245      ;
+; -2.210 ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.244      ;
+; -2.210 ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.244      ;
+; -2.209 ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.244      ;
+; -2.209 ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.244      ;
+; -2.206 ; short_or_long_signal_identifier:code_control|backspace_wait_time[1]  ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.238      ;
+; -2.206 ; short_or_long_signal_identifier:code_control|backspace_wait_time[1]  ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.238      ;
+; -2.198 ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.001      ; 3.231      ;
+; -2.198 ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.001      ; 3.231      ;
+; -2.198 ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.232      ;
+; -2.195 ; short_or_long_signal_identifier:code_control|backspace_wait_time[18] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.230      ;
+; -2.195 ; short_or_long_signal_identifier:code_control|backspace_wait_time[18] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.230      ;
+; -2.192 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.226      ;
+; -2.192 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.226      ;
+; -2.189 ; short_or_long_signal_identifier:code_control|backspace_wait_time[30] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.224      ;
+; -2.189 ; short_or_long_signal_identifier:code_control|backspace_wait_time[30] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.224      ;
+; -2.188 ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.220      ;
+; -2.186 ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; -0.001     ; 3.217      ;
+; -2.186 ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; -0.001     ; 3.217      ;
+; -2.185 ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.219      ;
+; -2.183 ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.217      ;
+; -2.183 ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.217      ;
+; -2.179 ; short_or_long_signal_identifier:code_control|backspace_wait_time[16] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.214      ;
+; -2.179 ; short_or_long_signal_identifier:code_control|backspace_wait_time[16] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.214      ;
+; -2.178 ; short_or_long_signal_identifier:code_control|backspace_wait_time[6]  ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; -0.001     ; 3.209      ;
+; -2.178 ; short_or_long_signal_identifier:code_control|backspace_wait_time[6]  ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; -0.001     ; 3.209      ;
+; -2.175 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.001      ; 3.208      ;
+; -2.170 ; short_or_long_signal_identifier:code_control|backspace_wait_time[22] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.205      ;
+; -2.170 ; short_or_long_signal_identifier:code_control|backspace_wait_time[22] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.205      ;
+; -2.169 ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.203      ;
+; -2.169 ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.203      ;
+; -2.169 ; short_or_long_signal_identifier:code_control|backspace_wait_time[7]  ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.201      ;
+; -2.169 ; short_or_long_signal_identifier:code_control|backspace_wait_time[7]  ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.201      ;
+; -2.166 ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.001      ; 3.199      ;
+; -2.161 ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; -0.001     ; 3.192      ;
+; -2.161 ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.195      ;
+; -2.161 ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.195      ;
+; -2.160 ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.001      ; 3.193      ;
+; -2.160 ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.001      ; 3.193      ;
+; -2.157 ; short_or_long_signal_identifier:code_control|backspace_wait_time[0]  ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; -0.001     ; 3.188      ;
+; -2.157 ; short_or_long_signal_identifier:code_control|backspace_wait_time[0]  ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; -0.001     ; 3.188      ;
+; -2.154 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.188      ;
+; -2.154 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.188      ;
+; -2.153 ; short_or_long_signal_identifier:code_control|backspace_wait_time[6]  ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; -0.001     ; 3.184      ;
+; -2.149 ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.183      ;
+; -2.149 ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.183      ;
+; -2.146 ; short_or_long_signal_identifier:code_control|backspace_wait_time[26] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.181      ;
+; -2.146 ; short_or_long_signal_identifier:code_control|backspace_wait_time[26] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.181      ;
+; -2.146 ; short_or_long_signal_identifier:code_control|backspace_wait_time[1]  ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; -0.001     ; 3.177      ;
+; -2.146 ; short_or_long_signal_identifier:code_control|backspace_wait_time[1]  ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; -0.001     ; 3.177      ;
+; -2.144 ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; short_or_long_signal_identifier:code_control|code[0][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.178      ;
+; -2.144 ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.001      ; 3.177      ;
+; -2.140 ; short_or_long_signal_identifier:code_control|backspace_wait_time[0]  ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; -0.002     ; 3.170      ;
+; -2.139 ; short_or_long_signal_identifier:code_control|backspace_wait_time[21] ; short_or_long_signal_identifier:code_control|code[3][1] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.174      ;
+; -2.139 ; short_or_long_signal_identifier:code_control|backspace_wait_time[21] ; short_or_long_signal_identifier:code_control|code[3][0] ; clock        ; clock       ; 1.000        ; 0.003      ; 3.174      ;
+; -2.139 ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; short_or_long_signal_identifier:code_control|code[2][1] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.173      ;
+; -2.139 ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; short_or_long_signal_identifier:code_control|code[2][0] ; clock        ; clock       ; 1.000        ; 0.002      ; 3.173      ;
+; -2.138 ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; short_or_long_signal_identifier:code_control|code[1][1] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.170      ;
+; -2.138 ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; short_or_long_signal_identifier:code_control|code[1][0] ; clock        ; clock       ; 1.000        ; 0.000      ; 3.170      ;
+; -2.137 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|code[0][1] ; clock        ; clock       ; 1.000        ; 0.001      ; 3.170      ;
++--------+----------------------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -677,105 +677,105 @@ No paths to report.
 ; Slack ; From Node                                                            ; To Node                                                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+----------------------------------------------------------------------+----------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; 0.215 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; short_or_long_signal_identifier:code_control|current_index[0]        ; short_or_long_signal_identifier:code_control|current_index[0]        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; short_or_long_signal_identifier:code_control|current_index[1]        ; short_or_long_signal_identifier:code_control|current_index[1]        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; short_or_long_signal_identifier:code_control|backspace_ready         ; short_or_long_signal_identifier:code_control|backspace_ready         ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.243 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.395      ;
 ; 0.243 ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.395      ;
-; 0.256 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.408      ;
 ; 0.355 ; short_or_long_signal_identifier:code_control|backspace_wait_time[16] ; short_or_long_signal_identifier:code_control|backspace_wait_time[16] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.507      ;
-; 0.355 ; short_or_long_signal_identifier:code_control|backspace_wait_time[0]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[0]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.507      ;
-; 0.358 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.510      ;
-; 0.359 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.511      ;
-; 0.359 ; short_or_long_signal_identifier:code_control|backspace_wait_time[1]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.511      ;
 ; 0.359 ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.511      ;
-; 0.360 ; short_or_long_signal_identifier:code_control|backspace_wait_time[2]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[2]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
-; 0.360 ; short_or_long_signal_identifier:code_control|backspace_wait_time[9]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[9]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
-; 0.360 ; short_or_long_signal_identifier:code_control|backspace_wait_time[11] ; short_or_long_signal_identifier:code_control|backspace_wait_time[11] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
 ; 0.360 ; short_or_long_signal_identifier:code_control|backspace_wait_time[18] ; short_or_long_signal_identifier:code_control|backspace_wait_time[18] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
 ; 0.360 ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
 ; 0.360 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
-; 0.361 ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.513      ;
-; 0.361 ; short_or_long_signal_identifier:code_control|backspace_wait_time[7]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[7]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.513      ;
 ; 0.361 ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.513      ;
-; 0.361 ; short_or_long_signal_identifier:code_control|backspace_wait_time[14] ; short_or_long_signal_identifier:code_control|backspace_wait_time[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.513      ;
 ; 0.361 ; short_or_long_signal_identifier:code_control|backspace_wait_time[15] ; short_or_long_signal_identifier:code_control|backspace_wait_time[15] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.513      ;
 ; 0.361 ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.513      ;
 ; 0.361 ; short_or_long_signal_identifier:code_control|backspace_wait_time[23] ; short_or_long_signal_identifier:code_control|backspace_wait_time[23] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.513      ;
 ; 0.361 ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.513      ;
 ; 0.361 ; short_or_long_signal_identifier:code_control|backspace_wait_time[30] ; short_or_long_signal_identifier:code_control|backspace_wait_time[30] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.513      ;
-; 0.362 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.514      ;
-; 0.365 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.517      ;
-; 0.371 ; short_or_long_signal_identifier:code_control|backspace_wait_time[3]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[3]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.523      ;
-; 0.371 ; short_or_long_signal_identifier:code_control|backspace_wait_time[8]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[8]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.523      ;
-; 0.371 ; short_or_long_signal_identifier:code_control|backspace_wait_time[10] ; short_or_long_signal_identifier:code_control|backspace_wait_time[10] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.523      ;
+; 0.361 ; short_or_long_signal_identifier:code_control|backspace_wait_time[14] ; short_or_long_signal_identifier:code_control|backspace_wait_time[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.513      ;
+; 0.367 ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.519      ;
+; 0.369 ; short_or_long_signal_identifier:code_control|backspace_wait_time[10] ; short_or_long_signal_identifier:code_control|backspace_wait_time[10] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.521      ;
+; 0.371 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.523      ;
 ; 0.371 ; short_or_long_signal_identifier:code_control|backspace_wait_time[19] ; short_or_long_signal_identifier:code_control|backspace_wait_time[19] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.523      ;
 ; 0.371 ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.523      ;
 ; 0.371 ; short_or_long_signal_identifier:code_control|backspace_wait_time[26] ; short_or_long_signal_identifier:code_control|backspace_wait_time[26] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.523      ;
-; 0.372 ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.524      ;
-; 0.372 ; short_or_long_signal_identifier:code_control|backspace_wait_time[6]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[6]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.524      ;
-; 0.372 ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.524      ;
 ; 0.372 ; short_or_long_signal_identifier:code_control|backspace_wait_time[21] ; short_or_long_signal_identifier:code_control|backspace_wait_time[21] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.524      ;
 ; 0.372 ; short_or_long_signal_identifier:code_control|backspace_wait_time[22] ; short_or_long_signal_identifier:code_control|backspace_wait_time[22] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.524      ;
 ; 0.372 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.524      ;
-; 0.373 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.525      ;
-; 0.383 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.535      ;
-; 0.384 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.536      ;
-; 0.493 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.645      ;
-; 0.493 ; short_or_long_signal_identifier:code_control|backspace_wait_time[0]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.645      ;
+; 0.447 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.599      ;
 ; 0.493 ; short_or_long_signal_identifier:code_control|backspace_wait_time[16] ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.645      ;
-; 0.494 ; short_or_long_signal_identifier:code_control|current_index[1]        ; short_or_long_signal_identifier:code_control|current_index[1]        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.646      ;
-; 0.497 ; short_or_long_signal_identifier:code_control|backspace_wait_time[1]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[2]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.649      ;
+; 0.496 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.648      ;
 ; 0.497 ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; short_or_long_signal_identifier:code_control|backspace_wait_time[18] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.649      ;
-; 0.497 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.649      ;
-; 0.498 ; short_or_long_signal_identifier:code_control|backspace_wait_time[2]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[3]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.650      ;
-; 0.498 ; short_or_long_signal_identifier:code_control|backspace_wait_time[9]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[10] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.650      ;
 ; 0.498 ; short_or_long_signal_identifier:code_control|backspace_wait_time[18] ; short_or_long_signal_identifier:code_control|backspace_wait_time[19] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.650      ;
 ; 0.498 ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; short_or_long_signal_identifier:code_control|backspace_wait_time[26] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.650      ;
-; 0.498 ; short_or_long_signal_identifier:code_control|backspace_wait_time[11] ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.650      ;
 ; 0.498 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.650      ;
 ; 0.499 ; short_or_long_signal_identifier:code_control|backspace_wait_time[30] ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.651      ;
-; 0.499 ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; short_or_long_signal_identifier:code_control|backspace_wait_time[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.651      ;
 ; 0.499 ; short_or_long_signal_identifier:code_control|backspace_wait_time[14] ; short_or_long_signal_identifier:code_control|backspace_wait_time[15] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.651      ;
 ; 0.499 ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; short_or_long_signal_identifier:code_control|backspace_wait_time[30] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.651      ;
-; 0.499 ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; short_or_long_signal_identifier:code_control|backspace_wait_time[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.651      ;
 ; 0.499 ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; short_or_long_signal_identifier:code_control|backspace_wait_time[21] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.651      ;
-; 0.500 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.652      ;
-; 0.503 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.655      ;
-; 0.511 ; short_or_long_signal_identifier:code_control|backspace_wait_time[8]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[9]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.663      ;
-; 0.511 ; short_or_long_signal_identifier:code_control|backspace_wait_time[10] ; short_or_long_signal_identifier:code_control|backspace_wait_time[11] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.663      ;
+; 0.509 ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.661      ;
+; 0.511 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.663      ;
 ; 0.511 ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.663      ;
 ; 0.511 ; short_or_long_signal_identifier:code_control|backspace_wait_time[26] ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.663      ;
-; 0.511 ; short_or_long_signal_identifier:code_control|backspace_wait_time[3]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.663      ;
 ; 0.511 ; short_or_long_signal_identifier:code_control|backspace_wait_time[19] ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.663      ;
-; 0.512 ; short_or_long_signal_identifier:code_control|backspace_wait_time[6]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[7]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.664      ;
-; 0.512 ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.664      ;
+; 0.512 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.664      ;
 ; 0.512 ; short_or_long_signal_identifier:code_control|backspace_wait_time[22] ; short_or_long_signal_identifier:code_control|backspace_wait_time[23] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.664      ;
 ; 0.512 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.664      ;
-; 0.512 ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[6]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.664      ;
 ; 0.512 ; short_or_long_signal_identifier:code_control|backspace_wait_time[21] ; short_or_long_signal_identifier:code_control|backspace_wait_time[22] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.664      ;
-; 0.513 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.665      ;
-; 0.523 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.675      ;
-; 0.524 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.676      ;
-; 0.528 ; short_or_long_signal_identifier:code_control|backspace_wait_time[0]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[2]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.680      ;
 ; 0.528 ; short_or_long_signal_identifier:code_control|backspace_wait_time[16] ; short_or_long_signal_identifier:code_control|backspace_wait_time[18] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.680      ;
-; 0.528 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.680      ;
-; 0.532 ; short_or_long_signal_identifier:code_control|backspace_wait_time[1]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[3]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.684      ;
+; 0.531 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.683      ;
 ; 0.532 ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; short_or_long_signal_identifier:code_control|backspace_wait_time[19] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.684      ;
-; 0.532 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.684      ;
-; 0.533 ; short_or_long_signal_identifier:code_control|backspace_wait_time[9]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[11] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.685      ;
 ; 0.533 ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.685      ;
-; 0.533 ; short_or_long_signal_identifier:code_control|backspace_wait_time[2]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.685      ;
 ; 0.533 ; short_or_long_signal_identifier:code_control|backspace_wait_time[18] ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.685      ;
-; 0.533 ; short_or_long_signal_identifier:code_control|backspace_wait_time[11] ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.685      ;
 ; 0.533 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.685      ;
 ; 0.534 ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.686      ;
 ; 0.534 ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; short_or_long_signal_identifier:code_control|backspace_wait_time[15] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.686      ;
-; 0.534 ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[6]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.686      ;
 ; 0.534 ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; short_or_long_signal_identifier:code_control|backspace_wait_time[22] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.686      ;
-; 0.535 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.687      ;
-; 0.538 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.690      ;
-; 0.545 ; short_or_long_signal_identifier:code_control|backspace_wait_time[15] ; short_or_long_signal_identifier:code_control|backspace_wait_time[16] ; clock        ; clock       ; 0.000        ; 0.001      ; 0.698      ;
-; 0.546 ; short_or_long_signal_identifier:code_control|backspace_wait_time[8]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[10] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.698      ;
+; 0.544 ; short_or_long_signal_identifier:code_control|backspace_wait_time[10] ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.696      ;
+; 0.544 ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; short_or_long_signal_identifier:code_control|backspace_wait_time[14] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.696      ;
 ; 0.546 ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; short_or_long_signal_identifier:code_control|backspace_wait_time[26] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.698      ;
-; 0.546 ; short_or_long_signal_identifier:code_control|backspace_wait_time[10] ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546 ; short_or_long_signal_identifier:code_control|backspace_wait_time[26] ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.698      ;
+; 0.546 ; short_or_long_signal_identifier:code_control|backspace_wait_time[19] ; short_or_long_signal_identifier:code_control|backspace_wait_time[21] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.698      ;
+; 0.547 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|backspace_wait_time[30] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.699      ;
+; 0.547 ; short_or_long_signal_identifier:code_control|backspace_wait_time[21] ; short_or_long_signal_identifier:code_control|backspace_wait_time[23] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.699      ;
+; 0.548 ; short_or_long_signal_identifier:code_control|backspace_wait_time[15] ; short_or_long_signal_identifier:code_control|backspace_wait_time[16] ; clock        ; clock       ; 0.000        ; -0.002     ; 0.698      ;
+; 0.554 ; short_or_long_signal_identifier:code_control|backspace_wait_time[23] ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.706      ;
+; 0.563 ; short_or_long_signal_identifier:code_control|backspace_wait_time[16] ; short_or_long_signal_identifier:code_control|backspace_wait_time[19] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.715      ;
+; 0.566 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.718      ;
+; 0.567 ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.719      ;
+; 0.568 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568 ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568 ; short_or_long_signal_identifier:code_control|backspace_wait_time[18] ; short_or_long_signal_identifier:code_control|backspace_wait_time[21] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568 ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; short_or_long_signal_identifier:code_control|backspace_wait_time[30] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.720      ;
+; 0.569 ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; short_or_long_signal_identifier:code_control|backspace_wait_time[23] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.721      ;
+; 0.579 ; short_or_long_signal_identifier:code_control|backspace_wait_time[10] ; short_or_long_signal_identifier:code_control|backspace_wait_time[13] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.579 ; short_or_long_signal_identifier:code_control|backspace_wait_time[12] ; short_or_long_signal_identifier:code_control|backspace_wait_time[15] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.580 ; short_or_long_signal_identifier:code_control|backspace_wait_time[4]  ; short_or_long_signal_identifier:code_control|backspace_wait_time[5]  ; clock        ; clock       ; 0.000        ; -0.001     ; 0.731      ;
+; 0.581 ; short_or_long_signal_identifier:code_control|backspace_wait_time[24] ; short_or_long_signal_identifier:code_control|backspace_wait_time[27] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.733      ;
+; 0.581 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.733      ;
+; 0.581 ; short_or_long_signal_identifier:code_control|backspace_wait_time[26] ; short_or_long_signal_identifier:code_control|backspace_wait_time[29] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.733      ;
+; 0.581 ; short_or_long_signal_identifier:code_control|backspace_wait_time[19] ; short_or_long_signal_identifier:code_control|backspace_wait_time[22] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.733      ;
+; 0.582 ; short_or_long_signal_identifier:code_control|backspace_wait_time[28] ; short_or_long_signal_identifier:code_control|backspace_wait_time[31] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.734      ;
+; 0.583 ; short_or_long_signal_identifier:code_control|backspace_wait_time[15] ; short_or_long_signal_identifier:code_control|backspace_wait_time[17] ; clock        ; clock       ; 0.000        ; -0.002     ; 0.733      ;
+; 0.587 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1]              ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2]              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.739      ;
+; 0.588 ; short_or_long_signal_identifier:code_control|backspace_wait_time[14] ; short_or_long_signal_identifier:code_control|backspace_wait_time[16] ; clock        ; clock       ; 0.000        ; -0.002     ; 0.738      ;
+; 0.589 ; short_or_long_signal_identifier:code_control|backspace_wait_time[23] ; short_or_long_signal_identifier:code_control|backspace_wait_time[25] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.741      ;
+; 0.598 ; short_or_long_signal_identifier:code_control|backspace_wait_time[16] ; short_or_long_signal_identifier:code_control|backspace_wait_time[20] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.750      ;
 +-------+----------------------------------------------------------------------+----------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -892,8 +892,8 @@ No paths to report.
 +-------------------+------------+-------+-------+------------+-----------------+
 ; Data Port         ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------------+------------+-------+-------+------------+-----------------+
-; backspace_in_code ; clock      ; 3.184 ; 3.184 ; Fall       ; clock           ;
-; input_button      ; clock      ; 3.224 ; 3.224 ; Fall       ; clock           ;
+; backspace_in_code ; clock      ; 4.273 ; 4.273 ; Fall       ; clock           ;
+; input_button      ; clock      ; 3.072 ; 3.072 ; Fall       ; clock           ;
 +-------------------+------------+-------+-------+------------+-----------------+
 
 
@@ -902,8 +902,8 @@ No paths to report.
 +-------------------+------------+--------+--------+------------+-----------------+
 ; Data Port         ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-------------------+------------+--------+--------+------------+-----------------+
-; backspace_in_code ; clock      ; -1.714 ; -1.714 ; Fall       ; clock           ;
-; input_button      ; clock      ; -1.749 ; -1.749 ; Fall       ; clock           ;
+; backspace_in_code ; clock      ; -2.286 ; -2.286 ; Fall       ; clock           ;
+; input_button      ; clock      ; -1.759 ; -1.759 ; Fall       ; clock           ;
 +-------------------+------------+--------+--------+------------+-----------------+
 
 
@@ -912,13 +912,13 @@ No paths to report.
 +-----------------+------------+-------+-------+------------+-----------------+
 ; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------------+------------+-------+-------+------------+-----------------+
-; backspace_ready ; clock      ; 4.067 ; 4.067 ; Fall       ; clock           ;
-; led[*]          ; clock      ; 5.542 ; 5.542 ; Fall       ; clock           ;
-;  led[0]         ; clock      ; 5.539 ; 5.539 ; Fall       ; clock           ;
-;  led[1]         ; clock      ; 5.481 ; 5.481 ; Fall       ; clock           ;
-;  led[2]         ; clock      ; 5.006 ; 5.006 ; Fall       ; clock           ;
-;  led[3]         ; clock      ; 5.542 ; 5.542 ; Fall       ; clock           ;
-;  led[4]         ; clock      ; 5.524 ; 5.524 ; Fall       ; clock           ;
+; backspace_ready ; clock      ; 4.224 ; 4.224 ; Fall       ; clock           ;
+; led[*]          ; clock      ; 5.786 ; 5.786 ; Fall       ; clock           ;
+;  led[0]         ; clock      ; 5.786 ; 5.786 ; Fall       ; clock           ;
+;  led[1]         ; clock      ; 5.516 ; 5.516 ; Fall       ; clock           ;
+;  led[2]         ; clock      ; 5.178 ; 5.178 ; Fall       ; clock           ;
+;  led[3]         ; clock      ; 5.325 ; 5.325 ; Fall       ; clock           ;
+;  led[4]         ; clock      ; 5.607 ; 5.607 ; Fall       ; clock           ;
 +-----------------+------------+-------+-------+------------+-----------------+
 
 
@@ -927,13 +927,13 @@ No paths to report.
 +-----------------+------------+-------+-------+------------+-----------------+
 ; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------------+------------+-------+-------+------------+-----------------+
-; backspace_ready ; clock      ; 4.067 ; 4.067 ; Fall       ; clock           ;
-; led[*]          ; clock      ; 4.409 ; 4.409 ; Fall       ; clock           ;
-;  led[0]         ; clock      ; 4.643 ; 4.643 ; Fall       ; clock           ;
-;  led[1]         ; clock      ; 4.409 ; 4.409 ; Fall       ; clock           ;
-;  led[2]         ; clock      ; 4.592 ; 4.592 ; Fall       ; clock           ;
-;  led[3]         ; clock      ; 4.445 ; 4.445 ; Fall       ; clock           ;
-;  led[4]         ; clock      ; 4.537 ; 4.537 ; Fall       ; clock           ;
+; backspace_ready ; clock      ; 4.224 ; 4.224 ; Fall       ; clock           ;
+; led[*]          ; clock      ; 4.380 ; 4.380 ; Fall       ; clock           ;
+;  led[0]         ; clock      ; 4.802 ; 4.802 ; Fall       ; clock           ;
+;  led[1]         ; clock      ; 4.795 ; 4.795 ; Fall       ; clock           ;
+;  led[2]         ; clock      ; 4.380 ; 4.380 ; Fall       ; clock           ;
+;  led[3]         ; clock      ; 4.551 ; 4.551 ; Fall       ; clock           ;
+;  led[4]         ; clock      ; 4.559 ; 4.559 ; Fall       ; clock           ;
 +-----------------+------------+-------+-------+------------+-----------------+
 
 
@@ -942,21 +942,21 @@ No paths to report.
 +------------------+----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -6.477   ; 0.215 ; N/A      ; N/A     ; -1.631              ;
-;  clock           ; -6.477   ; 0.215 ; N/A      ; N/A     ; -1.631              ;
-; Design-wide TNS  ; -325.323 ; 0.0   ; 0.0      ; 0.0     ; -106.723            ;
-;  clock           ; -325.323 ; 0.000 ; N/A      ; N/A     ; -106.723            ;
+; Worst-case Slack ; -7.909   ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+;  clock           ; -7.909   ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -374.673 ; 0.0   ; 0.0      ; 0.0     ; -106.723            ;
+;  clock           ; -374.673 ; 0.000 ; N/A      ; N/A     ; -106.723            ;
 +------------------+----------+-------+----------+---------+---------------------+
 
 
-+-------------------------------------------------------------------------------+
-; Setup Times                                                                   ;
-+-------------------+------------+-------+-------+------------+-----------------+
-; Data Port         ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-------------------+------------+-------+-------+------------+-----------------+
-; backspace_in_code ; clock      ; 7.343 ; 7.343 ; Fall       ; clock           ;
-; input_button      ; clock      ; 7.547 ; 7.547 ; Fall       ; clock           ;
-+-------------------+------------+-------+-------+------------+-----------------+
++---------------------------------------------------------------------------------+
+; Setup Times                                                                     ;
++-------------------+------------+--------+--------+------------+-----------------+
+; Data Port         ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------------+------------+--------+--------+------------+-----------------+
+; backspace_in_code ; clock      ; 10.495 ; 10.495 ; Fall       ; clock           ;
+; input_button      ; clock      ; 7.045  ; 7.045  ; Fall       ; clock           ;
++-------------------+------------+--------+--------+------------+-----------------+
 
 
 +---------------------------------------------------------------------------------+
@@ -964,8 +964,8 @@ No paths to report.
 +-------------------+------------+--------+--------+------------+-----------------+
 ; Data Port         ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-------------------+------------+--------+--------+------------+-----------------+
-; backspace_in_code ; clock      ; -1.714 ; -1.714 ; Fall       ; clock           ;
-; input_button      ; clock      ; -1.749 ; -1.749 ; Fall       ; clock           ;
+; backspace_in_code ; clock      ; -2.286 ; -2.286 ; Fall       ; clock           ;
+; input_button      ; clock      ; -1.759 ; -1.759 ; Fall       ; clock           ;
 +-------------------+------------+--------+--------+------------+-----------------+
 
 
@@ -974,13 +974,13 @@ No paths to report.
 +-----------------+------------+--------+--------+------------+-----------------+
 ; Data Port       ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------------+------------+--------+--------+------------+-----------------+
-; backspace_ready ; clock      ; 7.757  ; 7.757  ; Fall       ; clock           ;
-; led[*]          ; clock      ; 11.888 ; 11.888 ; Fall       ; clock           ;
-;  led[0]         ; clock      ; 11.625 ; 11.625 ; Fall       ; clock           ;
-;  led[1]         ; clock      ; 11.607 ; 11.607 ; Fall       ; clock           ;
-;  led[2]         ; clock      ; 10.414 ; 10.414 ; Fall       ; clock           ;
-;  led[3]         ; clock      ; 11.888 ; 11.888 ; Fall       ; clock           ;
-;  led[4]         ; clock      ; 11.794 ; 11.794 ; Fall       ; clock           ;
+; backspace_ready ; clock      ; 8.245  ; 8.245  ; Fall       ; clock           ;
+; led[*]          ; clock      ; 12.525 ; 12.525 ; Fall       ; clock           ;
+;  led[0]         ; clock      ; 12.525 ; 12.525 ; Fall       ; clock           ;
+;  led[1]         ; clock      ; 11.746 ; 11.746 ; Fall       ; clock           ;
+;  led[2]         ; clock      ; 10.808 ; 10.808 ; Fall       ; clock           ;
+;  led[3]         ; clock      ; 11.240 ; 11.240 ; Fall       ; clock           ;
+;  led[4]         ; clock      ; 12.120 ; 12.120 ; Fall       ; clock           ;
 +-----------------+------------+--------+--------+------------+-----------------+
 
 
@@ -989,13 +989,13 @@ No paths to report.
 +-----------------+------------+-------+-------+------------+-----------------+
 ; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------------+------------+-------+-------+------------+-----------------+
-; backspace_ready ; clock      ; 4.067 ; 4.067 ; Fall       ; clock           ;
-; led[*]          ; clock      ; 4.409 ; 4.409 ; Fall       ; clock           ;
-;  led[0]         ; clock      ; 4.643 ; 4.643 ; Fall       ; clock           ;
-;  led[1]         ; clock      ; 4.409 ; 4.409 ; Fall       ; clock           ;
-;  led[2]         ; clock      ; 4.592 ; 4.592 ; Fall       ; clock           ;
-;  led[3]         ; clock      ; 4.445 ; 4.445 ; Fall       ; clock           ;
-;  led[4]         ; clock      ; 4.537 ; 4.537 ; Fall       ; clock           ;
+; backspace_ready ; clock      ; 4.224 ; 4.224 ; Fall       ; clock           ;
+; led[*]          ; clock      ; 4.380 ; 4.380 ; Fall       ; clock           ;
+;  led[0]         ; clock      ; 4.802 ; 4.802 ; Fall       ; clock           ;
+;  led[1]         ; clock      ; 4.795 ; 4.795 ; Fall       ; clock           ;
+;  led[2]         ; clock      ; 4.380 ; 4.380 ; Fall       ; clock           ;
+;  led[3]         ; clock      ; 4.551 ; 4.551 ; Fall       ; clock           ;
+;  led[4]         ; clock      ; 4.559 ; 4.559 ; Fall       ; clock           ;
 +-----------------+------------+-------+-------+------------+-----------------+
 
 
@@ -1004,7 +1004,7 @@ No paths to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clock      ; clock    ; 0        ; 0        ; 0        ; 10470    ;
+; clock      ; clock    ; 0        ; 0        ; 0        ; 22078    ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1014,7 +1014,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clock      ; clock    ; 0        ; 0        ; 0        ; 10470    ;
+; clock      ; clock    ; 0        ; 0        ; 0        ; 22078    ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1039,7 +1039,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 3     ; 3    ;
-; Unconstrained Input Port Paths  ; 234   ; 234  ;
+; Unconstrained Input Port Paths  ; 202   ; 202  ;
 ; Unconstrained Output Ports      ; 6     ; 6    ;
 ; Unconstrained Output Port Paths ; 51    ; 51   ;
 +---------------------------------+-------+------+
@@ -1051,7 +1051,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Aug 23 11:46:50 2019
+    Info: Processing started: Fri Aug 23 15:45:12 2019
 Info: Command: quartus_sta main -c main
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -1064,10 +1064,10 @@ Info (332105): Deriving Clocks
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -6.477
+Info (332146): Worst-case setup slack is -7.909
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -6.477      -325.323 clock 
+    Info (332119):    -7.909      -374.673 clock 
 Info (332146): Worst-case hold slack is 0.445
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
@@ -1081,10 +1081,10 @@ Info (332146): Worst-case minimum pulse width slack is -1.631
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.970
+Info (332146): Worst-case setup slack is -2.336
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.970       -77.884 clock 
+    Info (332119):    -2.336       -95.257 clock 
 Info (332146): Worst-case hold slack is 0.215
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
@@ -1099,9 +1099,9 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 386 megabytes
-    Info: Processing ended: Fri Aug 23 11:46:51 2019
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 387 megabytes
+    Info: Processing ended: Fri Aug 23 15:45:14 2019
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

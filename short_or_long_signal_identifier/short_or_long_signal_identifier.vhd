@@ -36,11 +36,11 @@ architecture verifier of short_or_long_signal_identifier is
 	
 	--signal	code	: integer_vector	:= (others => 0);		-- Guarda a "letra" salva atualmente (0: desligado, 1: ponto, 2: traco)	-- Descomentar para Simulacao
 begin
-	process(clock, button_input, clear, backspace)
+	process(clock, clear)
 		variable count	: integer := 0;
 		variable current_index	: integer range 0 to MAX_CODE_LENGTH := 0;
 		
-		variable backspace_ready	: std_logic := '0';
+		variable backspace_ready	: std_logic := '1';
 		variable backspace_wait_time	: integer	:= 0;
 	begin
 		if (clear = '0') then	-- Se o botao de clear foi pressionado
