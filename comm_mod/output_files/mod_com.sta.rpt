@@ -1,0 +1,595 @@
+TimeQuest Timing Analyzer report for mod_com
+Fri Aug 23 11:55:42 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Minimum Pulse Width: 'recieve'
+ 12. Clock to Output Times
+ 13. Minimum Clock to Output Times
+ 14. Propagation Delay
+ 15. Minimum Propagation Delay
+ 16. Fast Model Setup Summary
+ 17. Fast Model Hold Summary
+ 18. Fast Model Recovery Summary
+ 19. Fast Model Removal Summary
+ 20. Fast Model Minimum Pulse Width Summary
+ 21. Fast Model Minimum Pulse Width: 'recieve'
+ 22. Clock to Output Times
+ 23. Minimum Clock to Output Times
+ 24. Propagation Delay
+ 25. Minimum Propagation Delay
+ 26. Multicorner Timing Analysis Summary
+ 27. Clock to Output Times
+ 28. Minimum Clock to Output Times
+ 29. Progagation Delay
+ 30. Minimum Progagation Delay
+ 31. Clock Transfers
+ 32. Report TCCS
+ 33. Report RSKM
+ 34. Unconstrained Paths
+ 35. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                         ;
++--------------------+----------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition ;
+; Revision Name      ; mod_com                                                              ;
+; Device Family      ; Cyclone II                                                           ;
+; Device Name        ; EP2C20F484C7                                                         ;
+; Timing Models      ; Final                                                                ;
+; Delay Model        ; Combined                                                             ;
+; Rise/Fall Delays   ; Unavailable                                                          ;
++--------------------+----------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                              ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets     ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+; recieve    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { recieve } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+
+
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
+
+
+----------------------------
+; Slow Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Slow Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++---------+--------+---------------------+
+; Clock   ; Slack  ; End Point TNS       ;
++---------+--------+---------------------+
+; recieve ; -1.469 ; -1.469              ;
++---------+--------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'recieve'                                                                        ;
++--------+--------------+----------------+------------------+---------+------------+-------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock   ; Clock Edge ; Target                        ;
++--------+--------------+----------------+------------------+---------+------------+-------------------------------+
+; -1.469 ; 1.000        ; 2.469          ; Port Rate        ; recieve ; Rise       ; recieve                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; recieve ; Rise       ; r_perm$latch                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; recieve ; Rise       ; r_perm$latch                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; recieve ; Rise       ; r_perm$latch|datac            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; recieve ; Rise       ; r_perm$latch|datac            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; recieve ; Rise       ; recieve|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; recieve ; Rise       ; recieve|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; recieve ; Rise       ; recieve~clk_delay_ctrl|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; recieve ; Rise       ; recieve~clk_delay_ctrl|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; recieve ; Rise       ; recieve~clk_delay_ctrl|clkout ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; recieve ; Rise       ; recieve~clk_delay_ctrl|clkout ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; recieve ; Rise       ; recieve~clkctrl|inclk[0]      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; recieve ; Rise       ; recieve~clkctrl|inclk[0]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; recieve ; Rise       ; recieve~clkctrl|outclk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; recieve ; Rise       ; recieve~clkctrl|outclk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; recieve ; Fall       ; w_perm$latch                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; recieve ; Fall       ; w_perm$latch                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; recieve ; Rise       ; w_perm$latch|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; recieve ; Rise       ; w_perm$latch|datad            ;
++--------+--------------+----------------+------------------+---------+------------+-------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; r_perm    ; recieve    ; 6.498 ; 6.498 ; Rise       ; recieve         ;
+; w_perm    ; recieve    ; 6.537 ; 6.537 ; Fall       ; recieve         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; r_perm    ; recieve    ; 6.498 ; 6.498 ; Rise       ; recieve         ;
+; w_perm    ; recieve    ; 6.537 ; 6.537 ; Fall       ; recieve         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; r_w        ; send        ; 5.953 ;    ;    ; 5.953 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; r_w        ; send        ; 5.953 ;    ;    ; 5.953 ;
++------------+-------------+-------+----+----+-------+
+
+
+----------------------------
+; Fast Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Fast Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++---------+--------+---------------------+
+; Clock   ; Slack  ; End Point TNS       ;
++---------+--------+---------------------+
+; recieve ; -1.222 ; -1.222              ;
++---------+--------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'recieve'                                                                        ;
++--------+--------------+----------------+------------------+---------+------------+-------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock   ; Clock Edge ; Target                        ;
++--------+--------------+----------------+------------------+---------+------------+-------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; recieve ; Rise       ; recieve                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; recieve ; Rise       ; r_perm$latch                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; recieve ; Rise       ; r_perm$latch                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; recieve ; Rise       ; r_perm$latch|datac            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; recieve ; Rise       ; r_perm$latch|datac            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; recieve ; Rise       ; recieve|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; recieve ; Rise       ; recieve|combout               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; recieve ; Rise       ; recieve~clk_delay_ctrl|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; recieve ; Rise       ; recieve~clk_delay_ctrl|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; recieve ; Rise       ; recieve~clk_delay_ctrl|clkout ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; recieve ; Rise       ; recieve~clk_delay_ctrl|clkout ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; recieve ; Rise       ; recieve~clkctrl|inclk[0]      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; recieve ; Rise       ; recieve~clkctrl|inclk[0]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; recieve ; Rise       ; recieve~clkctrl|outclk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; recieve ; Rise       ; recieve~clkctrl|outclk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; recieve ; Fall       ; w_perm$latch                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; recieve ; Fall       ; w_perm$latch                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; recieve ; Rise       ; w_perm$latch|datad            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; recieve ; Rise       ; w_perm$latch|datad            ;
++--------+--------------+----------------+------------------+---------+------------+-------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; r_perm    ; recieve    ; 3.347 ; 3.347 ; Rise       ; recieve         ;
+; w_perm    ; recieve    ; 3.338 ; 3.338 ; Fall       ; recieve         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; r_perm    ; recieve    ; 3.347 ; 3.347 ; Rise       ; recieve         ;
+; w_perm    ; recieve    ; 3.338 ; 3.338 ; Fall       ; recieve         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; r_w        ; send        ; 2.920 ;    ;    ; 2.920 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; r_w        ; send        ; 2.920 ;    ;    ; 2.920 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; -1.469              ;
+;  recieve         ; N/A   ; N/A  ; N/A      ; N/A     ; -1.469              ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; -1.469              ;
+;  recieve         ; N/A   ; N/A  ; N/A      ; N/A     ; -1.469              ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; r_perm    ; recieve    ; 6.498 ; 6.498 ; Rise       ; recieve         ;
+; w_perm    ; recieve    ; 6.537 ; 6.537 ; Fall       ; recieve         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; r_perm    ; recieve    ; 3.347 ; 3.347 ; Rise       ; recieve         ;
+; w_perm    ; recieve    ; 3.338 ; 3.338 ; Fall       ; recieve         ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Progagation Delay                                  ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; r_w        ; send        ; 5.953 ;    ;    ; 5.953 ;
++------------+-------------+-------+----+----+-------+
+
+
++----------------------------------------------------+
+; Minimum Progagation Delay                          ;
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; r_w        ; send        ; 2.920 ;    ;    ; 2.920 ;
++------------+-------------+-------+----+----+-------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 1     ; 1    ;
+; Unconstrained Output Ports      ; 3     ; 3    ;
+; Unconstrained Output Port Paths ; 3     ; 3    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
+    Info: Processing started: Fri Aug 23 11:55:41 2019
+Info: Command: quartus_sta mod_com -c mod_com
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 2 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'mod_com.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name recieve recieve
+Warning (332125): Found combinational loop of 155 nodes
+    Warning (332126): Node "Add0~1|datab"
+    Warning (332126): Node "Add0~1|cout"
+    Warning (332126): Node "Add0~3|cin"
+    Warning (332126): Node "Add0~3|combout"
+    Warning (332126): Node "Add0~3|dataa"
+    Warning (332126): Node "Add0~3|cout"
+    Warning (332126): Node "Add0~5|cin"
+    Warning (332126): Node "Add0~5|combout"
+    Warning (332126): Node "Add0~5|dataa"
+    Warning (332126): Node "Add0~5|cout"
+    Warning (332126): Node "Add0~7|cin"
+    Warning (332126): Node "Add0~7|combout"
+    Warning (332126): Node "Add0~7|dataa"
+    Warning (332126): Node "Add0~7|cout"
+    Warning (332126): Node "Add0~9|cin"
+    Warning (332126): Node "Add0~9|combout"
+    Warning (332126): Node "LessThan0~4|datab"
+    Warning (332126): Node "LessThan0~4|combout"
+    Warning (332126): Node "LessThan0~5|dataa"
+    Warning (332126): Node "LessThan0~5|combout"
+    Warning (332126): Node "LessThan0~6|datab"
+    Warning (332126): Node "LessThan0~6|combout"
+    Warning (332126): Node "count[23]~50|datac"
+    Warning (332126): Node "count[23]~50|combout"
+    Warning (332126): Node "Add0~45|datad"
+    Warning (332126): Node "Add0~45|combout"
+    Warning (332126): Node "count[23]~50|dataa"
+    Warning (332126): Node "LessThan0~6|dataa"
+    Warning (332126): Node "Add0~43|datab"
+    Warning (332126): Node "Add0~43|cout"
+    Warning (332126): Node "Add0~45|cin"
+    Warning (332126): Node "Add0~43|combout"
+    Warning (332126): Node "Add0~43|dataa"
+    Warning (332126): Node "LessThan0~6|datac"
+    Warning (332126): Node "Add0~41|datab"
+    Warning (332126): Node "Add0~41|combout"
+    Warning (332126): Node "LessThan0~0|datad"
+    Warning (332126): Node "LessThan0~0|combout"
+    Warning (332126): Node "LessThan0~1|datab"
+    Warning (332126): Node "LessThan0~1|combout"
+    Warning (332126): Node "LessThan0~5|datad"
+    Warning (332126): Node "Add0~41|dataa"
+    Warning (332126): Node "Add0~41|cout"
+    Warning (332126): Node "Add0~43|cin"
+    Warning (332126): Node "Add0~39|datab"
+    Warning (332126): Node "Add0~39|combout"
+    Warning (332126): Node "LessThan0~0|datac"
+    Warning (332126): Node "Add0~39|dataa"
+    Warning (332126): Node "Add0~39|cout"
+    Warning (332126): Node "Add0~41|cin"
+    Warning (332126): Node "Add0~37|datab"
+    Warning (332126): Node "Add0~37|combout"
+    Warning (332126): Node "LessThan0~1|datac"
+    Warning (332126): Node "Add0~37|dataa"
+    Warning (332126): Node "Add0~37|cout"
+    Warning (332126): Node "Add0~39|cin"
+    Warning (332126): Node "Add0~35|datab"
+    Warning (332126): Node "Add0~35|combout"
+    Warning (332126): Node "LessThan0~1|dataa"
+    Warning (332126): Node "Add0~35|dataa"
+    Warning (332126): Node "Add0~35|cout"
+    Warning (332126): Node "Add0~37|cin"
+    Warning (332126): Node "Add0~33|datab"
+    Warning (332126): Node "Add0~33|combout"
+    Warning (332126): Node "LessThan0~1|datad"
+    Warning (332126): Node "Add0~33|dataa"
+    Warning (332126): Node "Add0~33|cout"
+    Warning (332126): Node "Add0~35|cin"
+    Warning (332126): Node "Add0~31|datab"
+    Warning (332126): Node "Add0~31|combout"
+    Warning (332126): Node "LessThan0~5|datab"
+    Warning (332126): Node "LessThan0~0|datab"
+    Warning (332126): Node "Add0~31|dataa"
+    Warning (332126): Node "Add0~31|cout"
+    Warning (332126): Node "Add0~33|cin"
+    Warning (332126): Node "Add0~29|datab"
+    Warning (332126): Node "Add0~29|combout"
+    Warning (332126): Node "LessThan0~0|dataa"
+    Warning (332126): Node "Add0~29|dataa"
+    Warning (332126): Node "Add0~29|cout"
+    Warning (332126): Node "Add0~31|cin"
+    Warning (332126): Node "Add0~27|datab"
+    Warning (332126): Node "Add0~27|combout"
+    Warning (332126): Node "LessThan0~5|datac"
+    Warning (332126): Node "Add0~27|dataa"
+    Warning (332126): Node "Add0~27|cout"
+    Warning (332126): Node "Add0~29|cin"
+    Warning (332126): Node "Add0~25|datab"
+    Warning (332126): Node "Add0~25|combout"
+    Warning (332126): Node "LessThan0~2|datac"
+    Warning (332126): Node "LessThan0~2|combout"
+    Warning (332126): Node "LessThan0~4|datad"
+    Warning (332126): Node "Add0~25|dataa"
+    Warning (332126): Node "Add0~25|cout"
+    Warning (332126): Node "Add0~27|cin"
+    Warning (332126): Node "Add0~23|datab"
+    Warning (332126): Node "Add0~23|combout"
+    Warning (332126): Node "LessThan0~2|dataa"
+    Warning (332126): Node "Add0~23|dataa"
+    Warning (332126): Node "Add0~23|cout"
+    Warning (332126): Node "Add0~25|cin"
+    Warning (332126): Node "Add0~21|dataa"
+    Warning (332126): Node "Add0~21|cout"
+    Warning (332126): Node "Add0~23|cin"
+    Warning (332126): Node "Add0~21|combout"
+    Warning (332126): Node "LessThan0~2|datab"
+    Warning (332126): Node "Add0~21|datab"
+    Warning (332126): Node "Add0~19|dataa"
+    Warning (332126): Node "Add0~19|cout"
+    Warning (332126): Node "Add0~21|cin"
+    Warning (332126): Node "Add0~19|combout"
+    Warning (332126): Node "LessThan0~2|datad"
+    Warning (332126): Node "Add0~19|datab"
+    Warning (332126): Node "Add0~17|dataa"
+    Warning (332126): Node "Add0~17|cout"
+    Warning (332126): Node "Add0~19|cin"
+    Warning (332126): Node "Add0~17|combout"
+    Warning (332126): Node "LessThan0~3|datad"
+    Warning (332126): Node "LessThan0~3|combout"
+    Warning (332126): Node "LessThan0~4|datac"
+    Warning (332126): Node "Add0~17|datab"
+    Warning (332126): Node "Add0~15|datab"
+    Warning (332126): Node "Add0~15|combout"
+    Warning (332126): Node "LessThan0~3|dataa"
+    Warning (332126): Node "Add0~15|dataa"
+    Warning (332126): Node "Add0~15|cout"
+    Warning (332126): Node "Add0~17|cin"
+    Warning (332126): Node "Add0~13|dataa"
+    Warning (332126): Node "Add0~13|cout"
+    Warning (332126): Node "Add0~15|cin"
+    Warning (332126): Node "Add0~13|combout"
+    Warning (332126): Node "LessThan0~3|datab"
+    Warning (332126): Node "Add0~13|datab"
+    Warning (332126): Node "Add0~11|datab"
+    Warning (332126): Node "Add0~11|combout"
+    Warning (332126): Node "LessThan0~3|datac"
+    Warning (332126): Node "Add0~11|dataa"
+    Warning (332126): Node "Add0~11|cout"
+    Warning (332126): Node "Add0~13|cin"
+    Warning (332126): Node "Add0~9|dataa"
+    Warning (332126): Node "Add0~9|cout"
+    Warning (332126): Node "Add0~11|cin"
+    Warning (332126): Node "Add0~7|datab"
+    Warning (332126): Node "Add0~5|datab"
+    Warning (332126): Node "Add0~3|datab"
+    Warning (332126): Node "count[1]~48|datac"
+    Warning (332126): Node "count[1]~48|combout"
+    Warning (332126): Node "Add0~1|dataa"
+    Warning (332126): Node "Add0~1|combout"
+    Warning (332126): Node "count[1]~48|datad"
+    Warning (332126): Node "LessThan0~6|datad"
+    Warning (332126): Node "count[0]~49|datac"
+    Warning (332126): Node "count[0]~49|combout"
+    Warning (332126): Node "count[0]~49|datab"
+    Warning (332126): Node "Add0~9|datab"
+Critical Warning (332081): Design contains combinational loop of 155 nodes. Estimating the delays through the loop.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case minimum pulse width slack is -1.469
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.469        -1.469 recieve 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222        -1.222 recieve 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 161 warnings
+    Info: Peak virtual memory: 539 megabytes
+    Info: Processing ended: Fri Aug 23 11:55:42 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
