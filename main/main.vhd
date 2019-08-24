@@ -1,3 +1,7 @@
+-- Modulo main que une as funcionalidades do transmissor
+-- Possui a chamada para o envio e recebimento de codigos morse e a construcao desses codigos
+-- assim como o controle dos LEDs que exibem os codigos recebidos e enviados
+
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -6,30 +10,30 @@ entity main is
 				MAX_WORD_SIZE		: integer := 10);
 	port (clock	: in std_logic;
 	
-			input_button	: in std_logic;
-			backspace_in_code	: in std_logic;
-			backspace_ready	: out std_logic;
-			clear_code	: in std_logic;
-			leds_of_inserted_value	: out std_logic_vector(0 to MAX_CODE_LENGTH-1);
-			leds_of_received_value	: out std_logic_vector(0 to MAX_CODE_LENGTH-1));
+			input_button		: in std_logic;						-- Botao de input dos codigos
+			backspace_in_code	: in std_logic;						-- Botao de backspace (apaga o ultimo valor inserido no codigo possibilitando a reecrita)
+			backspace_ready		: out std_logic;					-- Sinal que sinaliza se backspace ja pode ser utilizado novamente
+			clear_code		: in std_logic;						-- Botao para limpar o codigo inserido atualmente
+			leds_of_inserted_value	: out std_logic_vector(0 to MAX_CODE_LENGTH-1);		-- Saida para os LEDs que indicam o codigo inserido atualmente
+			leds_of_received_value	: out std_logic_vector(0 to MAX_CODE_LENGTH-1));	-- Saida para os LEDs que indicam o codigo recebido atualmente
 			
 			-- [DEBUG]
 			--code_test0, code_test1, code_test2, code_test3, code_test4 : out integer range 0 to MAX_CODE_LENGTH-1;
-			--[]
+
 end main;
 
 architecture main_loop of main is
-	type integer_vector is array(0 to MAX_CODE_LENGTH-1) of integer range 0 to 2;
-	type code_vector is array(0 to MAX_WORD_SIZE-1) of integer_vector;
-	type std_logic_matrix is array(0 to MAX_CODE_LENGTH-1) of std_logic_vector(7 downto 0);
-	signal inserted_led_intensity	: std_logic_matrix;			-- Guarda a intensidade de cada LED
-	signal inserted_code	: integer_vector	:= (others => 0);	-- Guarda a "letra" salva atualmente (0: desligado, 1: ponto, 2: traco)
+	type integer_vector is array(0 to MAX_CODE_LENGTH-1) of integer range 0 to 2;			-- Definicao do tipo "vetor de inteiros" utilizado nos codigos
+	type code_vector is array(0 to MAX_WORD_SIZE-1) of integer_vector;				-- Definicao do tipo "vetor de codigos" utilizado para as palavras
+	type std_logic_matrix is array(0 to MAX_CODE_LENGTH-1) of std_logic_vector(7 downto 0);		-- Definicao do tipo "matrix de std_logics" utilizado para controle dos leds
+	signal inserted_led_intensity	: std_logic_matrix;			-- Guarda a intensidade de cada LED do codigo inserido
+	signal inserted_code	: integer_vector	:= (others => 0);	-- Guarda o codigo da "letra" inserida atualmente (0: desligado, 1: ponto, 2: traco)
 	
-	signal received_led_intensity	: std_logic_matrix;
-	signal received_codes_vector	: code_vector;
-	signal current_received_code	: integer_vector;
+	signal received_led_intensity	: std_logic_matrix;			-- Guarda a intensidade de cada LED do codigo recebido
+	signal received_codes_vector	: code_vector;				-- Guarda a "palavra" recebida atualmente (vetor de codigos)
+	signal current_received_code	: integer_vector;			-- Guarda o codigo recebido que esta sendo lido atualmente
 	
-	constant time_between_codes	: integer := 150000000;
+	constant time_between_codes	: integer := 150000000;			-- Temporizador para a troca de "letras" na exibicao da "palavra" recebida
 	
 	component modulo_pwm
 		port (clk, en			: in std_logic;
@@ -46,8 +50,8 @@ architecture main_loop of main is
 			
 			backspace_ready_signal	: out std_logic);
 
-			--code_test0, code_test1, code_test2, code_test3, code_test4 : out integer range 0 to 2);
-			--index_test	: out integer range 0 to MAX_CODE_LENGTH-1;
+			-- [DEBUG] code_test0, code_test1, code_test2, code_test3, code_test4 : out integer range 0 to 2);
+			-- [DEBUG] index_test	: out integer range 0 to MAX_CODE_LENGTH-1;
 	end component;
 	
 begin
@@ -66,9 +70,9 @@ begin
 	
 	
 	-- Recebimento da palavra (conjunto de codigos)
-	-- modulo do dani
-	-- detalhe ele nao salva, mostra o que estiver atualmente em received_codes_vector
-	received_code_control: port map (received_codes_vector);
+	-- modulo de transmissao
+	-- Detalhe de funcionamento: o main nao salva o valor recebido, assim so consegue mostrar enquanto o sinal estiver sendo enviado (mostra o que estiver atualmente em received_codes_vector)
+	-- received_code_control: port map (received_codes_vector); -- nao foi finalizado
 	------------------------------------------
 	
 	-- Controle de brilho para sinalizar os codigos recebidos
@@ -87,13 +91,13 @@ begin
 	begin
 		if	(clock'event and clock = '0') then
 		
-			code_change_timer := code_change_timer - 1;
-			if	(code_change_timer = 0) then
-				code_change_timer := time_between_codes;
+			code_change_timer := code_change_timer - 1;			-- Decrementa o timer e
+			if	(code_change_timer = 0) then				-- se ele chegou a zero
+				code_change_timer := time_between_codes;		-- reseta ele e
 				
-				code_number := code_number + 1;
-				if	(code_number = MAX_WORD_SIZE) then
-					current_received_code <= (others => 0);
+				code_number := code_number + 1;				-- muda para a proximo codigo da palavra recebida
+				if	(code_number = MAX_WORD_SIZE) then		-- Se chegou na ultima letra,
+					current_received_code <= (others => 0);		-- Passa um ciclo com os LEDs desligados antes de reiniciar o ciclo
 					
 				else
 					current_received_code <= received_codes_vector(code_number);
@@ -112,6 +116,9 @@ begin
 	--code_test4 <= code(4);
 	
 end main_loop;
+
+
+-- Bah professor, percebi que esqueci de resetar code_number depois que ele chega ao fim e espera um tempo na parte do repetidor entao ele so mostraria uma vez a palavra e depois ficaria apagado...
 
 -- Referencias
 -- 
