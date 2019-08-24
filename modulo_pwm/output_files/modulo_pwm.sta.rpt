@@ -1,6 +1,6 @@
 TimeQuest Timing Analyzer report for modulo_pwm
-Fri Aug 02 11:01:05 2019
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Sat Aug 24 20:33:14 2019
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -290,7 +290,7 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; pwm_out   ; clk        ; 12.522 ; 12.522 ; Fall       ; clk             ;
+; pwm_out   ; clk        ; 12.519 ; 12.519 ; Fall       ; clk             ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -299,42 +299,42 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; pwm_out   ; clk        ; 10.892 ; 10.892 ; Fall       ; clk             ;
+; pwm_out   ; clk        ; 10.889 ; 10.889 ; Fall       ; clk             ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
 +------------------------------------------------------+
 ; Propagation Delay                                    ;
-+------------+-------------+----+--------+--------+----+
-; Input Port ; Output Port ; RR ; RF     ; FR     ; FF ;
-+------------+-------------+----+--------+--------+----+
-; duty[0]    ; pwm_out     ;    ; 11.892 ; 11.892 ;    ;
-; duty[1]    ; pwm_out     ;    ; 11.666 ; 11.666 ;    ;
-; duty[2]    ; pwm_out     ;    ; 11.590 ; 11.590 ;    ;
-; duty[3]    ; pwm_out     ;    ; 10.664 ; 10.664 ;    ;
-; duty[4]    ; pwm_out     ;    ; 10.629 ; 10.629 ;    ;
-; duty[5]    ; pwm_out     ;    ; 10.554 ; 10.554 ;    ;
-; duty[6]    ; pwm_out     ;    ; 10.490 ; 10.490 ;    ;
-; duty[7]    ; pwm_out     ;    ; 10.468 ; 10.468 ;    ;
-; en         ; pwm_out     ;    ; 12.705 ; 12.705 ;    ;
-+------------+-------------+----+--------+--------+----+
++------------+-------------+--------+----+----+--------+
+; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
++------------+-------------+--------+----+----+--------+
+; duty[0]    ; pwm_out     ; 11.889 ;    ;    ; 11.889 ;
+; duty[1]    ; pwm_out     ; 11.663 ;    ;    ; 11.663 ;
+; duty[2]    ; pwm_out     ; 11.587 ;    ;    ; 11.587 ;
+; duty[3]    ; pwm_out     ; 10.661 ;    ;    ; 10.661 ;
+; duty[4]    ; pwm_out     ; 10.626 ;    ;    ; 10.626 ;
+; duty[5]    ; pwm_out     ; 10.551 ;    ;    ; 10.551 ;
+; duty[6]    ; pwm_out     ; 10.487 ;    ;    ; 10.487 ;
+; duty[7]    ; pwm_out     ; 10.495 ;    ;    ; 10.495 ;
+; en         ; pwm_out     ; 12.705 ;    ;    ; 12.705 ;
++------------+-------------+--------+----+----+--------+
 
 
 +------------------------------------------------------+
 ; Minimum Propagation Delay                            ;
-+------------+-------------+----+--------+--------+----+
-; Input Port ; Output Port ; RR ; RF     ; FR     ; FF ;
-+------------+-------------+----+--------+--------+----+
-; duty[0]    ; pwm_out     ;    ; 11.892 ; 11.892 ;    ;
-; duty[1]    ; pwm_out     ;    ; 11.666 ; 11.666 ;    ;
-; duty[2]    ; pwm_out     ;    ; 11.590 ; 11.590 ;    ;
-; duty[3]    ; pwm_out     ;    ; 10.664 ; 10.664 ;    ;
-; duty[4]    ; pwm_out     ;    ; 10.629 ; 10.629 ;    ;
-; duty[5]    ; pwm_out     ;    ; 10.554 ; 10.554 ;    ;
-; duty[6]    ; pwm_out     ;    ; 10.490 ; 10.490 ;    ;
-; duty[7]    ; pwm_out     ;    ; 10.468 ; 10.468 ;    ;
-; en         ; pwm_out     ;    ; 12.705 ; 12.705 ;    ;
-+------------+-------------+----+--------+--------+----+
++------------+-------------+--------+----+----+--------+
+; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
++------------+-------------+--------+----+----+--------+
+; duty[0]    ; pwm_out     ; 11.889 ;    ;    ; 11.889 ;
+; duty[1]    ; pwm_out     ; 11.663 ;    ;    ; 11.663 ;
+; duty[2]    ; pwm_out     ; 11.587 ;    ;    ; 11.587 ;
+; duty[3]    ; pwm_out     ; 10.661 ;    ;    ; 10.661 ;
+; duty[4]    ; pwm_out     ; 10.626 ;    ;    ; 10.626 ;
+; duty[5]    ; pwm_out     ; 10.551 ;    ;    ; 10.551 ;
+; duty[6]    ; pwm_out     ; 10.487 ;    ;    ; 10.487 ;
+; duty[7]    ; pwm_out     ; 10.495 ;    ;    ; 10.495 ;
+; en         ; pwm_out     ; 12.705 ;    ;    ; 12.705 ;
++------------+-------------+--------+----+----+--------+
 
 
 +-------------------------------+
@@ -516,7 +516,7 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; pwm_out   ; clk        ; 5.830 ; 5.830 ; Fall       ; clk             ;
+; pwm_out   ; clk        ; 5.856 ; 5.856 ; Fall       ; clk             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -525,42 +525,42 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; pwm_out   ; clk        ; 5.210 ; 5.210 ; Fall       ; clk             ;
+; pwm_out   ; clk        ; 5.236 ; 5.236 ; Fall       ; clk             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
 +----------------------------------------------------+
 ; Propagation Delay                                  ;
-+------------+-------------+----+-------+-------+----+
-; Input Port ; Output Port ; RR ; RF    ; FR    ; FF ;
-+------------+-------------+----+-------+-------+----+
-; duty[0]    ; pwm_out     ;    ; 5.104 ; 5.104 ;    ;
-; duty[1]    ; pwm_out     ;    ; 4.985 ; 4.985 ;    ;
-; duty[2]    ; pwm_out     ;    ; 4.967 ; 4.967 ;    ;
-; duty[3]    ; pwm_out     ;    ; 4.542 ; 4.542 ;    ;
-; duty[4]    ; pwm_out     ;    ; 4.524 ; 4.524 ;    ;
-; duty[5]    ; pwm_out     ;    ; 4.490 ; 4.490 ;    ;
-; duty[6]    ; pwm_out     ;    ; 4.455 ; 4.455 ;    ;
-; duty[7]    ; pwm_out     ;    ; 4.538 ; 4.538 ;    ;
-; en         ; pwm_out     ;    ; 6.223 ; 6.223 ;    ;
-+------------+-------------+----+-------+-------+----+
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; duty[0]    ; pwm_out     ; 5.130 ;    ;    ; 5.130 ;
+; duty[1]    ; pwm_out     ; 5.011 ;    ;    ; 5.011 ;
+; duty[2]    ; pwm_out     ; 4.993 ;    ;    ; 4.993 ;
+; duty[3]    ; pwm_out     ; 4.568 ;    ;    ; 4.568 ;
+; duty[4]    ; pwm_out     ; 4.550 ;    ;    ; 4.550 ;
+; duty[5]    ; pwm_out     ; 4.516 ;    ;    ; 4.516 ;
+; duty[6]    ; pwm_out     ; 4.481 ;    ;    ; 4.481 ;
+; duty[7]    ; pwm_out     ; 4.569 ;    ;    ; 4.569 ;
+; en         ; pwm_out     ; 6.223 ;    ;    ; 6.223 ;
++------------+-------------+-------+----+----+-------+
 
 
 +----------------------------------------------------+
 ; Minimum Propagation Delay                          ;
-+------------+-------------+----+-------+-------+----+
-; Input Port ; Output Port ; RR ; RF    ; FR    ; FF ;
-+------------+-------------+----+-------+-------+----+
-; duty[0]    ; pwm_out     ;    ; 5.104 ; 5.104 ;    ;
-; duty[1]    ; pwm_out     ;    ; 4.985 ; 4.985 ;    ;
-; duty[2]    ; pwm_out     ;    ; 4.967 ; 4.967 ;    ;
-; duty[3]    ; pwm_out     ;    ; 4.542 ; 4.542 ;    ;
-; duty[4]    ; pwm_out     ;    ; 4.524 ; 4.524 ;    ;
-; duty[5]    ; pwm_out     ;    ; 4.490 ; 4.490 ;    ;
-; duty[6]    ; pwm_out     ;    ; 4.455 ; 4.455 ;    ;
-; duty[7]    ; pwm_out     ;    ; 4.538 ; 4.538 ;    ;
-; en         ; pwm_out     ;    ; 6.223 ; 6.223 ;    ;
-+------------+-------------+----+-------+-------+----+
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; duty[0]    ; pwm_out     ; 5.130 ;    ;    ; 5.130 ;
+; duty[1]    ; pwm_out     ; 5.011 ;    ;    ; 5.011 ;
+; duty[2]    ; pwm_out     ; 4.993 ;    ;    ; 4.993 ;
+; duty[3]    ; pwm_out     ; 4.568 ;    ;    ; 4.568 ;
+; duty[4]    ; pwm_out     ; 4.550 ;    ;    ; 4.550 ;
+; duty[5]    ; pwm_out     ; 4.516 ;    ;    ; 4.516 ;
+; duty[6]    ; pwm_out     ; 4.481 ;    ;    ; 4.481 ;
+; duty[7]    ; pwm_out     ; 4.569 ;    ;    ; 4.569 ;
+; en         ; pwm_out     ; 6.223 ;    ;    ; 6.223 ;
++------------+-------------+-------+----+----+-------+
 
 
 +------------------------------------------------------------------------------+
@@ -580,7 +580,7 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; pwm_out   ; clk        ; 12.522 ; 12.522 ; Fall       ; clk             ;
+; pwm_out   ; clk        ; 12.519 ; 12.519 ; Fall       ; clk             ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -589,42 +589,42 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; pwm_out   ; clk        ; 5.210 ; 5.210 ; Fall       ; clk             ;
+; pwm_out   ; clk        ; 5.236 ; 5.236 ; Fall       ; clk             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
 +------------------------------------------------------+
 ; Progagation Delay                                    ;
-+------------+-------------+----+--------+--------+----+
-; Input Port ; Output Port ; RR ; RF     ; FR     ; FF ;
-+------------+-------------+----+--------+--------+----+
-; duty[0]    ; pwm_out     ;    ; 11.892 ; 11.892 ;    ;
-; duty[1]    ; pwm_out     ;    ; 11.666 ; 11.666 ;    ;
-; duty[2]    ; pwm_out     ;    ; 11.590 ; 11.590 ;    ;
-; duty[3]    ; pwm_out     ;    ; 10.664 ; 10.664 ;    ;
-; duty[4]    ; pwm_out     ;    ; 10.629 ; 10.629 ;    ;
-; duty[5]    ; pwm_out     ;    ; 10.554 ; 10.554 ;    ;
-; duty[6]    ; pwm_out     ;    ; 10.490 ; 10.490 ;    ;
-; duty[7]    ; pwm_out     ;    ; 10.468 ; 10.468 ;    ;
-; en         ; pwm_out     ;    ; 12.705 ; 12.705 ;    ;
-+------------+-------------+----+--------+--------+----+
++------------+-------------+--------+----+----+--------+
+; Input Port ; Output Port ; RR     ; RF ; FR ; FF     ;
++------------+-------------+--------+----+----+--------+
+; duty[0]    ; pwm_out     ; 11.889 ;    ;    ; 11.889 ;
+; duty[1]    ; pwm_out     ; 11.663 ;    ;    ; 11.663 ;
+; duty[2]    ; pwm_out     ; 11.587 ;    ;    ; 11.587 ;
+; duty[3]    ; pwm_out     ; 10.661 ;    ;    ; 10.661 ;
+; duty[4]    ; pwm_out     ; 10.626 ;    ;    ; 10.626 ;
+; duty[5]    ; pwm_out     ; 10.551 ;    ;    ; 10.551 ;
+; duty[6]    ; pwm_out     ; 10.487 ;    ;    ; 10.487 ;
+; duty[7]    ; pwm_out     ; 10.495 ;    ;    ; 10.495 ;
+; en         ; pwm_out     ; 12.705 ;    ;    ; 12.705 ;
++------------+-------------+--------+----+----+--------+
 
 
 +----------------------------------------------------+
 ; Minimum Progagation Delay                          ;
-+------------+-------------+----+-------+-------+----+
-; Input Port ; Output Port ; RR ; RF    ; FR    ; FF ;
-+------------+-------------+----+-------+-------+----+
-; duty[0]    ; pwm_out     ;    ; 5.104 ; 5.104 ;    ;
-; duty[1]    ; pwm_out     ;    ; 4.985 ; 4.985 ;    ;
-; duty[2]    ; pwm_out     ;    ; 4.967 ; 4.967 ;    ;
-; duty[3]    ; pwm_out     ;    ; 4.542 ; 4.542 ;    ;
-; duty[4]    ; pwm_out     ;    ; 4.524 ; 4.524 ;    ;
-; duty[5]    ; pwm_out     ;    ; 4.490 ; 4.490 ;    ;
-; duty[6]    ; pwm_out     ;    ; 4.455 ; 4.455 ;    ;
-; duty[7]    ; pwm_out     ;    ; 4.538 ; 4.538 ;    ;
-; en         ; pwm_out     ;    ; 6.223 ; 6.223 ;    ;
-+------------+-------------+----+-------+-------+----+
++------------+-------------+-------+----+----+-------+
+; Input Port ; Output Port ; RR    ; RF ; FR ; FF    ;
++------------+-------------+-------+----+----+-------+
+; duty[0]    ; pwm_out     ; 5.130 ;    ;    ; 5.130 ;
+; duty[1]    ; pwm_out     ; 5.011 ;    ;    ; 5.011 ;
+; duty[2]    ; pwm_out     ; 4.993 ;    ;    ; 4.993 ;
+; duty[3]    ; pwm_out     ; 4.568 ;    ;    ; 4.568 ;
+; duty[4]    ; pwm_out     ; 4.550 ;    ;    ; 4.550 ;
+; duty[5]    ; pwm_out     ; 4.516 ;    ;    ; 4.516 ;
+; duty[6]    ; pwm_out     ; 4.481 ;    ;    ; 4.481 ;
+; duty[7]    ; pwm_out     ; 4.569 ;    ;    ; 4.569 ;
+; en         ; pwm_out     ; 6.223 ;    ;    ; 6.223 ;
++------------+-------------+-------+----+----+-------+
 
 
 +-------------------------------------------------------------------+
@@ -677,9 +677,9 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; TimeQuest Timing Analyzer Messages ;
 +------------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Aug 02 11:01:03 2019
+    Info: Processing started: Sat Aug 24 20:33:12 2019
 Info: Command: quartus_sta modulo_pwm -c modulo_pwm
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -726,10 +726,10 @@ Info (332146): Worst-case minimum pulse width slack is -1.380
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 384 megabytes
-    Info: Processing ended: Fri Aug 02 11:01:05 2019
+Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 0 megabytes
+    Info: Processing ended: Sat Aug 24 20:33:14 2019
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 

@@ -36,6 +36,7 @@ architecture behav of send_control is
 	begin
 		if clk'event and clk = '0' then
 			if recieve = '0' then
+				--contador faz com que o sinal do led de envio alterne em 4 Hz
 				w_perm <= '0';
 				if count < 12500000 then
 					count := count +1;
@@ -43,10 +44,12 @@ architecture behav of send_control is
 					r_perm <= not r_perm;
 					count := 0;
 				end if;
+				--definiçao de um botao de envio na placa, colocando code como um sinal out
 				if enter = '0' then
 					code <= user_input;
 				end if;
 			else
+			--mesmo contador do caso anterior, mas para o led de recebimento
 				r_perm <= '0';
 				if count < 12500000 then
 					count := count + 1;
@@ -54,6 +57,7 @@ architecture behav of send_control is
 					w_perm <= not w_perm;
 					count := 0;
 				end if;
+				--quando recieve = 1, code se torna input para envio para outra placa
 				display <= code;
 			end if;
 		end if;

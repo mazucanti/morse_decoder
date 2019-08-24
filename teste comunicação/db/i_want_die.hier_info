@@ -1,0 +1,148 @@
+|comm_test
+clock => modulo_pwm:brightness_loop:0:led_intensity_module.clk
+clock => modulo_pwm:brightness_loop:1:led_intensity_module.clk
+clock => modulo_pwm:brightness_loop:2:led_intensity_module.clk
+clock => modulo_pwm:brightness_loop:3:led_intensity_module.clk
+clock => modulo_pwm:brightness_loop:4:led_intensity_module.clk
+led[4] <= modulo_pwm:brightness_loop:4:led_intensity_module.pwm_out
+led[3] <= modulo_pwm:brightness_loop:3:led_intensity_module.pwm_out
+led[2] <= modulo_pwm:brightness_loop:2:led_intensity_module.pwm_out
+led[1] <= modulo_pwm:brightness_loop:1:led_intensity_module.pwm_out
+led[0] <= modulo_pwm:brightness_loop:0:led_intensity_module.pwm_out
+codein[4][0] => Equal8.IN1
+codein[4][0] => Equal9.IN1
+codein[4][1] => Equal8.IN0
+codein[4][1] => Equal9.IN0
+codein[3][0] => Equal6.IN1
+codein[3][0] => Equal7.IN1
+codein[3][1] => Equal6.IN0
+codein[3][1] => Equal7.IN0
+codein[2][0] => Equal4.IN1
+codein[2][0] => Equal5.IN1
+codein[2][1] => Equal4.IN0
+codein[2][1] => Equal5.IN0
+codein[1][0] => Equal2.IN1
+codein[1][0] => Equal3.IN1
+codein[1][1] => Equal2.IN0
+codein[1][1] => Equal3.IN0
+codein[0][0] => Equal0.IN1
+codein[0][0] => Equal1.IN1
+codein[0][1] => Equal0.IN0
+codein[0][1] => Equal1.IN0
+codeout[4][0] << <VCC>
+codeout[4][1] << <GND>
+codeout[3][0] << <GND>
+codeout[3][1] << <VCC>
+codeout[2][0] << <GND>
+codeout[2][1] << <VCC>
+codeout[1][0] << <GND>
+codeout[1][1] << <GND>
+codeout[0][0] << <VCC>
+codeout[0][1] << <GND>
+
+
+|comm_test|modulo_pwm:\brightness_loop:0:led_intensity_module
+clk => c[0].CLK
+clk => c[1].CLK
+clk => c[2].CLK
+clk => c[3].CLK
+clk => c[4].CLK
+clk => c[5].CLK
+clk => c[6].CLK
+clk => c[7].CLK
+en => process_0.IN1
+duty[0] => LessThan0.IN8
+duty[1] => LessThan0.IN7
+duty[2] => LessThan0.IN6
+duty[3] => LessThan0.IN5
+duty[4] => LessThan0.IN4
+duty[5] => LessThan0.IN3
+duty[6] => LessThan0.IN2
+duty[7] => LessThan0.IN1
+pwm_out <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|comm_test|modulo_pwm:\brightness_loop:1:led_intensity_module
+clk => c[0].CLK
+clk => c[1].CLK
+clk => c[2].CLK
+clk => c[3].CLK
+clk => c[4].CLK
+clk => c[5].CLK
+clk => c[6].CLK
+clk => c[7].CLK
+en => process_0.IN1
+duty[0] => LessThan0.IN8
+duty[1] => LessThan0.IN7
+duty[2] => LessThan0.IN6
+duty[3] => LessThan0.IN5
+duty[4] => LessThan0.IN4
+duty[5] => LessThan0.IN3
+duty[6] => LessThan0.IN2
+duty[7] => LessThan0.IN1
+pwm_out <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|comm_test|modulo_pwm:\brightness_loop:2:led_intensity_module
+clk => c[0].CLK
+clk => c[1].CLK
+clk => c[2].CLK
+clk => c[3].CLK
+clk => c[4].CLK
+clk => c[5].CLK
+clk => c[6].CLK
+clk => c[7].CLK
+en => process_0.IN1
+duty[0] => LessThan0.IN8
+duty[1] => LessThan0.IN7
+duty[2] => LessThan0.IN6
+duty[3] => LessThan0.IN5
+duty[4] => LessThan0.IN4
+duty[5] => LessThan0.IN3
+duty[6] => LessThan0.IN2
+duty[7] => LessThan0.IN1
+pwm_out <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|comm_test|modulo_pwm:\brightness_loop:3:led_intensity_module
+clk => c[0].CLK
+clk => c[1].CLK
+clk => c[2].CLK
+clk => c[3].CLK
+clk => c[4].CLK
+clk => c[5].CLK
+clk => c[6].CLK
+clk => c[7].CLK
+en => process_0.IN1
+duty[0] => LessThan0.IN8
+duty[1] => LessThan0.IN7
+duty[2] => LessThan0.IN6
+duty[3] => LessThan0.IN5
+duty[4] => LessThan0.IN4
+duty[5] => LessThan0.IN3
+duty[6] => LessThan0.IN2
+duty[7] => LessThan0.IN1
+pwm_out <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|comm_test|modulo_pwm:\brightness_loop:4:led_intensity_module
+clk => c[0].CLK
+clk => c[1].CLK
+clk => c[2].CLK
+clk => c[3].CLK
+clk => c[4].CLK
+clk => c[5].CLK
+clk => c[6].CLK
+clk => c[7].CLK
+en => process_0.IN1
+duty[0] => LessThan0.IN8
+duty[1] => LessThan0.IN7
+duty[2] => LessThan0.IN6
+duty[3] => LessThan0.IN5
+duty[4] => LessThan0.IN4
+duty[5] => LessThan0.IN3
+duty[6] => LessThan0.IN2
+duty[7] => LessThan0.IN1
+pwm_out <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
