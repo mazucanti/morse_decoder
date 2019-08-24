@@ -1,22 +1,78 @@
 |main
-clock => modulo_pwm:brightness_loop:0:led_intensity_module.clk
-clock => modulo_pwm:brightness_loop:1:led_intensity_module.clk
-clock => modulo_pwm:brightness_loop:2:led_intensity_module.clk
-clock => modulo_pwm:brightness_loop:3:led_intensity_module.clk
-clock => modulo_pwm:brightness_loop:4:led_intensity_module.clk
-clock => short_or_long_signal_identifier:code_control.clock
-input_button => short_or_long_signal_identifier:code_control.button_input
-backspace_in_code => short_or_long_signal_identifier:code_control.backspace
-backspace_ready <= short_or_long_signal_identifier:code_control.backspace_ready_signal
-clear_code => short_or_long_signal_identifier:code_control.clear
-led[4] <= modulo_pwm:brightness_loop:4:led_intensity_module.pwm_out
-led[3] <= modulo_pwm:brightness_loop:3:led_intensity_module.pwm_out
-led[2] <= modulo_pwm:brightness_loop:2:led_intensity_module.pwm_out
-led[1] <= modulo_pwm:brightness_loop:1:led_intensity_module.pwm_out
-led[0] <= modulo_pwm:brightness_loop:0:led_intensity_module.pwm_out
+clock => modulo_pwm:brightness_loop:0:inserted_led_intensity_module.clk
+clock => modulo_pwm:brightness_loop:1:inserted_led_intensity_module.clk
+clock => modulo_pwm:brightness_loop:2:inserted_led_intensity_module.clk
+clock => modulo_pwm:brightness_loop:3:inserted_led_intensity_module.clk
+clock => modulo_pwm:brightness_loop:4:inserted_led_intensity_module.clk
+clock => short_or_long_signal_identifier:inserted_code_control.clock
+clock => modulo_pwm:received_brightness_loop:0:received_led_intensity_module.clk
+clock => modulo_pwm:received_brightness_loop:1:received_led_intensity_module.clk
+clock => modulo_pwm:received_brightness_loop:2:received_led_intensity_module.clk
+clock => modulo_pwm:received_brightness_loop:3:received_led_intensity_module.clk
+clock => modulo_pwm:received_brightness_loop:4:received_led_intensity_module.clk
+clock => current_received_code[4][0].CLK
+clock => current_received_code[4][1].CLK
+clock => current_received_code[3][0].CLK
+clock => current_received_code[3][1].CLK
+clock => current_received_code[2][0].CLK
+clock => current_received_code[2][1].CLK
+clock => current_received_code[1][0].CLK
+clock => current_received_code[1][1].CLK
+clock => current_received_code[0][0].CLK
+clock => current_received_code[0][1].CLK
+clock => code_number[0].CLK
+clock => code_number[1].CLK
+clock => code_number[2].CLK
+clock => code_number[3].CLK
+clock => code_change_timer[0].CLK
+clock => code_change_timer[1].CLK
+clock => code_change_timer[2].CLK
+clock => code_change_timer[3].CLK
+clock => code_change_timer[4].CLK
+clock => code_change_timer[5].CLK
+clock => code_change_timer[6].CLK
+clock => code_change_timer[7].CLK
+clock => code_change_timer[8].CLK
+clock => code_change_timer[9].CLK
+clock => code_change_timer[10].CLK
+clock => code_change_timer[11].CLK
+clock => code_change_timer[12].CLK
+clock => code_change_timer[13].CLK
+clock => code_change_timer[14].CLK
+clock => code_change_timer[15].CLK
+clock => code_change_timer[16].CLK
+clock => code_change_timer[17].CLK
+clock => code_change_timer[18].CLK
+clock => code_change_timer[19].CLK
+clock => code_change_timer[20].CLK
+clock => code_change_timer[21].CLK
+clock => code_change_timer[22].CLK
+clock => code_change_timer[23].CLK
+clock => code_change_timer[24].CLK
+clock => code_change_timer[25].CLK
+clock => code_change_timer[26].CLK
+clock => code_change_timer[27].CLK
+clock => code_change_timer[28].CLK
+clock => code_change_timer[29].CLK
+clock => code_change_timer[30].CLK
+clock => code_change_timer[31].CLK
+input_button => short_or_long_signal_identifier:inserted_code_control.button_input
+backspace_in_code => short_or_long_signal_identifier:inserted_code_control.backspace
+backspace_ready <= short_or_long_signal_identifier:inserted_code_control.backspace_ready_signal
+clear_code => short_or_long_signal_identifier:inserted_code_control.clear
+leds_of_inserted_value[4] <= modulo_pwm:brightness_loop:4:inserted_led_intensity_module.pwm_out
+leds_of_inserted_value[3] <= modulo_pwm:brightness_loop:3:inserted_led_intensity_module.pwm_out
+leds_of_inserted_value[2] <= modulo_pwm:brightness_loop:2:inserted_led_intensity_module.pwm_out
+leds_of_inserted_value[1] <= modulo_pwm:brightness_loop:1:inserted_led_intensity_module.pwm_out
+leds_of_inserted_value[0] <= modulo_pwm:brightness_loop:0:inserted_led_intensity_module.pwm_out
+leds_of_received_value[4] <= modulo_pwm:received_brightness_loop:4:received_led_intensity_module.pwm_out
+leds_of_received_value[3] <= modulo_pwm:received_brightness_loop:3:received_led_intensity_module.pwm_out
+leds_of_received_value[2] <= modulo_pwm:received_brightness_loop:2:received_led_intensity_module.pwm_out
+leds_of_received_value[1] <= modulo_pwm:received_brightness_loop:1:received_led_intensity_module.pwm_out
+leds_of_received_value[0] <= modulo_pwm:received_brightness_loop:0:received_led_intensity_module.pwm_out
 
 
-|main|modulo_pwm:\brightness_loop:0:led_intensity_module
+|main|modulo_pwm:\brightness_loop:0:inserted_led_intensity_module
 clk => c[0].CLK
 clk => c[1].CLK
 clk => c[2].CLK
@@ -37,7 +93,7 @@ duty[7] => LessThan0.IN1
 pwm_out <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|modulo_pwm:\brightness_loop:1:led_intensity_module
+|main|modulo_pwm:\brightness_loop:1:inserted_led_intensity_module
 clk => c[0].CLK
 clk => c[1].CLK
 clk => c[2].CLK
@@ -58,7 +114,7 @@ duty[7] => LessThan0.IN1
 pwm_out <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|modulo_pwm:\brightness_loop:2:led_intensity_module
+|main|modulo_pwm:\brightness_loop:2:inserted_led_intensity_module
 clk => c[0].CLK
 clk => c[1].CLK
 clk => c[2].CLK
@@ -79,7 +135,7 @@ duty[7] => LessThan0.IN1
 pwm_out <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|modulo_pwm:\brightness_loop:3:led_intensity_module
+|main|modulo_pwm:\brightness_loop:3:inserted_led_intensity_module
 clk => c[0].CLK
 clk => c[1].CLK
 clk => c[2].CLK
@@ -100,7 +156,7 @@ duty[7] => LessThan0.IN1
 pwm_out <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|modulo_pwm:\brightness_loop:4:led_intensity_module
+|main|modulo_pwm:\brightness_loop:4:inserted_led_intensity_module
 clk => c[0].CLK
 clk => c[1].CLK
 clk => c[2].CLK
@@ -121,7 +177,7 @@ duty[7] => LessThan0.IN1
 pwm_out <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|short_or_long_signal_identifier:code_control
+|main|short_or_long_signal_identifier:inserted_code_control
 clock => code[4][0]~reg0.CLK
 clock => code[4][1]~reg0.CLK
 clock => code[3][0]~reg0.CLK
@@ -368,5 +424,110 @@ code[1][1] <= code[1][1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 code[0][0] <= code[0][0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 code[0][1] <= code[0][1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 backspace_ready_signal <= backspace_ready.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|modulo_pwm:\received_brightness_loop:0:received_led_intensity_module
+clk => c[0].CLK
+clk => c[1].CLK
+clk => c[2].CLK
+clk => c[3].CLK
+clk => c[4].CLK
+clk => c[5].CLK
+clk => c[6].CLK
+clk => c[7].CLK
+en => process_0.IN1
+duty[0] => LessThan0.IN8
+duty[1] => LessThan0.IN7
+duty[2] => LessThan0.IN6
+duty[3] => LessThan0.IN5
+duty[4] => LessThan0.IN4
+duty[5] => LessThan0.IN3
+duty[6] => LessThan0.IN2
+duty[7] => LessThan0.IN1
+pwm_out <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|modulo_pwm:\received_brightness_loop:1:received_led_intensity_module
+clk => c[0].CLK
+clk => c[1].CLK
+clk => c[2].CLK
+clk => c[3].CLK
+clk => c[4].CLK
+clk => c[5].CLK
+clk => c[6].CLK
+clk => c[7].CLK
+en => process_0.IN1
+duty[0] => LessThan0.IN8
+duty[1] => LessThan0.IN7
+duty[2] => LessThan0.IN6
+duty[3] => LessThan0.IN5
+duty[4] => LessThan0.IN4
+duty[5] => LessThan0.IN3
+duty[6] => LessThan0.IN2
+duty[7] => LessThan0.IN1
+pwm_out <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|modulo_pwm:\received_brightness_loop:2:received_led_intensity_module
+clk => c[0].CLK
+clk => c[1].CLK
+clk => c[2].CLK
+clk => c[3].CLK
+clk => c[4].CLK
+clk => c[5].CLK
+clk => c[6].CLK
+clk => c[7].CLK
+en => process_0.IN1
+duty[0] => LessThan0.IN8
+duty[1] => LessThan0.IN7
+duty[2] => LessThan0.IN6
+duty[3] => LessThan0.IN5
+duty[4] => LessThan0.IN4
+duty[5] => LessThan0.IN3
+duty[6] => LessThan0.IN2
+duty[7] => LessThan0.IN1
+pwm_out <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|modulo_pwm:\received_brightness_loop:3:received_led_intensity_module
+clk => c[0].CLK
+clk => c[1].CLK
+clk => c[2].CLK
+clk => c[3].CLK
+clk => c[4].CLK
+clk => c[5].CLK
+clk => c[6].CLK
+clk => c[7].CLK
+en => process_0.IN1
+duty[0] => LessThan0.IN8
+duty[1] => LessThan0.IN7
+duty[2] => LessThan0.IN6
+duty[3] => LessThan0.IN5
+duty[4] => LessThan0.IN4
+duty[5] => LessThan0.IN3
+duty[6] => LessThan0.IN2
+duty[7] => LessThan0.IN1
+pwm_out <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|modulo_pwm:\received_brightness_loop:4:received_led_intensity_module
+clk => c[0].CLK
+clk => c[1].CLK
+clk => c[2].CLK
+clk => c[3].CLK
+clk => c[4].CLK
+clk => c[5].CLK
+clk => c[6].CLK
+clk => c[7].CLK
+en => process_0.IN1
+duty[0] => LessThan0.IN8
+duty[1] => LessThan0.IN7
+duty[2] => LessThan0.IN6
+duty[3] => LessThan0.IN5
+duty[4] => LessThan0.IN4
+duty[5] => LessThan0.IN3
+duty[6] => LessThan0.IN2
+duty[7] => LessThan0.IN1
+pwm_out <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -1,0 +1,5 @@
+|test_code_vector
+ins => ~NO_FANOUT~
+outs <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Fri Aug 23 19:09:08 2019
+Analysis & Synthesis Status : Successful - Fri Aug 23 21:26:51 2019
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : main
 Top-level Entity Name : main
@@ -7,7 +7,7 @@ Total logic elements : 192
     Total combinational functions : 184
     Dedicated logic registers : 86
 Total registers : 86
-Total pins : 10
+Total pins : 15
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
