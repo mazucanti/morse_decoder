@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE EP2C20F484C7
 set_global_assignment -name TOP_LEVEL_ENTITY send_control
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1.78"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:44:17  AUGUST 23, 2019"
-set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1.78"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -56,12 +56,43 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_L1 -to clk
 set_location_assignment PIN_U22 -to r_perm
 set_location_assignment PIN_L22 -to r_w
-set_location_assignment PIN_A13 -to recieve
-set_location_assignment PIN_B13 -to send
-set_location_assignment PIN_R20 -to w_perm
+set_location_assignment PIN_E21 -to recieve
+set_location_assignment PIN_E22 -to send
+set_location_assignment PIN_U21 -to w_perm
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name SIMULATION_MODE FUNCTIONAL
 set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/users/lzrd/Meus Documentos/morse_decoder/snd_cntr/Waveform.vwf"
+set_location_assignment PIN_A13 -to code[0][0]
+set_location_assignment PIN_A14 -to code[0][1]
+set_location_assignment PIN_A15 -to code[1][0]
+set_location_assignment PIN_A16 -to code[1][1]
+set_location_assignment PIN_A17 -to code[2][0]
+set_location_assignment PIN_A18 -to code[2][1]
+set_location_assignment PIN_A19 -to code[3][0]
+set_location_assignment PIN_A20 -to code[3][1]
+set_location_assignment PIN_C21 -to code[4][0]
+set_location_assignment PIN_D21 -to code[4][1]
+set_location_assignment PIN_R20 -to display[0][0]
+set_location_assignment PIN_R19 -to display[0][1]
+set_location_assignment PIN_U19 -to display[1][0]
+set_location_assignment PIN_Y19 -to display[1][1]
+set_location_assignment PIN_T18 -to display[2][0]
+set_location_assignment PIN_V19 -to display[2][1]
+set_location_assignment PIN_Y18 -to display[3][0]
+set_location_assignment PIN_U18 -to display[3][1]
+set_location_assignment PIN_R18 -to display[4][0]
+set_location_assignment PIN_R17 -to display[4][1]
+set_location_assignment PIN_R22 -to enter
+set_location_assignment PIN_L21 -to user_input[0][0]
+set_location_assignment PIN_M22 -to user_input[0][1]
+set_location_assignment PIN_V12 -to user_input[1][0]
+set_location_assignment PIN_W12 -to user_input[1][1]
+set_location_assignment PIN_U12 -to user_input[2][0]
+set_location_assignment PIN_U11 -to user_input[2][1]
+set_location_assignment PIN_M2 -to user_input[3][0]
+set_location_assignment PIN_M1 -to user_input[3][1]
+set_location_assignment PIN_L2 -to user_input[4][0]
+set_location_assignment PIN_R21 -to user_input[4][1]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

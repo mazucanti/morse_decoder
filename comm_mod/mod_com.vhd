@@ -15,7 +15,8 @@ use work.code_types.all;
 entity mod_com is
 	port (enter: in std_logic;
 			--enter: controle de envio de mensagem
-			code : inout integer_vector);
+			code_in : in integer_vector;
+			code_out : out integer_vector);
 			--Mensagem a ser enviada ou recebida
 end entity;
 
@@ -33,3 +34,5 @@ begin
 		symbol <= symbol_variable;
 	end process;
 end architecture;
+
+architecture recieve of mod_com is
