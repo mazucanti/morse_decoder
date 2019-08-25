@@ -1,6 +1,6 @@
 EDA Netlist Writer report for send_control
-Fri Aug 23 19:48:51 2019
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Sat Aug 24 20:04:09 2019
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri Aug 23 19:48:51 2019 ;
+; EDA Netlist Writer Status ; Successful - Sat Aug 24 20:04:09 2019 ;
 ; Revision Name             ; send_control                          ;
 ; Top-level Entity Name     ; send_control                          ;
 ; Family                    ; Cyclone II                            ;
@@ -65,28 +65,28 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+--------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                       ;
-+--------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                  ;
-+--------------------------------------------------------------------------------------------------+
-; C:/Users/pedro.shoji/Documents/GitHub/morse_decoder/snd_cntr/simulation/modelsim/send_control.vo ;
-+--------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                               ;
++------------------------------------------------------------------------------------------+
+; Generated Files                                                                          ;
++------------------------------------------------------------------------------------------+
+; C:/users/lzrd/Meus Documentos/morse_decoder/snd_cntr/simulation/modelsim/send_control.vo ;
++------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
 ; EDA Netlist Writer Messages ;
 +-----------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit EDA Netlist Writer
+Info: Running Quartus II 32-bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Aug 23 19:48:51 2019
+    Info: Processing started: Sat Aug 24 20:04:07 2019
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off send_control -c send_control
-Info (204019): Generated file send_control.vo in folder "C:/Users/pedro.shoji/Documents/GitHub/morse_decoder/snd_cntr/simulation/modelsim/" for EDA simulation tool
-Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 382 megabytes
-    Info: Processing ended: Fri Aug 23 19:48:52 2019
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+Info (204019): Generated file send_control.vo in folder "C:/users/lzrd/Meus Documentos/morse_decoder/snd_cntr/simulation/modelsim/" for EDA simulation tool
+Info: Quartus II 32-bit EDA Netlist Writer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 0 megabytes
+    Info: Processing ended: Sat Aug 24 20:04:09 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:00
 
 
