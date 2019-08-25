@@ -1,0 +1,777 @@
+TimeQuest Timing Analyzer report for i_want_die
+Fri Aug 23 21:53:48 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clock'
+ 12. Slow Model Hold: 'clock'
+ 13. Slow Model Minimum Pulse Width: 'clock'
+ 14. Clock to Output Times
+ 15. Minimum Clock to Output Times
+ 16. Propagation Delay
+ 17. Minimum Propagation Delay
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clock'
+ 24. Fast Model Hold: 'clock'
+ 25. Fast Model Minimum Pulse Width: 'clock'
+ 26. Clock to Output Times
+ 27. Minimum Clock to Output Times
+ 28. Propagation Delay
+ 29. Minimum Propagation Delay
+ 30. Multicorner Timing Analysis Summary
+ 31. Clock to Output Times
+ 32. Minimum Clock to Output Times
+ 33. Progagation Delay
+ 34. Minimum Progagation Delay
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                         ;
++--------------------+----------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition ;
+; Revision Name      ; i_want_die                                                           ;
+; Device Family      ; Cyclone II                                                           ;
+; Device Name        ; EP2C20F484C7                                                         ;
+; Timing Models      ; Final                                                                ;
+; Delay Model        ; Combined                                                             ;
+; Rise/Fall Delays   ; Unavailable                                                          ;
++--------------------+----------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                   ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 455.37 MHz ; 380.08 MHz      ; clock      ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -1.196 ; -5.965        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.445 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.631 ; -11.407               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clock'                                                                                                                                                                        ;
++--------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                               ; To Node                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.196 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.234      ;
+; -1.155 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.193      ;
+; -1.116 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.154      ;
+; -1.115 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.153      ;
+; -1.075 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.113      ;
+; -1.036 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.074      ;
+; -1.035 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.073      ;
+; -1.030 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.068      ;
+; -0.995 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 1.000        ; 0.000      ; 2.033      ;
+; -0.955 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.993      ;
+; -0.950 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.988      ;
+; -0.921 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.959      ;
+; -0.870 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.908      ;
+; -0.862 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.900      ;
+; -0.841 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.879      ;
+; -0.821 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.859      ;
+; -0.785 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.823      ;
+; -0.782 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.820      ;
+; -0.781 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.819      ;
+; -0.761 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.799      ;
+; -0.741 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.779      ;
+; -0.705 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.743      ;
+; -0.702 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.740      ;
+; -0.701 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.739      ;
+; -0.696 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.734      ;
+; -0.661 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.699      ;
+; -0.654 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.692      ;
+; -0.277 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.315      ;
+; -0.272 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.310      ;
+; -0.271 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.309      ;
+; -0.268 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.306      ;
+; -0.263 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.301      ;
+; -0.229 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.267      ;
+; -0.228 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.266      ;
+; -0.222 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.260      ;
+; 0.307  ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.731      ;
++--------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clock'                                                                                                                                                                        ;
++-------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                               ; To Node                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.974 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.260      ;
+; 0.980 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.266      ;
+; 0.981 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.267      ;
+; 1.015 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.301      ;
+; 1.020 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.306      ;
+; 1.023 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.309      ;
+; 1.024 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.310      ;
+; 1.029 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.315      ;
+; 1.406 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.692      ;
+; 1.413 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.699      ;
+; 1.448 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.734      ;
+; 1.453 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.739      ;
+; 1.454 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.740      ;
+; 1.457 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.743      ;
+; 1.493 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.779      ;
+; 1.513 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.799      ;
+; 1.533 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.819      ;
+; 1.534 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.820      ;
+; 1.537 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.823      ;
+; 1.573 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.859      ;
+; 1.593 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.879      ;
+; 1.614 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.900      ;
+; 1.622 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.908      ;
+; 1.673 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.959      ;
+; 1.702 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.988      ;
+; 1.707 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.993      ;
+; 1.747 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.033      ;
+; 1.782 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.068      ;
+; 1.787 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.073      ;
+; 1.788 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.074      ;
+; 1.827 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.113      ;
+; 1.867 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.153      ;
+; 1.868 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.154      ;
+; 1.907 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.193      ;
+; 1.948 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.234      ;
++-------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clock'                                                                                                  ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                  ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clock ; Rise       ; clock                                                   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[2]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[2]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[3]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[3]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[4]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[4]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[5]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[5]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[6]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[6]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[7]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[7]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock|combout                                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock|combout                                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock~clkctrl|inclk[0]                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock~clkctrl|inclk[0]                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock~clkctrl|outclk                                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock~clkctrl|outclk                                    ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; led[*]    ; clock      ; 12.705 ; 12.705 ; Fall       ; clock           ;
+;  led[0]   ; clock      ; 12.705 ; 12.705 ; Fall       ; clock           ;
+;  led[1]   ; clock      ; 12.422 ; 12.422 ; Fall       ; clock           ;
+;  led[2]   ; clock      ; 11.170 ; 11.170 ; Fall       ; clock           ;
+;  led[3]   ; clock      ; 11.543 ; 11.543 ; Fall       ; clock           ;
+;  led[4]   ; clock      ; 11.727 ; 11.727 ; Fall       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; led[*]    ; clock      ; 9.307  ; 9.307  ; Fall       ; clock           ;
+;  led[0]   ; clock      ; 11.696 ; 11.696 ; Fall       ; clock           ;
+;  led[1]   ; clock      ; 11.042 ; 11.042 ; Fall       ; clock           ;
+;  led[2]   ; clock      ; 9.307  ; 9.307  ; Fall       ; clock           ;
+;  led[3]   ; clock      ; 9.680  ; 9.680  ; Fall       ; clock           ;
+;  led[4]   ; clock      ; 10.205 ; 10.205 ; Fall       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------+
+; Propagation Delay                                      ;
++--------------+-------------+--------+----+----+--------+
+; Input Port   ; Output Port ; RR     ; RF ; FR ; FF     ;
++--------------+-------------+--------+----+----+--------+
+; codein[0][0] ; led[0]      ; 13.403 ;    ;    ; 13.403 ;
+; codein[0][1] ; led[0]      ; 13.272 ;    ;    ; 13.272 ;
+; codein[1][0] ; led[1]      ; 12.407 ;    ;    ; 12.407 ;
+; codein[1][1] ; led[1]      ; 12.233 ;    ;    ; 12.233 ;
+; codein[2][0] ; led[2]      ; 12.345 ;    ;    ; 12.345 ;
+; codein[2][1] ; led[2]      ; 12.015 ;    ;    ; 12.015 ;
+; codein[3][0] ; led[3]      ; 12.180 ;    ;    ; 12.180 ;
+; codein[3][1] ; led[3]      ; 12.154 ;    ;    ; 12.154 ;
+; codein[4][0] ; led[4]      ; 11.578 ;    ;    ; 11.578 ;
+; codein[4][1] ; led[4]      ; 12.093 ;    ;    ; 12.093 ;
++--------------+-------------+--------+----+----+--------+
+
+
++--------------------------------------------------------+
+; Minimum Propagation Delay                              ;
++--------------+-------------+--------+----+----+--------+
+; Input Port   ; Output Port ; RR     ; RF ; FR ; FF     ;
++--------------+-------------+--------+----+----+--------+
+; codein[0][0] ; led[0]      ; 13.403 ;    ;    ; 13.403 ;
+; codein[0][1] ; led[0]      ; 13.272 ;    ;    ; 13.272 ;
+; codein[1][0] ; led[1]      ; 12.407 ;    ;    ; 12.407 ;
+; codein[1][1] ; led[1]      ; 12.233 ;    ;    ; 12.233 ;
+; codein[2][0] ; led[2]      ; 12.345 ;    ;    ; 12.345 ;
+; codein[2][1] ; led[2]      ; 12.015 ;    ;    ; 12.015 ;
+; codein[3][0] ; led[3]      ; 12.180 ;    ;    ; 12.180 ;
+; codein[3][1] ; led[3]      ; 12.154 ;    ;    ; 12.154 ;
+; codein[4][0] ; led[4]      ; 11.578 ;    ;    ; 11.578 ;
+; codein[4][1] ; led[4]      ; 12.093 ;    ;    ; 12.093 ;
++--------------+-------------+--------+----+----+--------+
+
+
++-------------------------------+
+; Fast Model Setup Summary      ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.132 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.380 ; -9.380                ;
++-------+--------+-----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clock'                                                                                                                                                                       ;
++-------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                               ; To Node                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.132 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.900      ;
+; 0.145 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.887      ;
+; 0.167 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.865      ;
+; 0.167 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.865      ;
+; 0.180 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.852      ;
+; 0.202 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.830      ;
+; 0.202 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.830      ;
+; 0.202 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.830      ;
+; 0.215 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.817      ;
+; 0.237 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.795      ;
+; 0.237 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.795      ;
+; 0.252 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.780      ;
+; 0.272 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.760      ;
+; 0.287 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.745      ;
+; 0.296 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.736      ;
+; 0.309 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.723      ;
+; 0.322 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.710      ;
+; 0.327 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.705      ;
+; 0.331 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.701      ;
+; 0.331 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.701      ;
+; 0.344 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.688      ;
+; 0.362 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.670      ;
+; 0.366 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.666      ;
+; 0.366 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.666      ;
+; 0.366 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.666      ;
+; 0.379 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.653      ;
+; 0.381 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.651      ;
+; 0.500 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.532      ;
+; 0.502 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.530      ;
+; 0.506 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.526      ;
+; 0.506 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.526      ;
+; 0.506 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.526      ;
+; 0.514 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.518      ;
+; 0.515 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.517      ;
+; 0.519 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.513      ;
+; 0.665 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.367      ;
++-------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clock'                                                                                                                                                                        ;
++-------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                               ; To Node                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.361 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.513      ;
+; 0.365 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.517      ;
+; 0.366 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.518      ;
+; 0.374 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.526      ;
+; 0.378 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.530      ;
+; 0.380 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.532      ;
+; 0.499 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.651      ;
+; 0.501 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.653      ;
+; 0.514 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.666      ;
+; 0.514 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.666      ;
+; 0.514 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.666      ;
+; 0.518 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.670      ;
+; 0.536 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.688      ;
+; 0.549 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.701      ;
+; 0.549 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.701      ;
+; 0.553 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.705      ;
+; 0.558 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.710      ;
+; 0.571 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.723      ;
+; 0.584 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.736      ;
+; 0.593 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.745      ;
+; 0.608 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.760      ;
+; 0.628 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.780      ;
+; 0.643 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.795      ;
+; 0.643 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.795      ;
+; 0.665 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.817      ;
+; 0.678 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.830      ;
+; 0.678 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.830      ;
+; 0.678 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.830      ;
+; 0.700 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.852      ;
+; 0.713 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.865      ;
+; 0.713 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.865      ;
+; 0.735 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.887      ;
+; 0.748 ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.900      ;
++-------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clock'                                                                                                  ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                  ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock                                                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Fall       ; modulo_pwm:\brightness_loop:0:led_intensity_module|c[7] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[2]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[2]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[3]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[3]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[4]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[4]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[5]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[5]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[6]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[6]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[7]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; \brightness_loop:0:led_intensity_module|c[7]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock|combout                                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock|combout                                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock~clkctrl|inclk[0]                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock~clkctrl|inclk[0]                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock~clkctrl|outclk                                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock~clkctrl|outclk                                    ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; led[*]    ; clock      ; 6.027 ; 6.027 ; Fall       ; clock           ;
+;  led[0]   ; clock      ; 6.027 ; 6.027 ; Fall       ; clock           ;
+;  led[1]   ; clock      ; 5.873 ; 5.873 ; Fall       ; clock           ;
+;  led[2]   ; clock      ; 5.387 ; 5.387 ; Fall       ; clock           ;
+;  led[3]   ; clock      ; 5.544 ; 5.544 ; Fall       ; clock           ;
+;  led[4]   ; clock      ; 5.665 ; 5.665 ; Fall       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; led[*]    ; clock      ; 4.684 ; 4.684 ; Fall       ; clock           ;
+;  led[0]   ; clock      ; 5.649 ; 5.649 ; Fall       ; clock           ;
+;  led[1]   ; clock      ; 5.341 ; 5.341 ; Fall       ; clock           ;
+;  led[2]   ; clock      ; 4.684 ; 4.684 ; Fall       ; clock           ;
+;  led[3]   ; clock      ; 4.842 ; 4.842 ; Fall       ; clock           ;
+;  led[4]   ; clock      ; 5.080 ; 5.080 ; Fall       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------+
+; Propagation Delay                                    ;
++--------------+-------------+-------+----+----+-------+
+; Input Port   ; Output Port ; RR    ; RF ; FR ; FF    ;
++--------------+-------------+-------+----+----+-------+
+; codein[0][0] ; led[0]      ; 6.577 ;    ;    ; 6.577 ;
+; codein[0][1] ; led[0]      ; 6.494 ;    ;    ; 6.494 ;
+; codein[1][0] ; led[1]      ; 6.094 ;    ;    ; 6.094 ;
+; codein[1][1] ; led[1]      ; 6.038 ;    ;    ; 6.038 ;
+; codein[2][0] ; led[2]      ; 6.096 ;    ;    ; 6.096 ;
+; codein[2][1] ; led[2]      ; 5.942 ;    ;    ; 5.942 ;
+; codein[3][0] ; led[3]      ; 6.040 ;    ;    ; 6.040 ;
+; codein[3][1] ; led[3]      ; 6.022 ;    ;    ; 6.022 ;
+; codein[4][0] ; led[4]      ; 5.870 ;    ;    ; 5.870 ;
+; codein[4][1] ; led[4]      ; 6.074 ;    ;    ; 6.074 ;
++--------------+-------------+-------+----+----+-------+
+
+
++------------------------------------------------------+
+; Minimum Propagation Delay                            ;
++--------------+-------------+-------+----+----+-------+
+; Input Port   ; Output Port ; RR    ; RF ; FR ; FF    ;
++--------------+-------------+-------+----+----+-------+
+; codein[0][0] ; led[0]      ; 6.577 ;    ;    ; 6.577 ;
+; codein[0][1] ; led[0]      ; 6.494 ;    ;    ; 6.494 ;
+; codein[1][0] ; led[1]      ; 6.094 ;    ;    ; 6.094 ;
+; codein[1][1] ; led[1]      ; 6.038 ;    ;    ; 6.038 ;
+; codein[2][0] ; led[2]      ; 6.096 ;    ;    ; 6.096 ;
+; codein[2][1] ; led[2]      ; 5.942 ;    ;    ; 5.942 ;
+; codein[3][0] ; led[3]      ; 6.040 ;    ;    ; 6.040 ;
+; codein[3][1] ; led[3]      ; 6.022 ;    ;    ; 6.022 ;
+; codein[4][0] ; led[4]      ; 5.870 ;    ;    ; 5.870 ;
+; codein[4][1] ; led[4]      ; 6.074 ;    ;    ; 6.074 ;
++--------------+-------------+-------+----+----+-------+
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.196 ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+;  clock           ; -1.196 ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -5.965 ; 0.0   ; 0.0      ; 0.0     ; -11.407             ;
+;  clock           ; -5.965 ; 0.000 ; N/A      ; N/A     ; -11.407             ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; led[*]    ; clock      ; 12.705 ; 12.705 ; Fall       ; clock           ;
+;  led[0]   ; clock      ; 12.705 ; 12.705 ; Fall       ; clock           ;
+;  led[1]   ; clock      ; 12.422 ; 12.422 ; Fall       ; clock           ;
+;  led[2]   ; clock      ; 11.170 ; 11.170 ; Fall       ; clock           ;
+;  led[3]   ; clock      ; 11.543 ; 11.543 ; Fall       ; clock           ;
+;  led[4]   ; clock      ; 11.727 ; 11.727 ; Fall       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; led[*]    ; clock      ; 4.684 ; 4.684 ; Fall       ; clock           ;
+;  led[0]   ; clock      ; 5.649 ; 5.649 ; Fall       ; clock           ;
+;  led[1]   ; clock      ; 5.341 ; 5.341 ; Fall       ; clock           ;
+;  led[2]   ; clock      ; 4.684 ; 4.684 ; Fall       ; clock           ;
+;  led[3]   ; clock      ; 4.842 ; 4.842 ; Fall       ; clock           ;
+;  led[4]   ; clock      ; 5.080 ; 5.080 ; Fall       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------+
+; Progagation Delay                                      ;
++--------------+-------------+--------+----+----+--------+
+; Input Port   ; Output Port ; RR     ; RF ; FR ; FF     ;
++--------------+-------------+--------+----+----+--------+
+; codein[0][0] ; led[0]      ; 13.403 ;    ;    ; 13.403 ;
+; codein[0][1] ; led[0]      ; 13.272 ;    ;    ; 13.272 ;
+; codein[1][0] ; led[1]      ; 12.407 ;    ;    ; 12.407 ;
+; codein[1][1] ; led[1]      ; 12.233 ;    ;    ; 12.233 ;
+; codein[2][0] ; led[2]      ; 12.345 ;    ;    ; 12.345 ;
+; codein[2][1] ; led[2]      ; 12.015 ;    ;    ; 12.015 ;
+; codein[3][0] ; led[3]      ; 12.180 ;    ;    ; 12.180 ;
+; codein[3][1] ; led[3]      ; 12.154 ;    ;    ; 12.154 ;
+; codein[4][0] ; led[4]      ; 11.578 ;    ;    ; 11.578 ;
+; codein[4][1] ; led[4]      ; 12.093 ;    ;    ; 12.093 ;
++--------------+-------------+--------+----+----+--------+
+
+
++------------------------------------------------------+
+; Minimum Progagation Delay                            ;
++--------------+-------------+-------+----+----+-------+
+; Input Port   ; Output Port ; RR    ; RF ; FR ; FF    ;
++--------------+-------------+-------+----+----+-------+
+; codein[0][0] ; led[0]      ; 6.577 ;    ;    ; 6.577 ;
+; codein[0][1] ; led[0]      ; 6.494 ;    ;    ; 6.494 ;
+; codein[1][0] ; led[1]      ; 6.094 ;    ;    ; 6.094 ;
+; codein[1][1] ; led[1]      ; 6.038 ;    ;    ; 6.038 ;
+; codein[2][0] ; led[2]      ; 6.096 ;    ;    ; 6.096 ;
+; codein[2][1] ; led[2]      ; 5.942 ;    ;    ; 5.942 ;
+; codein[3][0] ; led[3]      ; 6.040 ;    ;    ; 6.040 ;
+; codein[3][1] ; led[3]      ; 6.022 ;    ;    ; 6.022 ;
+; codein[4][0] ; led[4]      ; 5.870 ;    ;    ; 5.870 ;
+; codein[4][1] ; led[4]      ; 6.074 ;    ;    ; 6.074 ;
++--------------+-------------+-------+----+----+-------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 0        ; 0        ; 0        ; 36       ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 0        ; 0        ; 0        ; 36       ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 10    ; 10   ;
+; Unconstrained Output Ports      ; 5     ; 5    ;
+; Unconstrained Output Port Paths ; 50    ; 50   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
+    Info: Processing started: Fri Aug 23 21:53:47 2019
+Info: Command: quartus_sta i_want_die -c i_want_die
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'i_want_die.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clock clock
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.196
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.196        -5.965 clock 
+Info (332146): Worst-case hold slack is 0.445
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.445         0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631       -11.407 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 0.132
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.132         0.000 clock 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -9.380 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 569 megabytes
+    Info: Processing ended: Fri Aug 23 21:53:48 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
